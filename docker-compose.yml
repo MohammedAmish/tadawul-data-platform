@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: tadawul-postgres
+    environment:
+      POSTGRES_USER: tadawul
+      POSTGRES_PASSWORD: tadawul
+      POSTGRES_DB: tadawul
+    ports:
+      - "55433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
