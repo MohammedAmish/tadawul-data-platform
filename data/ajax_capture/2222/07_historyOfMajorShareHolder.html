@@ -1,0 +1,173 @@
+
+
+
+
+
+
+
+
+<div class="time_apply">
+                                    <div class="time_period">
+                                         <div class="time">
+                                            Time Period
+                                        </div>
+                                        <div class="time_cal">
+                                            <div class="input-daterange input-group" id="datepicker">
+                                            
+                                            	
+                                                <input type="text" class="input-sm form-control" id="drp_start_shareHolder" name="start" value="28/07/2026" autocomplete="off" placeholder="DD/MM/YYYY" />
+                                                <span class="input-group-addon">-</span>
+                                                <input type="text" class="input-sm form-control" id="drp_end_shareHolder" name="end" value="28/08/2026" autocomplete="off" placeholder="DD/MM/YYYY" />
+                                                <i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.697 24.859">
+                                                    <g id="Calendar_Icon" transform="translate(0.25 0.25)">
+                                                      <path id="Path_21" data-name="Path 21" d="M11.644,5.578V8.423H9.205A2,2,0,0,0,7.2,10.429V27.366a2,2,0,0,0,2.005,2.005H28.391A2,2,0,0,0,30.4,27.366V10.456a2,2,0,0,0-2.005-2.005H25.953V5.605a.6.6,0,0,0-1.192,0V8.451H12.837V5.605A.6.6,0,0,0,11.644,5.578ZM28.391,28.206H9.205a.844.844,0,0,1-.84-.84V15.659H29.232V27.393A.821.821,0,0,1,28.391,28.206ZM24.76,9.616V11.7a.6.6,0,0,0,1.192,0V9.616h2.439a.844.844,0,0,1,.84.84v4.011H8.392V10.456a.844.844,0,0,1,.84-.84h2.439V11.7a.6.6,0,0,0,1.192,0V9.616Z" transform="translate(-7.2 -5.012)" fill="#fff" stroke="#fff" stroke-width="0.5"/>
+                                                      <circle id="Ellipse_2" data-name="Ellipse 2" cx="1.003" cy="1.003" r="1.003" transform="translate(4.255 13.817)" fill="#fff" stroke="#fff" stroke-width="0.5"/>
+                                                      <circle id="Ellipse_3" data-name="Ellipse 3" cx="1.003" cy="1.003" r="1.003" transform="translate(4.255 18.478)" fill="#fff" stroke="#fff" stroke-width="0.5"/>
+                                                      <circle id="Ellipse_4" data-name="Ellipse 4" cx="1.003" cy="1.003" r="1.003" transform="translate(16.937 13.817)" fill="#fff" stroke="#fff" stroke-width="0.5"/>
+                                                      <circle id="Ellipse_5" data-name="Ellipse 5" cx="1.003" cy="1.003" r="1.003" transform="translate(16.937 18.478)" fill="#fff" stroke="#fff" stroke-width="0.5"/>
+                                                      <circle id="Ellipse_6" data-name="Ellipse 6" cx="1.003" cy="1.003" r="1.003" transform="translate(10.596 13.817)" fill="#fff" stroke="#fff" stroke-width="0.5"/>
+                                                      <circle id="Ellipse_7" data-name="Ellipse 7" cx="1.003" cy="1.003" r="1.003" transform="translate(10.596 18.478)" fill="#fff" stroke="#fff" stroke-width="0.5"/>
+                                                    </g>
+                                                  </svg>     
+                                                    </i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="locked" id="locked">
+                                        <span><input id="showLocked" type="checkbox"></span>
+                                        <strong>Shareholders Subject to the lock-up period</strong>
+                                    </div>
+                                    <div class="applyBtn" onclick="renderMajorShareHolder(this,1);">Search</div>
+</div>
+                                <div class="tableStyle">
+	
+   		<table id="majorShareHoldersTable" class="col-md-12 table-bordered table-striped table-condensed cf">
+      		<thead class="cf">
+                                            <tr>
+                                             	<th>Trading Date</th>
+                                                <th>Shareholders</th>
+				                               
+                			                    <th class="numeric">Total Shares Held Trading Day</th>
+                                 				<th class="numeric">Total Shares Held Prev Trading Day</th>
+                                 				<th class="numeric">Total Shares Change</th>
+                                 				
+                                 			 
+												
+                                 			
+                                                
+                                            </tr>
+             </thead>
+      		<tbody>
+      		
+      		
+      		
+      		
+      			
+      			
+      			
+      			 
+      			
+      			
+      			 
+      			
+         		
+         		<tr>
+         			<td >2026-08-27 </td>
+         			<td>المملكة العربية السعودية</td>           	
+	            	
+        	    	        	    	
+            			
+            			
+            				<td class="priceUp">81.484%</td>
+            			
+            			
+            		
+            		        	    	
+            			
+            			
+            				<td class="priceUp">81.484%</td>
+            			
+            			
+            		
+            		        	    	
+            			
+            			
+            			
+            				<td>0</td>
+            			
+            		
+            		
+            		
+            		
+            		
+            		 
+							
+							
+								
+							
+                           
+            		
+            		
+    	     	</tr>
+    	     
+        	
+		
+      		</tbody>
+   		</table>
+   		<div class="cumulativeList" id="majorShareHoldersNote">
+		<ul>
+			<li>Major shareholder who owns 5% or more from total shares or total voting rights</li>
+			<li>N/A : the ownership is less than 5%</li>	
+			<li>The published ownership percentage above is a reflection of all transactions resulting in ownership transfer excluding lending and borrowing transactions.</li>	
+			<li>The published ownership percentage above reflects the percentage of registered securities with the Securities Depository Center Company “Edaa” only.</li>
+			
+		</ul>
+	</div>
+   		
+   		<table id="majorShareHoldersTableLock" class="col-md-12 table-bordered table-striped table-condensed cf" style="display:none;">
+      		<thead class="cf">
+                                            <tr>
+                                             	<th>Trading Date</th>
+                                                <th>Shareholders</th>
+				                               
+                			                    <th class="numeric">Total Shares Held Trading Day</th>
+                                 				<th class="numeric">Total Shares Held Prev Trading Day</th>
+                                 				<th class="numeric">Total Shares Change</th>
+                                                
+                                            </tr>
+             </thead>
+      		<tbody>
+      		
+      			<tr class="no-records-found showTr"><td colspan="5">No data available in table</td></tr>
+      		
+      		
+      		
+      		</tbody>
+   		</table>
+   		<div class="cumulativeList" id="majorShareHoldersLockedNote">
+		<ul>
+			<li>Shareholders subject to the lock-up period as per the Listing Rules.</li>
+			<li>Preferred shares grant voting rights in the General Assembly Meeting under certain specific circumstances outlined in the Implementing Regulation of the Companies Law for Listed Joint Stock Companies, as detailed on the Capital Market Authority's website. (For more details, please refer to the Implementing Regulations).</li>
+			
+		</ul>
+	</div>
+   		 
+   		
+   		</div>
+
+<script>
+
+
+$('#datepicker input[id="drp_end_shareHolder"]')
+	.datepicker({
+		format: "dd/mm/yyyy",
+});
+$('#datepicker input[id="drp_start_shareHolder"]')
+	.datepicker({
+		format: "dd/mm/yyyy",
+});
+$('#datepicker i').click(function(){
+	$('.datepicker').hide();
+	$(this).parents('.input-daterange').find('input.form-control').eq(0).focus();
+});
+</script>

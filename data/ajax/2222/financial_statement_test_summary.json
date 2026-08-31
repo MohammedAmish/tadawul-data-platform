@@ -1,0 +1,49 @@
+{
+  "symbol": "2222",
+  "successful_count": 0,
+  "total_count": 6,
+  "results": [
+    {
+      "statement_type": 0,
+      "name": "balance_sheet",
+      "success": false,
+      "status_code": 404,
+      "size_bytes": 43
+    },
+    {
+      "statement_type": 1,
+      "name": "income_statement",
+      "success": false,
+      "status_code": 404,
+      "size_bytes": 43
+    },
+    {
+      "statement_type": 2,
+      "name": "cash_flow",
+      "success": false,
+      "status_code": 404,
+      "size_bytes": 43
+    },
+    {
+      "statement_type": 4,
+      "name": "xbrl",
+      "success": false,
+      "status_code": 404,
+      "size_bytes": 43
+    },
+    {
+      "statement_type": 5,
+      "name": "report_statement",
+      "success": false,
+      "status_code": 404,
+      "size_bytes": 43
+    },
+    {
+      "statement_type": 6,
+      "name": "financial_statements_and_reports",
+      "success": false,
+      "status_code": 404,
+      "size_bytes": 43
+    }
+  ]
+}
