@@ -5,24 +5,28 @@ from tadawul.scraper.company import CompanyScraper
 
 
 def main():
+    symbol = "9634"
+
     loader = TickerLoader(
         "data/tickerData.json"
     )
 
-    company = loader.get_by_symbol("2222")
+    company = loader.get_by_symbol(symbol)
 
     if company is None:
         raise ValueError(
-            "Company 2222 was not found."
+            f"Company with symbol {symbol} was not found."
         )
 
     scraper = CompanyScraper(
-        headless=False
+        headless=True
     )
 
     result = scraper.scrape(company)
 
-    output_path = "data/aramco_2222.json"
+    company_name = result["company_name"]
+
+    output_path = f"data/{company_name}_{symbol}.json"
 
     with open(
         output_path,
@@ -36,9 +40,9 @@ def main():
             indent=2,
         )
 
-    print(
-        f"Result saved to: {output_path}"
-    )
+    print(f"Company: {company_name}")
+    print(f"Symbol: {symbol}")
+    print(f"Result saved to: {output_path}")
 
 
 if __name__ == "__main__":

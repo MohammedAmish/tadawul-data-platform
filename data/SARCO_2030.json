@@ -1,141 +1,132 @@
 {
-  "symbol": "2222",
-  "company_name": "SAUDI ARAMCO",
+  "symbol": "2030",
+  "company_name": "SARCO",
   "market": "Main Market",
   "sector": "Energy",
   "shares_type": "Common Shares",
   "company_profile": {
-    "company_overview": "In accordance with the Bylaws, the main objective of the Company shall be to engage in any activities relating to the energy industry, including hydrocarbons, chemicals and other associated and complementary industries, or any other activity, in or outside the Kingdom.",
-    "company_history": "The Saudi Arabian Oil Company (Saudi Aramco) was originally established in the Kingdom of Saudi Arabia by virtue of Royal Decree No. (M/8) dated 4/4/1409H (corresponding to 13 November 1988G) as a company wholly owned by the State with a fully paid share capital of sixty billion Saudi Riyals (SAR 60,000,000,000). It became a Saudi joint stock company on 14/4/1439H (corresponding to 1 January 2018G) by virtue of the Bylaws, which were approved by Council of Ministers Resolution No.(180) dated 1/4/1439H (corresponding to 19 December 2017G). Saudi Aramco is registered in the city of Dhahran under commercial registration No(2052101150) dated 11/7/1439H (corresponding to 28 March 2018G) with its headquarters based in Dhahran. The current share capital of Saudi Aramco is ninety billion Saudi Riyals (SAR 90,000,000,000), consisting of two hundred and forty-two billion (242,000,000,000) ordinary shares with no par value.",
-    "company_bylaws_url": "https://www.saudiexchange.sa/Resources/pdfs/1541_ByLaw1.pdf",
-    "Authorized Capital  (^)": "90,000,000,000",
-    "Total Issued Shares": "242,000,000,000",
-    "Paid Capital  (^)": "90,000,000,000",
-    "Par Value/Share": "-",
-    "Paid Up Value/Share": "-"
+    "company_overview": "Carrying out petroleum works in all its branches and all aspects of activity related to it, carrying out water projects, land reform, utilities, transportation, all business, industrial and commercial projects, commercial agency business, establishing companies and purchasing shares, participating with the Arab Tanks Company Limited.",
+    "company_history": "A Saudi joint stock company established in accordance with the Companies Law in the Kingdom of Saudi Arabia by Royal Decree No. 376 dated 8/14/1380 AH.",
+    "company_bylaws_url": "https://www.saudiexchange.sa/Resources/pdfs/383_ByLaw1.pdf",
+    "Authorized Capital  (^)": "150,000,000",
+    "Total Issued Shares": "15,000,000",
+    "Paid Capital  (^)": "150,000,000",
+    "Par Value/Share": "10",
+    "Paid Up Value/Share": "10"
   },
-  "subsidiaries": [],
+  "subsidiaries": [
+    {
+      "name": "Clean Energy Company",
+      "ownership_percentage": 100.0,
+      "main_business": "Carrying out activities of mineral mining, organic chemical manufacturing, and the production of basic gases and liquid and compressed air.",
+      "location": "Bish City",
+      "country": "KSA"
+    },
+    {
+      "name": "Storage Services Company",
+      "ownership_percentage": 100.0,
+      "main_business": "Carrying out pipeline transportation activities, maritime and coastal water transport of goods, and storage.",
+      "location": "Bish City",
+      "country": "KSA"
+    }
+  ],
   "company_details": {
-    "date_established": "1988/11/13",
+    "date_established": "1960/06/14",
     "financial_year_end": "31/12",
-    "listing_date": "2019/12/11",
-    "external_auditors": "[PricewaterhouseCoopers Public Accountants]",
-    "isin_code": "SA14TG012N13",
-    "number_of_employees": "75118",
+    "listing_date": "/",
+    "external_auditors": "[Deloitte Company]",
+    "isin_code": "SA0007879147",
+    "number_of_employees": "-",
     "investor_relations": {
-      "contact_name": "Investor Relations",
-      "company_address": "P.O. Box 5000 Dhahran 31311",
+      "contact_name": "Investor relations & shareholder affairs",
+      "company_address": "Jeddah, Madinah Road, Nadi Alfunon AL ruwaia Dist Adham Commercial Center, Bulding No 4947 Postal Code 23215",
       "contact_details": [
-        "Telephone: +966138720115",
-        "Fax : +966138738190",
-        "Email : -"
+        "Telephone: 0126517016",
+        "Fax : 0126518050/30",
+        "Email : ir@almasafi.com.sa"
       ],
-      "company_website": "www.saudiaramco.com"
+      "company_website": "www.almasafi.com.sa"
     }
   },
   "management_team": {
     "board_of_directors": [
       {
-        "name": "H.E. Yasir O. Al-Rumayyan",
-        "role": "Non - Executive",
-        "classification": "Non - Executive",
-        "bd_session_start": "2024-07-01",
-        "bd_session_end": "2027-06-30",
+        "name": "Dr. Obaid Saad Al-Subaie",
+        "role": "Independent",
+        "classification": "Independent",
+        "bd_session_start": "2024-01-25",
+        "bd_session_end": "2028-01-24",
         "designation": "Chairman"
       },
       {
-        "name": "H.E. Dr. Ibrahim A. Al-Assaf",
+        "name": "Mr. Abdul Aziz Abdul Mohsen Al-Bakr",
         "role": "Deputy Chairman - Non Executive",
         "classification": "Deputy Chairman - Non Executive",
-        "bd_session_start": "2024-07-01",
-        "bd_session_end": "2027-06-30",
+        "bd_session_start": "2024-01-25",
+        "bd_session_end": "2028-01-24",
         "designation": "Board of Directors"
       },
       {
-        "name": "H.E. Mohammed A. Al-Jadaan",
+        "name": "Dr. Abdul Rahman Ahmed Al-Mufarreh",
         "role": "Non - Executive",
         "classification": "Non - Executive",
-        "bd_session_start": "2024-07-01",
-        "bd_session_end": "2027-06-30",
+        "bd_session_start": "2024-01-25",
+        "bd_session_end": "2028-01-24",
         "designation": "Board of Directors"
       },
       {
-        "name": "H.E. Faisal Fadhil M. Alibrahim",
-        "role": "Non - Executive",
-        "classification": "Non - Executive",
-        "bd_session_start": "2024-07-01",
-        "bd_session_end": "2027-06-30",
-        "designation": "Board of Directors"
-      },
-      {
-        "name": "Mr. Andrew N. Liveris",
+        "name": "Mr. Mishal Abdul Rahman Al-Aqla",
         "role": "Independent",
         "classification": "Independent",
-        "bd_session_start": "2024-07-01",
-        "bd_session_end": "2027-06-30",
+        "bd_session_start": "2024-01-25",
+        "bd_session_end": "2028-01-24",
         "designation": "Board of Directors"
       },
       {
-        "name": "Ms. Lynn L. Elsenhans",
+        "name": "Mr. Khaled Ahmed Al-Hamdan",
         "role": "Independent",
         "classification": "Independent",
-        "bd_session_start": "2024-07-01",
-        "bd_session_end": "2027-06-30",
+        "bd_session_start": "2024-01-25",
+        "bd_session_end": "2028-01-24",
         "designation": "Board of Directors"
       },
       {
-        "name": "Mr. Amin H. Nasser",
+        "name": "Mr. Nael Samir Fayez",
+        "role": "Independent",
+        "classification": "Independent",
+        "bd_session_start": "2024-01-25",
+        "bd_session_end": "2028-01-24",
+        "designation": "Board of Directors"
+      },
+      {
+        "name": "Mr. Khaled Muhammad Al-Hanaki",
+        "role": "Independent",
+        "classification": "Independent",
+        "bd_session_start": "2024-01-25",
+        "bd_session_end": "2028-01-24",
+        "designation": "Board of Directors"
+      },
+      {
+        "name": "Eng. Mohammed Iqbal Radwan Daboul",
         "role": "Executive",
         "classification": "Executive",
-        "bd_session_start": "2024-07-01",
-        "bd_session_end": "2024-07-18",
-        "designation": "Board of Directors"
-      },
-      {
-        "name": "Mr. Mark A. Weinberger",
-        "role": "Independent",
-        "classification": "Independent",
-        "bd_session_start": "2024-07-01",
-        "bd_session_end": "2027-06-30",
-        "designation": "Board of Directors"
-      },
-      {
-        "name": "Mr. Stuart T. Gulliver",
-        "role": "Independent",
-        "classification": "Independent",
-        "bd_session_start": "2024-07-01",
-        "bd_session_end": "2027-06-30",
-        "designation": "Board of Directors"
-      },
-      {
-        "name": "Mr. Robert W. Dudley",
-        "role": "Independent",
-        "classification": "Independent",
-        "bd_session_start": "2024-07-01",
-        "bd_session_end": "2027-06-30",
-        "designation": "Board of Directors"
-      },
-      {
-        "name": "Mr. Khalid H. Al-Dabbagh",
-        "role": "Non - Executive",
-        "classification": "Non - Executive",
-        "bd_session_start": "2024-07-01",
-        "bd_session_end": "2027-06-30",
+        "bd_session_start": "2025-06-01",
+        "bd_session_end": "2028-01-24",
         "designation": "Board of Directors"
       }
     ],
     "senior_executives": [
       {
-        "name": "Mr. Amin H. Nasser",
-        "role": "CEO",
-        "classification": "CEO",
-        "bd_session_start": "2015-09-17",
+        "name": "Mr.Yacub Zuhier Al-nazer",
+        "role": "CFO",
+        "classification": "CFO",
+        "bd_session_start": "2024-07-01",
         "bd_session_end": "-",
         "designation": "Senior Executives"
       },
       {
-        "name": "Mr. Ziad T. Al- Murshed",
-        "role": "CFO",
+        "name": "Eng. Mohammed Iqbal Radwan Daboul - Managing Director",
+        "role": "-",
         "classification": null,
         "bd_session_start": null,
         "bd_session_end": null,
@@ -148,41 +139,41 @@
       "section": "Financial Statements",
       "period": "Annual",
       "year": 2025,
-      "publication_date": "2026-03-10",
+      "publication_date": "2026-04-02",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2026-03-10_08-18-44_En.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2026-04-02_10-41-49_En.pdf"
     },
     {
       "section": "Financial Statements",
       "period": "Annual",
       "year": 2024,
-      "publication_date": "2025-03-04",
+      "publication_date": "2025-04-10",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2025-03-04_09-24-08_En.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2025-04-09_20-31-45_En.pdf"
     },
     {
       "section": "Financial Statements",
       "period": "Annual",
       "year": 2023,
-      "publication_date": "2024-03-11",
+      "publication_date": "2024-03-21",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2024-03-11_10-08-23_En.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2024-03-21_12-13-04_En.pdf"
     },
     {
       "section": "Financial Statements",
       "period": "Annual",
       "year": 2022,
-      "publication_date": "2023-03-13",
+      "publication_date": "2023-03-31",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2023-03-13_07-38-47_En.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2023-03-31_01-37-53_En.pdf"
     },
     {
       "section": "Financial Statements",
       "period": "Q3",
       "year": 2025,
-      "publication_date": "2025-11-04",
+      "publication_date": "2025-11-13",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2025-11-04_08-06-37_En.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2025-11-13_15-44-13_En.pdf"
     },
     {
       "section": "Financial Statements",
@@ -190,103 +181,103 @@
       "year": 2024,
       "publication_date": "2024-11-05",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2024-11-05_08-59-01_En.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2024-11-05_09-34-45_En.pdf"
     },
     {
       "section": "Financial Statements",
       "period": "Q3",
       "year": 2023,
-      "publication_date": "2023-11-07",
+      "publication_date": "2023-11-08",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2023-11-07_09-31-37_En.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2023-11-07_16-20-26_En.pdf"
     },
     {
       "section": "Financial Statements",
       "period": "Q3",
       "year": 2022,
-      "publication_date": "2022-11-01",
+      "publication_date": "2022-12-08",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2022-11-01_08-32-19_En.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2022-12-08_15-11-06_En.pdf"
     },
     {
       "section": "Financial Statements",
       "period": "Q2",
       "year": 2026,
-      "publication_date": "2026-08-04",
+      "publication_date": "2026-08-18",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2026-08-04_07-43-39_En.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2026-08-18_13-15-09_En.pdf"
     },
     {
       "section": "Financial Statements",
       "period": "Q2",
       "year": 2025,
-      "publication_date": "2025-08-05",
+      "publication_date": "2025-08-17",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2025-08-05_08-48-45_En.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2025-08-16_11-51-00_En.pdf"
     },
     {
       "section": "Financial Statements",
       "period": "Q2",
       "year": 2024,
-      "publication_date": "2024-08-06",
+      "publication_date": "2024-08-08",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2024-08-06_08-31-31_En.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2024-08-08_11-52-07_En.pdf"
     },
     {
       "section": "Financial Statements",
       "period": "Q2",
       "year": 2023,
-      "publication_date": "2023-08-07",
+      "publication_date": "2023-09-13",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2023-08-07_11-35-12_En.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2023-09-13_15-06-17_En.pdf"
     },
     {
       "section": "Financial Statements",
       "period": "Q2",
       "year": 2022,
-      "publication_date": "2022-08-15",
+      "publication_date": "2022-08-25",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2022-08-15_08-23-41_En.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2022-08-25_15-11-13_En.pdf"
     },
     {
       "section": "Financial Statements",
       "period": "Q1",
       "year": 2026,
-      "publication_date": "2026-05-11",
+      "publication_date": "2026-05-18",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2026-05-11_07-12-04_En.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2026-05-18_07-28-12_En.pdf"
     },
     {
       "section": "Financial Statements",
       "period": "Q1",
       "year": 2025,
-      "publication_date": "2025-05-12",
+      "publication_date": "2025-05-19",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2025-05-12_08-06-40_En.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2025-05-18_16-51-12_En.pdf"
     },
     {
       "section": "Financial Statements",
       "period": "Q1",
       "year": 2024,
-      "publication_date": "2024-05-07",
+      "publication_date": "2024-05-15",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2024-05-07_10-34-11_En.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2024-05-15_13-38-19_En.pdf"
     },
     {
       "section": "Financial Statements",
       "period": "Q1",
       "year": 2023,
-      "publication_date": "2023-05-09",
+      "publication_date": "2023-05-23",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2023-05-09_11-51-19_En.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2023-05-23_15-37-25_En.pdf"
     },
     {
       "section": "Financial Statements",
       "period": "Q1",
       "year": 2022,
-      "publication_date": "2022-05-16",
+      "publication_date": "2022-05-24",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2022-05-16_07-51-23_En.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2022-05-23_16-29-57_En.pdf"
     },
     {
       "section": "XBRL",
@@ -294,7 +285,7 @@
       "year": 2025,
       "publication_date": "2026-04-02",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2026-04-02_10-31-16_Eng.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2026-04-02_15-03-07_Eng.html"
     },
     {
       "section": "XBRL",
@@ -302,493 +293,726 @@
       "year": 2025,
       "publication_date": "2026-04-02",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2026-04-02_10-31-16_Eng.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2026-04-02_15-03-07_Eng.xls"
     },
     {
       "section": "XBRL",
       "period": "Annual",
       "year": 2024,
-      "publication_date": "2025-04-13",
+      "publication_date": "2025-04-10",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2025-04-13_08-43-03_Eng.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2025-04-10_00-41-30_Eng.html"
     },
     {
       "section": "XBRL",
       "period": "Annual",
       "year": 2024,
-      "publication_date": "2025-04-13",
+      "publication_date": "2025-04-10",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2025-04-13_08-43-03_Eng.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2025-04-10_00-41-30_Eng.xls"
     },
     {
       "section": "XBRL",
       "period": "Annual",
       "year": 2023,
-      "publication_date": "2024-04-22",
+      "publication_date": "2024-03-24",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2024-04-22_08-18-03_Eng.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2024-03-24_16-07-44_Eng.html"
     },
     {
       "section": "XBRL",
       "period": "Annual",
       "year": 2023,
-      "publication_date": "2024-04-22",
+      "publication_date": "2024-03-24",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2024-04-22_08-18-03_Eng.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2024-03-24_16-07-44_Eng.xls"
     },
     {
       "section": "XBRL",
       "period": "Annual",
       "year": 2022,
-      "publication_date": "2023-04-03",
+      "publication_date": "2023-12-06",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2023-04-03_09-12-15_Eng.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2023-12-05_14-30-57_Eng.html"
     },
     {
       "section": "XBRL",
       "period": "Annual",
       "year": 2022,
-      "publication_date": "2023-04-03",
+      "publication_date": "2023-12-06",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2023-04-03_09-12-15_Eng.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2023-12-05_14-30-57_Eng.xls"
     },
     {
       "section": "XBRL",
       "period": "Q3",
       "year": 2025,
-      "publication_date": "2025-11-18",
+      "publication_date": "2025-11-16",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2025-11-18_08-33-25_Eng.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2025-11-14_20-03-12_Eng.html"
     },
     {
       "section": "XBRL",
       "period": "Q3",
       "year": 2025,
-      "publication_date": "2025-11-18",
+      "publication_date": "2025-11-16",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2025-11-18_08-33-25_Eng.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2025-11-14_20-03-12_Eng.xls"
     },
     {
       "section": "XBRL",
       "period": "Q3",
       "year": 2024,
-      "publication_date": "2024-11-25",
+      "publication_date": "2024-11-05",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2024-11-25_07-30-58_Eng.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2024-11-05_12-58-51_Eng.html"
     },
     {
       "section": "XBRL",
       "period": "Q3",
       "year": 2024,
-      "publication_date": "2024-11-25",
+      "publication_date": "2024-11-05",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2024-11-25_07-30-58_Eng.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2024-11-05_12-58-51_Eng.xls"
     },
     {
       "section": "XBRL",
       "period": "Q3",
       "year": 2023,
-      "publication_date": "2023-12-03",
+      "publication_date": "2023-12-06",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2023-12-03_08-07-48_Eng.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2023-12-05_14-32-16_Eng.html"
     },
     {
       "section": "XBRL",
       "period": "Q3",
       "year": 2023,
-      "publication_date": "2023-12-03",
+      "publication_date": "2023-12-06",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2023-12-03_08-07-48_Eng.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2023-12-05_14-32-16_Eng.xls"
     },
     {
       "section": "XBRL",
       "period": "Q3",
       "year": 2022,
-      "publication_date": "2022-11-24",
+      "publication_date": "2023-12-05",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2022-11-24_12-22-19_Eng.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2023-12-05_14-30-29_Eng.html"
     },
     {
       "section": "XBRL",
       "period": "Q3",
       "year": 2022,
-      "publication_date": "2022-11-24",
+      "publication_date": "2023-12-05",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2022-11-24_12-22-19_Eng.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2023-12-05_14-30-29_Eng.xls"
     },
     {
       "section": "XBRL",
       "period": "Q2",
       "year": 2026,
-      "publication_date": "2026-08-18",
+      "publication_date": "2026-08-19",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2026-08-18_08-33-41_Eng.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2026-08-18_18-50-10_Eng.html"
     },
     {
       "section": "XBRL",
       "period": "Q2",
       "year": 2026,
-      "publication_date": "2026-08-18",
+      "publication_date": "2026-08-19",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2026-08-18_08-33-41_Eng.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2026-08-18_18-50-10_Eng.xls"
     },
     {
       "section": "XBRL",
       "period": "Q2",
       "year": 2025,
-      "publication_date": "2025-08-18",
+      "publication_date": "2025-08-17",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2025-08-18_10-45-23_Eng.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2025-08-17_11-54-31_Eng.html"
     },
     {
       "section": "XBRL",
       "period": "Q2",
       "year": 2025,
-      "publication_date": "2025-08-18",
+      "publication_date": "2025-08-17",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2025-08-18_10-45-23_Eng.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2025-08-17_11-54-31_Eng.xls"
     },
     {
       "section": "XBRL",
       "period": "Q2",
       "year": 2024,
-      "publication_date": "2024-08-20",
+      "publication_date": "2024-08-11",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2024-08-20_10-45-37_Eng.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2024-08-08_16-13-28_Eng.html"
     },
     {
       "section": "XBRL",
       "period": "Q2",
       "year": 2024,
-      "publication_date": "2024-08-20",
+      "publication_date": "2024-08-11",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2024-08-20_10-45-37_Eng.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2024-08-08_16-13-28_Eng.xls"
     },
     {
       "section": "XBRL",
       "period": "Q2",
       "year": 2023,
-      "publication_date": "2023-08-20",
+      "publication_date": "2023-12-06",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2023-08-20_07-43-54_Eng.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2023-12-05_14-31-49_Eng.html"
     },
     {
       "section": "XBRL",
       "period": "Q2",
       "year": 2023,
-      "publication_date": "2023-08-20",
+      "publication_date": "2023-12-06",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2023-08-20_07-43-54_Eng.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2023-12-05_14-31-49_Eng.xls"
     },
     {
       "section": "XBRL",
       "period": "Q2",
       "year": 2022,
-      "publication_date": "2022-09-19",
+      "publication_date": "2022-09-15",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2022-09-19_14-53-35_Eng.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2022-09-14_15-05-54_Eng.html"
     },
     {
       "section": "XBRL",
       "period": "Q2",
       "year": 2022,
-      "publication_date": "2022-09-19",
+      "publication_date": "2022-09-15",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2022-09-19_14-53-35_Eng.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2022-09-14_15-05-54_Eng.xls"
     },
     {
       "section": "XBRL",
       "period": "Q1",
       "year": 2026,
-      "publication_date": "2026-05-21",
+      "publication_date": "2026-05-19",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2026-05-21_14-32-22_Eng.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2026-05-18_11-42-02_Eng.html"
     },
     {
       "section": "XBRL",
       "period": "Q1",
       "year": 2026,
-      "publication_date": "2026-05-21",
+      "publication_date": "2026-05-19",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2026-05-21_14-32-22_Eng.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2026-05-18_11-42-02_Eng.xls"
     },
     {
       "section": "XBRL",
       "period": "Q1",
       "year": 2025,
-      "publication_date": "2025-05-20",
+      "publication_date": "2025-05-19",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2025-05-20_10-41-26_Eng.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2025-05-19_11-47-07_Eng.html"
     },
     {
       "section": "XBRL",
       "period": "Q1",
       "year": 2025,
-      "publication_date": "2025-05-20",
+      "publication_date": "2025-05-19",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2025-05-20_10-41-26_Eng.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2025-05-19_11-47-07_Eng.xls"
     },
     {
       "section": "XBRL",
       "period": "Q1",
       "year": 2024,
-      "publication_date": "2024-05-26",
+      "publication_date": "2024-05-20",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2024-05-26_13-15-39_Eng.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2024-05-20_11-12-19_Eng.html"
     },
     {
       "section": "XBRL",
       "period": "Q1",
       "year": 2024,
-      "publication_date": "2024-05-26",
+      "publication_date": "2024-05-20",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2024-05-26_13-15-39_Eng.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2024-05-20_11-12-19_Eng.xls"
     },
     {
       "section": "XBRL",
       "period": "Q1",
       "year": 2023,
-      "publication_date": "2023-05-23",
+      "publication_date": "2023-12-06",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2023-05-23_13-13-01_Eng.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2023-12-05_14-31-21_Eng.html"
     },
     {
       "section": "XBRL",
       "period": "Q1",
       "year": 2023,
-      "publication_date": "2023-05-23",
+      "publication_date": "2023-12-06",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2023-05-23_13-13-01_Eng.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2023-12-05_14-31-21_Eng.xls"
     },
     {
       "section": "XBRL",
       "period": "Q1",
       "year": 2022,
-      "publication_date": "2022-06-13",
+      "publication_date": "2022-05-24",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2022-06-13_08-18-57_Eng.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2022-05-24_12-26-37_Eng.html"
     },
     {
       "section": "XBRL",
       "period": "Q1",
       "year": 2022,
-      "publication_date": "2022-06-13",
+      "publication_date": "2022-05-24",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2022-06-13_08-18-57_Eng.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2022-05-24_12-26-37_Eng.xls"
     },
     {
       "section": "Board Report",
       "period": "Board Report",
       "year": 2025,
-      "publication_date": "2026-03-10",
+      "publication_date": "2026-03-30",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2026-03-10_08-17-11_En.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2026-03-30_09-07-45_En.pdf"
     },
     {
       "section": "Board Report",
       "period": "Board Report",
       "year": 2024,
-      "publication_date": "2025-03-04",
+      "publication_date": "2025-03-31",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2025-03-04_09-23-11_En.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2025-03-31_21-09-17_En.pdf"
     },
     {
       "section": "Board Report",
       "period": "Board Report",
       "year": 2023,
-      "publication_date": "2024-03-11",
+      "publication_date": "2024-04-03",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2024-03-11_10-07-11_En.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2024-04-03_16-29-03_En.pdf"
     },
     {
       "section": "Board Report",
       "period": "Board Report",
       "year": 2022,
-      "publication_date": "2023-03-13",
+      "publication_date": "2023-05-17",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2023-03-13_15-28-20_En.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2023-05-16_17-48-00_En.pdf"
     }
   ],
   "foreign_ownership": {
     "total_foreign_ownership": {
       "maximum_limit_percent": 49.0,
-      "actual_percent": 0.74
+      "actual_percent": 5.24
     },
     "foreign_strategic_investors_ownership_percent": 0.0,
-    "last_updated": "2026-09-08"
+    "last_updated": "2026-09-09"
   },
   "substantial_shareholders": {
     "substantial_shareholders": [
       {
-        "trading_date": "2026-09-08",
-        "shareholder": "المملكة العربية السعودية",
-        "total_shares_held_trading_day": "81.484%",
-        "total_shares_held_prev_trading_day": "81.484%",
-        "total_shares_change": "0"
+        "trading_date": "2026-09-09",
+        "shareholder": "شركة اثراء القابضة",
+        "total_shares_held_trading_day": "7.743%",
+        "total_shares_held_prev_trading_day": "7.278%",
+        "total_shares_change": "0.465"
       }
     ],
     "shareholders_subject_to_lock_up": []
+  },
+  "financial_information": {
+    "balance_sheet": [
+      {
+        "period": "2025-12-31",
+        "metric": "Total Assets",
+        "value": 305043
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "Total Assets",
+        "value": 360369
+      },
+      {
+        "period": "2023-12-31",
+        "metric": "Total Assets",
+        "value": 441214
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "Total Liabilities",
+        "value": 21732
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "Total Liabilities",
+        "value": 16899
+      },
+      {
+        "period": "2023-12-31",
+        "metric": "Total Liabilities",
+        "value": 7203
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "Total Shareholders Equity (After Deducting the Minority Equity)",
+        "value": 283311
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "Total Shareholders Equity (After Deducting the Minority Equity)",
+        "value": 343469
+      },
+      {
+        "period": "2023-12-31",
+        "metric": "Total Shareholders Equity (After Deducting the Minority Equity)",
+        "value": 434011
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "Total Liabilities and Shareholders Equity",
+        "value": 305043
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "Total Liabilities and Shareholders Equity",
+        "value": 360369
+      },
+      {
+        "period": "2023-12-31",
+        "metric": "Total Liabilities and Shareholders Equity",
+        "value": 441214
+      }
+    ],
+    "statement_of_income": [
+      {
+        "period": "2025-12-31",
+        "metric": "Total Revenue (Sales/Operating)",
+        "value": -41946
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "Total Revenue (Sales/Operating)",
+        "value": -33348
+      },
+      {
+        "period": "2023-12-31",
+        "metric": "Total Revenue (Sales/Operating)",
+        "value": 15599
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "Net Profit (Loss) before Zakat and Tax",
+        "value": -53626
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "Net Profit (Loss) before Zakat and Tax",
+        "value": -45688
+      },
+      {
+        "period": "2023-12-31",
+        "metric": "Net Profit (Loss) before Zakat and Tax",
+        "value": 9379
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "Zakat and Income Tax",
+        "value": -6557
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "Zakat and Income Tax",
+        "value": -7800
+      },
+      {
+        "period": "2023-12-31",
+        "metric": "Zakat and Income Tax",
+        "value": -1677
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "Net Profit (Loss) Attributable to Shareholders of the Issuer",
+        "value": -60183
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "Net Profit (Loss) Attributable to Shareholders of the Issuer",
+        "value": -53488
+      },
+      {
+        "period": "2023-12-31",
+        "metric": "Net Profit (Loss) Attributable to Shareholders of the Issuer",
+        "value": 7702
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "Total Comprehensive Income Attributable to Shareholders of the Issuer",
+        "value": -60158
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "Total Comprehensive Income Attributable to Shareholders of the Issuer",
+        "value": -90542
+      },
+      {
+        "period": "2023-12-31",
+        "metric": "Total Comprehensive Income Attributable to Shareholders of the Issuer",
+        "value": 10190
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "Profit (Loss) per Share",
+        "value": -4.01
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "Profit (Loss) per Share",
+        "value": -3.57
+      },
+      {
+        "period": "2023-12-31",
+        "metric": "Profit (Loss) per Share",
+        "value": 0.51
+      }
+    ],
+    "cash_flows": [
+      {
+        "period": "2025-12-31",
+        "metric": "Net Cash From Operating Activities",
+        "value": -7484
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "Net Cash From Operating Activities",
+        "value": 5151
+      },
+      {
+        "period": "2023-12-31",
+        "metric": "Net Cash From Operating Activities",
+        "value": 894
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "Net Cash From Investing Activities",
+        "value": -8807
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "Net Cash From Investing Activities",
+        "value": -20041
+      },
+      {
+        "period": "2023-12-31",
+        "metric": "Net Cash From Investing Activities",
+        "value": -17
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "Net Cash From Financing Activities",
+        "value": -347
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "Net Cash From Financing Activities",
+        "value": -132
+      },
+      {
+        "period": "2023-12-31",
+        "metric": "Net Cash From Financing Activities",
+        "value": -15000
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "Cash and Cash Equivalents, Beginning of the Period",
+        "value": 24861
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "Cash and Cash Equivalents, Beginning of the Period",
+        "value": 39882
+      },
+      {
+        "period": "2023-12-31",
+        "metric": "Cash and Cash Equivalents, Beginning of the Period",
+        "value": 54005
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "Cash and Cash Equivalents, End of the Period",
+        "value": 8223
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "Cash and Cash Equivalents, End of the Period",
+        "value": 24861
+      },
+      {
+        "period": "2023-12-31",
+        "metric": "Cash and Cash Equivalents, End of the Period",
+        "value": 39882
+      }
+    ]
   },
   "balance_sheet": [
     {
       "period": "2022-12-31",
       "metric": "Current Assets",
-      "value": 476088000
+      "value": 54373
     },
     {
       "period": "2021-12-31",
       "metric": "Current Assets",
-      "value": 509465000
+      "value": 30922
     },
     {
       "period": "2020-12-31",
       "metric": "Current Assets",
-      "value": 340079000
+      "value": 39245
     },
     {
       "period": "2019-12-31",
       "metric": "Current Assets",
-      "value": 320122000
+      "value": 48704
     },
     {
       "period": "2022-12-31",
       "metric": "Inventory",
-      "value": 100528000
+      "value": null
     },
     {
       "period": "2021-12-31",
       "metric": "Inventory",
-      "value": 74703000
+      "value": null
     },
     {
       "period": "2020-12-31",
       "metric": "Inventory",
-      "value": 51999000
+      "value": null
     },
     {
       "period": "2019-12-31",
       "metric": "Inventory",
-      "value": 42607000
+      "value": null
     },
     {
       "period": "2022-12-31",
       "metric": "Investments",
-      "value": 380169000
+      "value": 390758
     },
     {
       "period": "2021-12-31",
       "metric": "Investments",
-      "value": 120793000
+      "value": 532428
     },
     {
       "period": "2020-12-31",
       "metric": "Investments",
-      "value": 95638000
+      "value": 479293
     },
     {
       "period": "2019-12-31",
       "metric": "Investments",
-      "value": 85161000
+      "value": 416259
     },
     {
       "period": "2022-12-31",
       "metric": "Fixed Assets",
-      "value": 1303266000
+      "value": 104
     },
     {
       "period": "2021-12-31",
       "metric": "Fixed Assets",
-      "value": 1244316000
+      "value": 56
     },
     {
       "period": "2020-12-31",
       "metric": "Fixed Assets",
-      "value": 1209460000
+      "value": 57
     },
     {
       "period": "2019-12-31",
       "metric": "Fixed Assets",
-      "value": 982014000
+      "value": 59
     },
     {
       "period": "2022-12-31",
       "metric": "Other Assets",
-      "value": 232873000
+      "value": null
     },
     {
       "period": "2021-12-31",
       "metric": "Other Assets",
-      "value": 213413000
+      "value": 72
     },
     {
       "period": "2020-12-31",
       "metric": "Other Assets",
-      "value": 217085000
+      "value": null
     },
     {
       "period": "2019-12-31",
       "metric": "Other Assets",
-      "value": 64222000
+      "value": null
     },
     {
       "period": "2022-12-31",
       "metric": "Total Assets",
-      "value": 2492924000
+      "value": 445235
     },
     {
       "period": "2021-12-31",
       "metric": "Total Assets",
-      "value": 2162690000
+      "value": 563478
     },
     {
       "period": "2020-12-31",
       "metric": "Total Assets",
-      "value": 1914261000
+      "value": 518595
     },
     {
       "period": "2019-12-31",
       "metric": "Total Assets",
-      "value": 1494126000
+      "value": 465022
     },
     {
       "period": "2022-12-31",
       "metric": "Current Liabilities",
-      "value": 331386000
+      "value": 6366
     },
     {
       "period": "2021-12-31",
       "metric": "Current Liabilities",
-      "value": 303828000
+      "value": 3262
     },
     {
       "period": "2020-12-31",
       "metric": "Current Liabilities",
-      "value": 243211000
+      "value": 9659
     },
     {
       "period": "2019-12-31",
       "metric": "Current Liabilities",
-      "value": 215571000
+      "value": 10518
     },
     {
       "period": "2022-12-31",
       "metric": "Non-Current Liabilities",
-      "value": 495391000
+      "value": 48
     },
     {
       "period": "2021-12-31",
       "metric": "Non-Current Liabilities",
-      "value": 578194000
+      "value": 681
     },
     {
       "period": "2020-12-31",
       "metric": "Non-Current Liabilities",
-      "value": 569956000
+      "value": 612
     },
     {
       "period": "2019-12-31",
       "metric": "Non-Current Liabilities",
-      "value": 232320000
+      "value": 542
     },
     {
       "period": "2022-12-31",
@@ -813,84 +1037,84 @@
     {
       "period": "2022-12-31",
       "metric": "Shareholders Equity",
-      "value": 1448916000
+      "value": 438821
     },
     {
       "period": "2021-12-31",
       "metric": "Shareholders Equity",
-      "value": 1113257000
+      "value": 559535
     },
     {
       "period": "2020-12-31",
       "metric": "Shareholders Equity",
-      "value": 990848000
+      "value": 508324
     },
     {
       "period": "2019-12-31",
       "metric": "Shareholders Equity",
-      "value": 1035065000
+      "value": 453962
     },
     {
       "period": "2022-12-31",
       "metric": "Total Liabilities and Shareholder Equity",
-      "value": 2492924000
+      "value": 445235
     },
     {
       "period": "2021-12-31",
       "metric": "Total Liabilities and Shareholder Equity",
-      "value": 2162690000
+      "value": 563478
     },
     {
       "period": "2020-12-31",
       "metric": "Total Liabilities and Shareholder Equity",
-      "value": 1914261000
+      "value": 518595
     },
     {
       "period": "2019-12-31",
       "metric": "Total Liabilities and Shareholder Equity",
-      "value": 1494126000
+      "value": 465022
     },
     {
       "period": "2022-12-31",
       "metric": "Minority Interests",
-      "value": 217231000
+      "value": null
     },
     {
       "period": "2021-12-31",
       "metric": "Minority Interests",
-      "value": 167411000
+      "value": null
     },
     {
       "period": "2020-12-31",
       "metric": "Minority Interests",
-      "value": 110246000
+      "value": null
     },
     {
       "period": "2019-12-31",
       "metric": "Minority Interests",
-      "value": 11170000
+      "value": null
     }
   ],
   "statement_of_income": [
     {
       "period": "2022-12-31",
       "metric": "Sales",
-      "value": 2006955000
+      "value": null
     },
     {
       "period": "2021-12-31",
       "metric": "Sales",
-      "value": 1346930000
+      "value": null
     },
     {
       "period": "2020-12-31",
       "metric": "Sales",
-      "value": 768109000
+      "value": null
     },
     {
       "period": "2019-12-31",
       "metric": "Sales",
-      "value": 1105696000
+      "value": null
     },
     {
       "period": "2022-12-31",
@@ -915,202 +1139,202 @@
     {
       "period": "2022-12-31",
       "metric": "Total Income",
-      "value": 2006955000
+      "value": null
     },
     {
       "period": "2021-12-31",
       "metric": "Total Income",
-      "value": 1346930000
+      "value": null
     },
     {
       "period": "2020-12-31",
       "metric": "Total Income",
-      "value": 768109000
+      "value": null
     },
     {
       "period": "2019-12-31",
       "metric": "Total Income",
-      "value": 1105696000
+      "value": null
     },
     {
       "period": "2022-12-31",
       "metric": "Other Revenues",
-      "value": 259418000
+      "value": 34726
     },
     {
       "period": "2021-12-31",
       "metric": "Other Revenues",
-      "value": 154828000
+      "value": 10018
     },
     {
       "period": "2020-12-31",
       "metric": "Other Revenues",
-      "value": 93982000
+      "value": 17129
     },
     {
       "period": "2019-12-31",
       "metric": "Other Revenues",
-      "value": 131089000
+      "value": 21451
     },
     {
       "period": "2022-12-31",
       "metric": "Total Revenues",
-      "value": 2266373000
+      "value": 34726
     },
     {
       "period": "2021-12-31",
       "metric": "Total Revenues",
-      "value": 1501758000
+      "value": 10018
     },
     {
       "period": "2020-12-31",
       "metric": "Total Revenues",
-      "value": 862091000
+      "value": 17129
     },
     {
       "period": "2019-12-31",
       "metric": "Total Revenues",
-      "value": 1236785000
+      "value": 21451
     },
     {
       "period": "2022-12-31",
       "metric": "Admin and Marketing Expenses",
-      "value": 83700000
+      "value": -5007
     },
     {
       "period": "2021-12-31",
       "metric": "Admin and Marketing Expenses",
-      "value": 59496000
+      "value": 2842
     },
     {
       "period": "2020-12-31",
       "metric": "Admin and Marketing Expenses",
-      "value": 46970000
+      "value": 2777
     },
     {
       "period": "2019-12-31",
       "metric": "Admin and Marketing Expenses",
-      "value": 36647000
+      "value": 3133
     },
     {
       "period": "2022-12-31",
       "metric": "Depreciation",
-      "value": 91618000
+      "value": -34
     },
     {
       "period": "2021-12-31",
       "metric": "Depreciation",
-      "value": 85521000
+      "value": 17
     },
     {
       "period": "2020-12-31",
       "metric": "Depreciation",
-      "value": 76208000
+      "value": 13
     },
     {
       "period": "2019-12-31",
       "metric": "Depreciation",
-      "value": 50266000
+      "value": 5
     },
     {
       "period": "2022-12-31",
       "metric": "Other Expenses",
-      "value": 938093000
+      "value": null
     },
     {
       "period": "2021-12-31",
       "metric": "Other Expenses",
-      "value": 587220000
+      "value": null
     },
     {
       "period": "2020-12-31",
       "metric": "Other Expenses",
-      "value": 366489000
+      "value": null
     },
     {
       "period": "2019-12-31",
       "metric": "Other Expenses",
-      "value": 483131000
+      "value": null
     },
     {
       "period": "2022-12-31",
       "metric": "Total Expenses",
-      "value": 1113411000
+      "value": -5041
     },
     {
       "period": "2021-12-31",
       "metric": "Total Expenses",
-      "value": 732237000
+      "value": 2859
     },
     {
       "period": "2020-12-31",
       "metric": "Total Expenses",
-      "value": 489667000
+      "value": 2790
     },
     {
       "period": "2019-12-31",
       "metric": "Total Expenses",
-      "value": 570044000
+      "value": 3138
     },
     {
       "period": "2022-12-31",
       "metric": "Net Income Before Zakat",
-      "value": 1152962000
+      "value": 29685
     },
     {
       "period": "2021-12-31",
       "metric": "Net Income Before Zakat",
-      "value": 769521000
+      "value": 7159
     },
     {
       "period": "2020-12-31",
       "metric": "Net Income Before Zakat",
-      "value": 372424000
+      "value": 14339
     },
     {
       "period": "2019-12-31",
       "metric": "Net Income Before Zakat",
-      "value": 666741000
+      "value": 18313
     },
     {
       "period": "2022-12-31",
       "metric": "Zakat",
-      "value": 548957000
+      "value": 1455
     },
     {
       "period": "2021-12-31",
       "metric": "Zakat",
-      "value": 357125000
+      "value": 567
     },
     {
       "period": "2020-12-31",
       "metric": "Zakat",
-      "value": 188661000
+      "value": 959
     },
     {
       "period": "2019-12-31",
       "metric": "Zakat",
-      "value": 336048000
+      "value": 1142
     },
     {
       "period": "2022-12-31",
       "metric": "Net Income",
-      "value": 604005000
+      "value": 28230
     },
     {
       "period": "2021-12-31",
       "metric": "Net Income",
-      "value": 412396000
+      "value": 6592
     },
     {
       "period": "2020-12-31",
       "metric": "Net Income",
-      "value": 183763000
+      "value": 13380
     },
     {
       "period": "2019-12-31",
       "metric": "Net Income",
-      "value": 330693000
+      "value": 17171
     },
     {
       "period": "2022-12-31",
@@ -1120,17 +1344,17 @@
     {
       "period": "2021-12-31",
       "metric": "Balance First Period",
-      "value": null
+      "value": 28977
     },
     {
       "period": "2020-12-31",
       "metric": "Balance First Period",
-      "value": null
+      "value": 31927
     },
     {
       "period": "2019-12-31",
       "metric": "Balance First Period",
-      "value": null
+      "value": 27945
     },
     {
       "period": "2022-12-31",
@@ -1140,17 +1364,17 @@
     {
       "period": "2021-12-31",
       "metric": "Reserves",
-      "value": null
+      "value": 659
     },
     {
       "period": "2020-12-31",
       "metric": "Reserves",
-      "value": null
+      "value": 1338
     },
     {
       "period": "2019-12-31",
       "metric": "Reserves",
-      "value": null
+      "value": 1717
     },
     {
       "period": "2022-12-31",
@@ -1180,12 +1404,12 @@
     {
       "period": "2021-12-31",
       "metric": "Other Distributions",
-      "value": null
+      "value": 11250
     },
     {
       "period": "2020-12-31",
       "metric": "Other Distributions",
-      "value": null
+      "value": 15000
     },
     {
       "period": "2019-12-31",
@@ -1200,279 +1424,279 @@
     {
       "period": "2021-12-31",
       "metric": "Balance End Period",
-      "value": null
+      "value": 25131
     },
     {
       "period": "2020-12-31",
       "metric": "Balance End Period",
-      "value": null
+      "value": 28977
     },
     {
       "period": "2019-12-31",
       "metric": "Balance End Period",
-      "value": null
+      "value": 31927
     }
   ],
   "cash_flows": [
     {
       "period": "2022-12-31",
       "metric": "Net Income",
-      "value": 1152962000
+      "value": 28230
     },
     {
       "period": "2021-12-31",
       "metric": "Net Income",
-      "value": 769521000
+      "value": 7159
     },
     {
       "period": "2020-12-31",
       "metric": "Net Income",
-      "value": 372424000
+      "value": 14339
     },
     {
       "period": "2019-12-31",
       "metric": "Net Income",
-      "value": 666741000
+      "value": 17171
     },
     {
       "period": "2022-12-31",
       "metric": "Depreciation",
-      "value": 91618000
+      "value": -34
     },
     {
       "period": "2021-12-31",
       "metric": "Depreciation",
-      "value": 85521000
+      "value": 17
     },
     {
       "period": "2020-12-31",
       "metric": "Depreciation",
-      "value": 76208000
+      "value": 13
     },
     {
       "period": "2019-12-31",
       "metric": "Depreciation",
-      "value": 50266000
+      "value": 5
     },
     {
       "period": "2022-12-31",
       "metric": "Accounts Receivable",
-      "value": -22906000
+      "value": -176
     },
     {
       "period": "2021-12-31",
       "metric": "Accounts Receivable",
-      "value": -55190000
+      "value": 8092
     },
     {
       "period": "2020-12-31",
       "metric": "Accounts Receivable",
-      "value": 22172000
+      "value": 3806
     },
     {
       "period": "2019-12-31",
       "metric": "Accounts Receivable",
-      "value": 727000
+      "value": 589
     },
     {
       "period": "2022-12-31",
       "metric": "Inventory",
-      "value": -26555000
+      "value": null
     },
     {
       "period": "2021-12-31",
       "metric": "Inventory",
-      "value": -23157000
+      "value": null
     },
     {
       "period": "2020-12-31",
       "metric": "Inventory",
-      "value": 15890000
+      "value": null
     },
     {
       "period": "2019-12-31",
       "metric": "Inventory",
-      "value": 1869000
+      "value": null
     },
     {
       "period": "2022-12-31",
       "metric": "Prepaid Expenses",
-      "value": 2973000
+      "value": null
     },
     {
       "period": "2021-12-31",
       "metric": "Prepaid Expenses",
-      "value": 1263000
+      "value": null
     },
     {
       "period": "2020-12-31",
       "metric": "Prepaid Expenses",
-      "value": -8593000
+      "value": null
     },
     {
       "period": "2019-12-31",
       "metric": "Prepaid Expenses",
-      "value": -9951000
+      "value": null
     },
     {
       "period": "2022-12-31",
       "metric": "Accounts Payable",
-      "value": 13745000
+      "value": 2116
     },
     {
       "period": "2021-12-31",
       "metric": "Accounts Payable",
-      "value": 35763000
+      "value": -6512
     },
     {
       "period": "2020-12-31",
       "metric": "Accounts Payable",
-      "value": -16250000
+      "value": -51
     },
     {
       "period": "2019-12-31",
       "metric": "Accounts Payable",
-      "value": 3430000
+      "value": 69
     },
     {
       "period": "2022-12-31",
       "metric": "Other Changes in Oper. Activity",
-      "value": -513685000
+      "value": -6547
     },
     {
       "period": "2021-12-31",
       "metric": "Other Changes in Oper. Activity",
-      "value": -291120000
+      "value": -456
     },
     {
       "period": "2020-12-31",
       "metric": "Other Changes in Oper. Activity",
-      "value": -176554000
+      "value": -2739
     },
     {
       "period": "2019-12-31",
       "metric": "Other Changes in Oper. Activity",
-      "value": -296553000
+      "value": 2223
     },
     {
       "period": "2022-12-31",
       "metric": "Purchases of Fixed Assets",
-      "value": -141161000
+      "value": -10
     },
     {
       "period": "2021-12-31",
       "metric": "Purchases of Fixed Assets",
-      "value": -119645000
+      "value": -15
     },
     {
       "period": "2020-12-31",
       "metric": "Purchases of Fixed Assets",
-      "value": -101030000
+      "value": -11
     },
     {
       "period": "2019-12-31",
       "metric": "Purchases of Fixed Assets",
-      "value": -122882000
+      "value": -54
     },
     {
       "period": "2022-12-31",
       "metric": "Other Changes in Investing Act.",
-      "value": -247848000
+      "value": null
     },
     {
       "period": "2021-12-31",
       "metric": "Other Changes in Investing Act.",
-      "value": -16096000
+      "value": 2733
     },
     {
       "period": "2020-12-31",
       "metric": "Other Changes in Investing Act.",
-      "value": 80131000
+      "value": -6010
     },
     {
       "period": "2019-12-31",
       "metric": "Other Changes in Investing Act.",
-      "value": -54262000
+      "value": -1086
     },
     {
       "period": "2022-12-31",
       "metric": "Increase in Debts",
-      "value": -135546000
+      "value": null
     },
     {
       "period": "2021-12-31",
       "metric": "Increase in Debts",
-      "value": -43493000
+      "value": null
     },
     {
       "period": "2020-12-31",
       "metric": "Increase in Debts",
-      "value": 34527000
+      "value": null
     },
     {
       "period": "2019-12-31",
       "metric": "Increase in Debts",
-      "value": 39058000
+      "value": null
     },
     {
       "period": "2022-12-31",
       "metric": "Other Changes in Financing Act.",
-      "value": -247129000
+      "value": null
     },
     {
       "period": "2021-12-31",
       "metric": "Other Changes in Financing Act.",
-      "value": -251020000
+      "value": -11250
     },
     {
       "period": "2020-12-31",
       "metric": "Other Changes in Financing Act.",
-      "value": -269399000
+      "value": -15000
     },
     {
       "period": "2019-12-31",
       "metric": "Other Changes in Financing Act.",
-      "value": -283889000
+      "value": -11250
     },
     {
       "period": "2022-12-31",
       "metric": "Cash at Begining of Period",
-      "value": 299579000
+      "value": 30426
     },
     {
       "period": "2021-12-31",
       "metric": "Cash at Begining of Period",
-      "value": 207232000
+      "value": 30657
     },
     {
       "period": "2020-12-31",
       "metric": "Cash at Begining of Period",
-      "value": 177706000
+      "value": 36310
     },
     {
       "period": "2019-12-31",
       "metric": "Cash at Begining of Period",
-      "value": 183152000
+      "value": 28643
     },
     {
       "period": "2022-12-31",
       "metric": "Cash at End of Period",
-      "value": 226047000
+      "value": 54005
     },
     {
       "period": "2021-12-31",
       "metric": "Cash at End of Period",
-      "value": 299579000
+      "value": 30425
     },
     {
       "period": "2020-12-31",
       "metric": "Cash at End of Period",
-      "value": 207232000
+      "value": 30657
     },
     {
       "period": "2019-12-31",
       "metric": "Cash at End of Period",
-      "value": 177706000
+      "value": 36310
     }
   ]
 }
