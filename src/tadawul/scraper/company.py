@@ -11,84 +11,185 @@ from tadawul.scraper.browser import TadawulBrowser
 
 
 class CompanyScraper:
+    SUPPORTED_LANGUAGES = {"en", "ar"}
+
     STATEMENT_TYPES = {
         0: "balance_sheet",
         1: "statement_of_income",
         2: "cash_flows",
     }
 
-    def __init__(self, headless: bool = False):
+    LABELS = {
+        "en": {
+            "main_market": "Main Market",
+            "common_shares": "Common Shares",
+            "company_overview": "Company overview",
+            "company_history": "Company History",
+            "company_bylaws": "Company Bylaws",
+            "equity_profile": "Equity Profile",
+            "foreign_ownership": "Foreign Ownership",
+            "substantial_shareholders": "Substantial Shareholders",
+            "senior_executives": "Senior Executives",
+            "balance_sheet": "Balance Sheet",
+            "statement_of_income": "Statement of Income",
+            "cash_flows": "Cash Flows",
+            "company_details": "Company Details",
+            "date_established": "Date Established",
+            "financial_year_end": "Financial Year End",
+            "listing_date": "Listing Date",
+            "external_auditors": "External Auditors",
+            "isin_code": "ISIN CODE",
+            "number_of_employees": "Number of Employees",
+            "contact_name": "Contact Name:",
+            "company_address": "Company Address:",
+            "contact_details": "Contact Details:",
+            "company_website": "Company Website:",
+            "add_to_watchlist": "Add To Watchlist",
+        },
+        "ar": {
+            "main_market": "السوق الرئيسية",
+            "common_shares": "أسهم عادية",
+            "company_overview": "نبذة عن نشاط الشركة",
+            "company_history": "نبذة عن تاريخ الشركة",
+            "company_bylaws": "النظام الأساسي للشركة",
+            "equity_profile": "ملف الأسهم",
+            "foreign_ownership": "الملكية الأجنبية",
+            "substantial_shareholders": "المساهمون الكبار",
+            "senior_executives": "كبار التنفيذيين",
+            "balance_sheet": "قائمة المركز المالي",
+            "statement_of_income": "قائمة الدخل",
+            "cash_flows": "قائمة التدفقات النقدية",
+            "company_details": "تفاصيل الشركة",
+            "date_established": "تاريخ التأسيس",
+            "financial_year_end": "نهاية السنة المالية",
+            "listing_date": "تاريخ الادراج",
+            "external_auditors": "مراجعي الحسابات",
+            "isin_code": "الرمز الدولي",
+            "number_of_employees": "عدد الموظفين",
+            "contact_name": "اسم ضابط الاتصال",
+            "company_address": "عنوان الشركة",
+            "contact_details": "بيانات الإتصال",
+            "company_website": "موقع الشركة:",
+            "add_to_watchlist": "إضافة إلى قائمة المتابعة",
+        },
+    }
+
+    def __init__(
+        self,
+        language: str = "en",
+        headless: bool = False,
+    ):
+        language = language.lower()
+
+        if language not in self.SUPPORTED_LANGUAGES:
+            raise ValueError(
+                f"Unsupported language '{language}'. "
+                f"Supported languages: "
+                f"{sorted(self.SUPPORTED_LANGUAGES)}"
+            )
+
+        self.language = language
         self.headless = headless
 
-    def scrape(self, company: dict) -> dict:
-        symbol = company["company"]
+    @property
+    def labels(self) -> dict[str, str]:
+        return self.LABELS[self.language]
 
-        url = urljoin(
-            TadawulBrowser.BASE_URL,
-            company["link"],
-        )
+    def scrape(self, symbol: str) -> dict:
+        with TadawulBrowser(
+            headless=self.headless
+        ) as browser:
 
-        result = {
-            "symbol": symbol,
-            "company_name": company["companyDisplay"],
-            "market": None,
-            "sector": None,
-            "shares_type": None,
-            "company_profile": {},
-            "subsidiaries": [],
-            "company_details": {},
-            "management_team": {
-                "board_of_directors": [],
-                "senior_executives": [],
-            },
-            "financial_statements_and_reports": [],
-            "foreign_ownership": None,
-            "substantial_shareholders": {
-                "substantial_shareholders": [],
-                "shareholders_subject_to_lock_up": [],
-            },
-            "financial_information": {
+            browser.set_locale(self.language)
+
+            company = browser.get_company(symbol)
+
+            company_url = company.get("link")
+
+            if not company_url:
+                raise RuntimeError(
+                    f"Link for company {symbol} was not found"
+                )
+
+            if company_url.startswith("/"):
+                company_url = (
+                    browser.BASE_URL + company_url
+                )
+
+            browser.open(
+                company_url,
+                wait_seconds=10,
+            )
+
+            driver = browser.driver
+
+            company_name = company.get(
+                "companyDisplay"
+            )
+
+            result = {
+                "symbol": symbol,
+                "company_name": company_name,
+                "language": self.language,
+                "market": None,
+                "sector": None,
+                "shares_type": None,
+                "company_profile": {},
+                "subsidiaries": [],
+                "company_details": {},
+                "management_team": {
+                    "board_of_directors": [],
+                    "senior_executives": [],
+                },
+                "financial_statements_and_reports": [],
+                "foreign_ownership": None,
+                "substantial_shareholders": {
+                    "substantial_shareholders": [],
+                    "shareholders_subject_to_lock_up": [],
+                },
+                "financial_information": {
+                    "balance_sheet": [],
+                    "statement_of_income": [],
+                    "cash_flows": [],
+                },
                 "balance_sheet": [],
                 "statement_of_income": [],
                 "cash_flows": [],
-            },
-            "balance_sheet": [],
-            "statement_of_income": [],
-            "cash_flows": [],
-        }
+            }
 
-        with TadawulBrowser(headless=self.headless) as driver:
-            driver.get(url)
-
-            market, sector = self._get_market_and_sector(driver)
+            market, sector = (
+                self._get_market_and_sector(driver)
+            )
 
             result["market"] = market
             result["sector"] = sector
 
             result["shares_type"] = self._get_exact_text(
                 driver,
-                "Common Shares",
+                self.labels["common_shares"],
             )
 
-            result["company_profile"] = self._get_company_profile(
-                driver
+            result["company_profile"] = (
+                self._get_company_profile(driver)
             )
 
-            result["subsidiaries"] = self._get_subsidiaries(driver)
-
-            result["company_details"] = self._get_company_details(
-                driver
+            result["subsidiaries"] = (
+                self._get_subsidiaries(driver)
             )
 
-            result["management_team"] = self._get_management_team(
-                driver
+            result["company_details"] = (
+                self._get_company_details(driver)
             )
-            
+
+            result["management_team"] = (
+                self._get_management_team(driver)
+            )
+
             result["financial_information"] = (
-                            self._get_financial_information(
-                                driver
-                            )
-                        )
+                self._get_financial_information(
+                    driver
+                )
+            )
 
             result["financial_statements_and_reports"] = (
                 self._get_financial_statements_and_reports(
@@ -111,9 +212,13 @@ class CompanyScraper:
                 )
             )
 
-            self._open_financial_information(driver)
+            self._open_financial_information(
+                driver
+            )
 
-            for statement_type, key in self.STATEMENT_TYPES.items():
+            for statement_type, key in (
+                self.STATEMENT_TYPES.items()
+            ):
                 records = self._get_statement(
                     driver,
                     symbol,
@@ -143,14 +248,26 @@ class CompanyScraper:
 
         return None
 
-    @staticmethod
     def _get_market_and_sector(
+        self,
         driver,
     ) -> tuple[str | None, str | None]:
-        market = driver.find_element(
+        market_elements = driver.find_elements(
             By.XPATH,
-            "//li[normalize-space()='Main Market']",
+            f"//li[normalize-space()="
+            f"'{self.labels['main_market']}']",
         )
+
+        visible_markets = [
+            element
+            for element in market_elements
+            if element.is_displayed()
+        ]
+
+        if not visible_markets:
+            return None, None
+
+        market = visible_markets[0]
 
         items = market.find_elements(
             By.XPATH,
@@ -168,12 +285,25 @@ class CompanyScraper:
 
         return None, None
 
-    @staticmethod
-    def _get_company_profile(driver) -> dict:
-        container = driver.find_element(
+    def _get_company_profile(
+        self,
+        driver,
+    ) -> dict:
+        containers = driver.find_elements(
             By.CSS_SELECTOR,
             "div.fundInfo",
         )
+
+        visible_containers = [
+            container
+            for container in containers
+            if container.is_displayed()
+        ]
+
+        if not visible_containers:
+            return {}
+
+        container = visible_containers[0]
 
         paragraphs = container.find_elements(
             By.TAG_NAME,
@@ -185,70 +315,92 @@ class CompanyScraper:
         for paragraph in paragraphs:
             text = paragraph.text.strip()
 
-            if text == "Company overview":
-                profile["company_overview"] = (
-                    paragraph.find_element(
-                        By.XPATH,
-                        "following-sibling::p[1]",
-                    ).text.strip()
+            if (
+                text
+                == self.labels["company_overview"]
+            ):
+                next_paragraphs = paragraph.find_elements(
+                    By.XPATH,
+                    "following-sibling::p[1]",
                 )
 
-            elif text == "Company History":
-                profile["company_history"] = (
-                    paragraph.find_element(
-                        By.XPATH,
-                        "following-sibling::p[1]",
-                    ).text.strip()
+                if next_paragraphs:
+                    profile["company_overview"] = (
+                        next_paragraphs[0]
+                        .text
+                        .strip()
+                    )
+
+            elif (
+                text
+                == self.labels["company_history"]
+            ):
+                next_paragraphs = paragraph.find_elements(
+                    By.XPATH,
+                    "following-sibling::p[1]",
                 )
 
-            elif text == "Company Bylaws":
-                link = paragraph.find_element(
+                if next_paragraphs:
+                    profile["company_history"] = (
+                        next_paragraphs[0]
+                        .text
+                        .strip()
+                    )
+
+            elif (
+                text
+                == self.labels["company_bylaws"]
+            ):
+                links = paragraph.find_elements(
                     By.XPATH,
                     "following-sibling::p[1]//a",
                 )
 
-                profile["company_bylaws_url"] = (
-                    link.get_attribute("href")
-                )
+                if links:
+                    profile["company_bylaws_url"] = (
+                        links[0]
+                        .get_attribute("href")
+                    )
 
-        equity = container.find_element(
+        equity_elements = container.find_elements(
             By.XPATH,
-            ".//p[strong[normalize-space()='Equity Profile']]"
-            "/following-sibling::div[contains(@class, 'inspectionBox')][1]",
+            ".//p[strong[normalize-space()="
+            f"'{self.labels['equity_profile']}'"
+            "]]"
+            "/following-sibling::div"
+            "[contains(@class, 'inspectionBox')][1]",
         )
 
-        for item in equity.find_elements(
-            By.CSS_SELECTOR,
-            "li",
-        ):
-            spans = item.find_elements(
-                By.TAG_NAME,
-                "span",
-            )
+        if equity_elements:
+            equity = equity_elements[0]
 
-            strongs = item.find_elements(
-                By.TAG_NAME,
-                "strong",
-            )
+            for item in equity.find_elements(
+                By.CSS_SELECTOR,
+                "li",
+            ):
+                spans = item.find_elements(
+                    By.TAG_NAME,
+                    "span",
+                )
 
-            if spans and strongs:
-                key = spans[0].text.strip()
-                value = strongs[0].text.strip()
+                strongs = item.find_elements(
+                    By.TAG_NAME,
+                    "strong",
+                )
 
-                if key:
-                    profile[key] = value
+                if spans and strongs:
+                    key = spans[0].text.strip()
+                    value = strongs[0].text.strip()
+
+                    if key:
+                        profile[key] = value
 
         return profile
 
     @staticmethod
-    def _get_subsidiaries(driver) -> list[dict]:
-        """
-        Extract subsidiaries from the Company Profile page.
-
-        Not every company has subsidiaries. If the subsidiary
-        table does not exist, return an empty list.
-        """
-
+    def _get_subsidiaries(
+        driver,
+    ) -> list[dict]:
         tables = driver.find_elements(
             By.XPATH,
             "//table[.//th[contains("
@@ -303,7 +455,9 @@ class CompanyScraper:
 
             try:
                 ownership_percentage = float(
-                    ownership.replace("%", "").strip()
+                    ownership
+                    .replace("%", "")
+                    .strip()
                 )
             except ValueError:
                 ownership_percentage = None
@@ -311,23 +465,37 @@ class CompanyScraper:
             subsidiaries.append(
                 {
                     "name": name,
-                    "ownership_percentage": ownership_percentage,
-                    "main_business": values[2] or None,
-                    "location": values[3] or None,
-                    "country": values[4] or None,
+                    "ownership_percentage": (
+                        ownership_percentage
+                    ),
+                    "main_business": (
+                        values[2] or None
+                    ),
+                    "location": (
+                        values[3] or None
+                    ),
+                    "country": (
+                        values[4] or None
+                    ),
                 }
             )
 
         return subsidiaries
 
-    @staticmethod
-    def _get_company_details(driver) -> dict:
-        container = driver.find_element(
+    def _get_company_details(
+        self,
+        driver,
+    ) -> dict:
+        containers = driver.find_elements(
             By.CSS_SELECTOR,
             "div.companyProfile",
         )
 
-        text = container.text.strip()
+        visible_containers = [
+            container
+            for container in containers
+            if container.is_displayed()
+        ]
 
         details = {
             "date_established": None,
@@ -339,6 +507,13 @@ class CompanyScraper:
             "investor_relations": {},
         }
 
+        if not visible_containers:
+            return details
+
+        container = visible_containers[0]
+
+        text = container.text.strip()
+
         lines = [
             line.strip()
             for line in text.splitlines()
@@ -346,65 +521,92 @@ class CompanyScraper:
         ]
 
         fields = {
-            "Date Established": "date_established",
-            "Financial Year End": "financial_year_end",
-            "Listing Date": "listing_date",
-            "External Auditors": "external_auditors",
-            "ISIN CODE": "isin_code",
-            "Number of Employees": "number_of_employees",
+            self.labels["date_established"]:
+                "date_established",
+            self.labels["financial_year_end"]:
+                "financial_year_end",
+            self.labels["listing_date"]:
+                "listing_date",
+            self.labels["external_auditors"]:
+                "external_auditors",
+            self.labels["isin_code"]:
+                "isin_code",
+            self.labels["number_of_employees"]:
+                "number_of_employees",
         }
 
         for index, line in enumerate(lines):
-            if line in fields and index + 1 < len(lines):
-                details[fields[line]] = lines[index + 1]
+            if (
+                line in fields
+                and index + 1 < len(lines)
+            ):
+                details[
+                    fields[line]
+                ] = lines[index + 1]
 
-        investor_relations = details["investor_relations"]
+        investor_relations = (
+            details["investor_relations"]
+        )
 
         for index, line in enumerate(lines):
             if (
-                line == "Contact Name:"
+                line
+                == self.labels["contact_name"]
                 and index + 1 < len(lines)
             ):
-                investor_relations["contact_name"] = (
-                    lines[index + 1]
-                )
+                investor_relations[
+                    "contact_name"
+                ] = lines[index + 1]
 
             elif (
-                line == "Company Address:"
+                line
+                == self.labels["company_address"]
                 and index + 1 < len(lines)
             ):
-                investor_relations["company_address"] = (
-                    lines[index + 1]
-                )
+                investor_relations[
+                    "company_address"
+                ] = lines[index + 1]
 
-            elif line == "Contact Details:":
+            elif (
+                line
+                == self.labels["contact_details"]
+            ):
                 contact_details = []
 
                 for value in lines[index + 1:]:
                     if value in {
-                        "Company Website:",
-                        "Add To Watchlist",
+                        self.labels[
+                            "company_website"
+                        ],
+                        self.labels[
+                            "add_to_watchlist"
+                        ],
                     }:
                         break
 
-                    contact_details.append(value)
+                    contact_details.append(
+                        value
+                    )
 
-                investor_relations["contact_details"] = (
-                    contact_details
-                )
+                investor_relations[
+                    "contact_details"
+                ] = contact_details
 
             elif (
-                line == "Company Website:"
+                line
+                == self.labels["company_website"]
                 and index + 1 < len(lines)
             ):
-                investor_relations["company_website"] = (
-                    lines[index + 1]
-                )
+                investor_relations[
+                    "company_website"
+                ] = lines[index + 1]
 
         return details
 
-    @staticmethod
-    def _get_management_team(driver) -> dict:
+    def _get_management_team(
+        self,
+        driver,
+    ) -> dict:
         sections = driver.find_elements(
             By.CSS_SELECTOR,
             "div.company_management_tab_dtl",
@@ -443,7 +645,8 @@ class CompanyScraper:
 
             people = group.find_elements(
                 By.XPATH,
-                "./p[strong[contains(@class, 'namePopup')]]",
+                "./p[strong[contains("
+                "@class, 'namePopup')]]",
             )
 
             for person in people:
@@ -454,7 +657,9 @@ class CompanyScraper:
 
                 name = (
                     name_element
-                    .get_attribute("textContent")
+                    .get_attribute(
+                        "textContent"
+                    )
                     .strip()
                 )
 
@@ -469,17 +674,26 @@ class CompanyScraper:
 
                 person_text = (
                     person
-                    .get_attribute("textContent")
+                    .get_attribute(
+                        "textContent"
+                    )
                     .strip()
                 )
 
                 if person_text.startswith(name):
-                    role = person_text[len(name):].strip()
+                    role = person_text[
+                        len(name):
+                    ].strip()
 
                     if role:
-                        person_data["role"] = role
+                        person_data[
+                            "role"
+                        ] = role
 
-                popup_id = name_element.get_attribute("id")
+                popup_id = (
+                    name_element
+                    .get_attribute("id")
+                )
 
                 if popup_id:
                     popup_id = popup_id.replace(
@@ -507,57 +721,108 @@ class CompanyScraper:
                         ):
                             key = (
                                 fields[index]
-                                .get_attribute("textContent")
+                                .get_attribute(
+                                    "textContent"
+                                )
                                 .strip()
                             )
 
                             value = (
                                 fields[index + 1]
-                                .get_attribute("textContent")
+                                .get_attribute(
+                                    "textContent"
+                                )
                                 .strip()
                             )
 
-                            if key == "BD Session Start":
-                                person_data[
-                                    "bd_session_start"
-                                ] = value
+                            self._set_management_field(
+                                person_data,
+                                key,
+                                value,
+                            )
 
-                            elif key == "BD Session End":
-                                person_data[
-                                    "bd_session_end"
-                                ] = value
-
-                            elif key == "Designation":
-                                person_data[
-                                    "designation"
-                                ] = value
-
-                            elif key == "Classification":
-                                person_data[
-                                    "classification"
-                                ] = value
-
-                if heading == "Senior Executives":
-                    senior_executives.append(person_data)
+                if (
+                    heading
+                    == self.labels[
+                        "senior_executives"
+                    ]
+                ):
+                    senior_executives.append(
+                        person_data
+                    )
                 else:
-                    board_of_directors.append(person_data)
+                    board_of_directors.append(
+                        person_data
+                    )
 
         return {
-            "board_of_directors": board_of_directors,
-            "senior_executives": senior_executives,
+            "board_of_directors": (
+                board_of_directors
+            ),
+            "senior_executives": (
+                senior_executives
+            ),
         }
 
-    @staticmethod
+    def _set_management_field(
+        self,
+        person_data: dict,
+        key: str,
+        value: str,
+    ) -> None:
+        field_map = {
+            "en": {
+                "BD Session Start":
+                    "bd_session_start",
+                "BD Session End":
+                    "bd_session_end",
+                "Designation":
+                    "designation",
+                "Classification":
+                    "classification",
+            },
+            "ar": {
+                "بداية دورة مجلس الإدارة":
+                    "bd_session_start",
+                "نهاية دورة مجلس الإدارة":
+                    "bd_session_end",
+                "التصنيف":
+                    "classification",
+                "التعيين":
+                    "designation",
+            },
+        }
+
+        output_key = field_map.get(
+            self.language,
+            {},
+        ).get(key)
+
+        if output_key:
+            person_data[output_key] = value
+
     def _get_financial_statements_and_reports(
+        self,
         driver,
         symbol: str,
     ) -> list[dict]:
         driver.get_log("performance")
 
-        tab = driver.find_element(
+        tabs = driver.find_elements(
             By.ID,
             "finacialStatementAndReports",
         )
+
+        visible_tabs = [
+            tab
+            for tab in tabs
+            if tab.is_displayed()
+        ]
+
+        if not visible_tabs:
+            return []
+
+        tab = visible_tabs[0]
 
         driver.execute_script(
             "arguments[0].click();",
@@ -567,29 +832,46 @@ class CompanyScraper:
         deadline = time.time() + 15
 
         while time.time() < deadline:
-            logs = driver.get_log("performance")
+            logs = driver.get_log(
+                "performance"
+            )
 
             for entry in logs:
                 message = json.loads(
                     entry["message"]
                 )["message"]
 
-                if message["method"] != "Network.responseReceived":
-                    continue
-
-                response = message["params"]["response"]
-                response_url = response["url"]
-
                 if (
-                    "NJstatementsTabData" not in response_url
-                    or "statementType=6" not in response_url
-                    or "reportType=0" not in response_url
-                    or "requestLocale=en" not in response_url
-                    or f"symbol={symbol}" not in response_url
+                    message["method"]
+                    != "Network.responseReceived"
                 ):
                     continue
 
-                request_id = message["params"]["requestId"]
+                response = message[
+                    "params"
+                ]["response"]
+
+                response_url = response["url"]
+
+                if (
+                    "NJstatementsTabData"
+                    not in response_url
+                    or "statementType=6"
+                    not in response_url
+                    or "reportType=0"
+                    not in response_url
+                    or (
+                        f"requestLocale={self.language}"
+                        not in response_url
+                    )
+                    or f"symbol={symbol}"
+                    not in response_url
+                ):
+                    continue
+
+                request_id = message[
+                    "params"
+                ]["requestId"]
 
                 try:
                     result = driver.execute_cdp_cmd(
@@ -599,8 +881,10 @@ class CompanyScraper:
                         },
                     )
 
-                    return CompanyScraper._parse_financial_reports(
-                        result["body"]
+                    return (
+                        self._parse_financial_reports(
+                            result["body"]
+                        )
                     )
 
                 except Exception:
@@ -638,9 +922,11 @@ class CompanyScraper:
             )
 
             if section_header:
-                current_section = section_header.get_text(
-                    " ",
-                    strip=True,
+                current_section = (
+                    section_header.get_text(
+                        " ",
+                        strip=True,
+                    )
                 )
 
                 current_years = []
@@ -665,13 +951,18 @@ class CompanyScraper:
                         year = int(value)
 
                         if year not in detected_years:
-                            detected_years.append(year)
+                            detected_years.append(
+                                year
+                            )
 
             if len(detected_years) >= 2:
                 current_years = detected_years
                 continue
 
-            if not current_section or not current_years:
+            if (
+                not current_section
+                or not current_years
+            ):
                 continue
 
             cells = row.find_all("td")
@@ -687,7 +978,9 @@ class CompanyScraper:
             if not period:
                 continue
 
-            for index, cell in enumerate(cells[1:]):
+            for index, cell in enumerate(
+                cells[1:]
+            ):
                 if index >= len(current_years):
                     break
 
@@ -698,9 +991,11 @@ class CompanyScraper:
                 date_element = cell.find("p")
 
                 if date_element:
-                    publication_date = date_element.get_text(
-                        " ",
-                        strip=True,
+                    publication_date = (
+                        date_element.get_text(
+                            " ",
+                            strip=True,
+                        )
                     )
 
                 links = cell.find_all(
@@ -716,12 +1011,19 @@ class CompanyScraper:
 
                     reports.append(
                         {
-                            "section": current_section,
+                            "section": (
+                                current_section
+                            ),
                             "period": period,
                             "year": year,
-                            "publication_date": publication_date,
-                            "file_type": CompanyScraper._get_file_type(
-                                href
+                            "publication_date": (
+                                publication_date
+                            ),
+                            "file_type": (
+                                CompanyScraper
+                                ._get_file_type(
+                                    href
+                                )
                             ),
                             "file_url": urljoin(
                                 TadawulBrowser.BASE_URL,
@@ -732,8 +1034,8 @@ class CompanyScraper:
 
         return reports
 
-    @staticmethod
     def _get_foreign_ownership(
+        self,
         driver,
         symbol: str,
     ) -> dict | None:
@@ -746,7 +1048,9 @@ class CompanyScraper:
             while time.time() < deadline:
                 elements = driver.find_elements(
                     By.XPATH,
-                    "//li[normalize-space()='Foreign Ownership']",
+                    "//li[normalize-space()="
+                    f"'{self.labels['foreign_ownership']}'"
+                    "]",
                 )
 
                 visible_elements = [
@@ -756,7 +1060,9 @@ class CompanyScraper:
                 ]
 
                 if visible_elements:
-                    foreign_ownership_tab = visible_elements[0]
+                    foreign_ownership_tab = (
+                        visible_elements[0]
+                    )
                     break
 
                 time.sleep(0.2)
@@ -784,39 +1090,53 @@ class CompanyScraper:
             deadline = time.time() + 15
 
             while time.time() < deadline:
-                logs = driver.get_log("performance")
+                logs = driver.get_log(
+                    "performance"
+                )
 
                 for entry in logs:
                     message = json.loads(
                         entry["message"]
                     )["message"]
 
-                    if message["method"] != "Network.responseReceived":
-                        continue
-
-                    response = message["params"]["response"]
-                    response_url = response["url"]
-
                     if (
-                        "NJforeginOwnerShip" not in response_url
-                        or f"symbol={symbol}" not in response_url
+                        message["method"]
+                        != "Network.responseReceived"
                     ):
                         continue
 
-                    request_id = message["params"]["requestId"]
+                    response = message[
+                        "params"
+                    ]["response"]
+
+                    response_url = response["url"]
+
+                    if (
+                        "NJforeginOwnerShip"
+                        not in response_url
+                        or f"symbol={symbol}"
+                        not in response_url
+                    ):
+                        continue
+
+                    request_id = message[
+                        "params"
+                    ]["requestId"]
 
                     try:
-                        result = driver.execute_cdp_cmd(
-                            "Network.getResponseBody",
-                            {
-                                "requestId": request_id,
-                            },
+                        result = (
+                            driver.execute_cdp_cmd(
+                                "Network.getResponseBody",
+                                {
+                                    "requestId": request_id,
+                                },
+                            )
                         )
 
-                        body = result["body"]
-
-                        return CompanyScraper._parse_foreign_ownership(
-                            body
+                        return (
+                            self._parse_foreign_ownership(
+                                result["body"]
+                            )
                         )
 
                     except Exception:
@@ -843,7 +1163,8 @@ class CompanyScraper:
                 "maximum_limit_percent": None,
                 "actual_percent": None,
             },
-            "foreign_strategic_investors_ownership_percent": None,
+            "foreign_strategic_investors_ownership_percent":
+                None,
             "last_updated": None,
         }
 
@@ -864,9 +1185,11 @@ class CompanyScraper:
             )
 
             if len(values) >= 2:
-                maximum_limit = values[0].get_text(
-                    " ",
-                    strip=True,
+                maximum_limit = (
+                    values[0].get_text(
+                        " ",
+                        strip=True,
+                    )
                 )
 
                 actual = values[1].get_text(
@@ -875,14 +1198,18 @@ class CompanyScraper:
                 )
 
                 try:
-                    result["total_foreign_ownership"][
+                    result[
+                        "total_foreign_ownership"
+                    ][
                         "maximum_limit_percent"
                     ] = float(maximum_limit)
                 except ValueError:
                     pass
 
                 try:
-                    result["total_foreign_ownership"][
+                    result[
+                        "total_foreign_ownership"
+                    ][
                         "actual_percent"
                     ] = float(actual)
                 except ValueError:
@@ -918,13 +1245,16 @@ class CompanyScraper:
 
             if ":" in text:
                 result["last_updated"] = (
-                    text.split(":", 1)[1].strip()
+                    text.split(
+                        ":",
+                        1,
+                    )[1].strip()
                 )
 
         return result
 
-    @staticmethod
     def _get_substantial_shareholders(
+        self,
         driver,
         symbol: str,
     ) -> dict:
@@ -937,7 +1267,9 @@ class CompanyScraper:
             while time.time() < deadline:
                 elements = driver.find_elements(
                     By.XPATH,
-                    "//li[normalize-space()='Substantial Shareholders']",
+                    "//li[normalize-space()="
+                    f"'{self.labels['substantial_shareholders']}'"
+                    "]",
                 )
 
                 visible_elements = [
@@ -980,39 +1312,55 @@ class CompanyScraper:
             deadline = time.time() + 15
 
             while time.time() < deadline:
-                logs = driver.get_log("performance")
+                logs = driver.get_log(
+                    "performance"
+                )
 
                 for entry in logs:
                     message = json.loads(
                         entry["message"]
                     )["message"]
 
-                    if message["method"] != "Network.responseReceived":
+                    if (
+                        message["method"]
+                        != "Network.responseReceived"
+                    ):
                         continue
 
-                    response = message["params"]["response"]
+                    response = message[
+                        "params"
+                    ]["response"]
+
                     response_url = response["url"]
 
                     if (
                         "NJhistoryOfMajorShareHolder"
                         not in response_url
-                        or f"symbol={symbol}" not in response_url
-                        or "history=0" not in response_url
+                        or f"symbol={symbol}"
+                        not in response_url
+                        or "history=0"
+                        not in response_url
                     ):
                         continue
 
-                    request_id = message["params"]["requestId"]
+                    request_id = message[
+                        "params"
+                    ]["requestId"]
 
                     try:
-                        result = driver.execute_cdp_cmd(
-                            "Network.getResponseBody",
-                            {
-                                "requestId": request_id,
-                            },
+                        result = (
+                            driver.execute_cdp_cmd(
+                                "Network.getResponseBody",
+                                {
+                                    "requestId": request_id,
+                                },
+                            )
                         )
 
-                        return CompanyScraper._parse_substantial_shareholders(
-                            result["body"]
+                        return (
+                            self._parse_substantial_shareholders(
+                                result["body"]
+                            )
                         )
 
                     except Exception:
@@ -1042,7 +1390,9 @@ class CompanyScraper:
             "shareholders_subject_to_lock_up": [],
         }
 
-        def parse_table(table_id: str) -> list[dict]:
+        def parse_table(
+            table_id: str,
+        ) -> list[dict]:
             table = soup.find(
                 "table",
                 id=table_id,
@@ -1051,7 +1401,9 @@ class CompanyScraper:
             if table is None:
                 return []
 
-            rows = table.select("tbody tr")
+            rows = table.select(
+                "tbody tr"
+            )
 
             shareholders = []
 
@@ -1063,7 +1415,8 @@ class CompanyScraper:
 
                 if (
                     len(cells) == 1
-                    or "no-records-found" in row.get(
+                    or "no-records-found"
+                    in row.get(
                         "class",
                         [],
                     )
@@ -1085,30 +1438,35 @@ class CompanyScraper:
                     {
                         "trading_date": values[0],
                         "shareholder": values[1],
-                        "total_shares_held_trading_day": (
-                            values[2]
-                        ),
-                        "total_shares_held_prev_trading_day": (
-                            values[3]
-                        ),
-                        "total_shares_change": values[4],
+                        "total_shares_held_trading_day":
+                            values[2],
+                        "total_shares_held_prev_trading_day":
+                            values[3],
+                        "total_shares_change":
+                            values[4],
                     }
                 )
 
             return shareholders
 
-        result["substantial_shareholders"] = parse_table(
+        result[
+            "substantial_shareholders"
+        ] = parse_table(
             "majorShareHoldersTable"
         )
 
-        result["shareholders_subject_to_lock_up"] = parse_table(
+        result[
+            "shareholders_subject_to_lock_up"
+        ] = parse_table(
             "majorShareHoldersTableLock"
         )
 
         return result
 
-    @staticmethod
-    def _open_financial_information(driver) -> None:
+    def _open_financial_information(
+        self,
+        driver,
+    ) -> None:
         deadline = time.time() + 15
         previous_periods = None
 
@@ -1125,14 +1483,17 @@ class CompanyScraper:
             ]
 
             if visible_elements:
-                previous_periods = visible_elements[0]
+                previous_periods = (
+                    visible_elements[0]
+                )
                 break
 
             time.sleep(0.2)
 
         if previous_periods is None:
             raise RuntimeError(
-                "Display Previous Periods button was not found."
+                "Display Previous Periods "
+                "button was not found."
             )
 
         driver.execute_script(
@@ -1168,14 +1529,17 @@ class CompanyScraper:
             ]
 
             if visible_elements:
-                financial_information = visible_elements[0]
+                financial_information = (
+                    visible_elements[0]
+                )
                 break
 
             time.sleep(0.2)
 
         if financial_information is None:
             raise RuntimeError(
-                "Financial Information tab was not found."
+                "Financial Information tab "
+                "was not found."
             )
 
         driver.execute_script(
@@ -1188,8 +1552,8 @@ class CompanyScraper:
             financial_information,
         )
 
-    @staticmethod
     def _get_financial_information(
+        self,
         driver,
     ) -> dict:
         section = driver.find_element(
@@ -1225,6 +1589,15 @@ class CompanyScraper:
         current_statement = None
         periods = []
 
+        statement_labels = {
+            self.labels["balance_sheet"]:
+                "balance_sheet",
+            self.labels["statement_of_income"]:
+                "statement_of_income",
+            self.labels["cash_flows"]:
+                "cash_flows",
+        }
+
         for row in rows:
             cells = row.find_elements(
                 By.CSS_SELECTOR,
@@ -1241,8 +1614,10 @@ class CompanyScraper:
 
             first_value = values[0]
 
-            if first_value == "Balance Sheet":
-                current_statement = "balance_sheet"
+            if first_value in statement_labels:
+                current_statement = (
+                    statement_labels[first_value]
+                )
 
                 periods = [
                     value
@@ -1251,34 +1626,14 @@ class CompanyScraper:
                 ]
 
                 continue
-
-            if first_value == "Statement Of Income":
-                current_statement = "statement_of_income"
-
-                periods = [
-                    value
-                    for value in values[1:]
-                    if value
-                ]
-
-                continue
-
-            if first_value == "Cash Flows":
-                current_statement = "cash_flows"
-
-                periods = [
-                    value
-                    for value in values[1:]
-                    if value
-                ]
-
-                continue
-
 
             if first_value in {
                 "All Figures in",
                 "All Currency In",
                 "Last Update Date",
+                "جميع الأرقام بال",
+                "العملة في",
+                "تاريخ آخر تحديث",
             }:
                 continue
 
@@ -1289,7 +1644,7 @@ class CompanyScraper:
 
             if not metric:
                 continue
-            
+
             for index, period in enumerate(
                 periods,
                 start=1,
@@ -1299,30 +1654,15 @@ class CompanyScraper:
 
                 value = values[index].strip()
 
-                if not value or value == "-":
-                    parsed_value = None
-
-                else:
-                    value_without_commas = value.replace(
-                        ",",
-                        "",
+                parsed_value = (
+                    self._parse_numeric_value(
+                        value
                     )
+                )
 
-                    try:
-                        parsed_value = int(
-                            value_without_commas
-                        )
-
-                    except ValueError:
-                        try:
-                            parsed_value = float(
-                                value_without_commas
-                            )
-
-                        except ValueError:
-                            parsed_value = value
-
-                result[current_statement].append(
+                result[
+                    current_statement
+                ].append(
                     {
                         "period": period,
                         "metric": metric,
@@ -1332,62 +1672,34 @@ class CompanyScraper:
 
         return result
 
-    @staticmethod
     def _get_statement(
+        self,
         driver,
         symbol: str,
         statement_type: int,
     ) -> list[dict]:
-        key = CompanyScraper.STATEMENT_TYPES[
+        key = self.STATEMENT_TYPES[
             statement_type
         ]
 
         driver.get_log("performance")
 
-        if statement_type == 0:
-            elements = driver.find_elements(
-                By.ID,
-                "balancesheet",
-            )
+        label = self.labels[key]
 
-        else:
-            elements = driver.find_elements(
-                By.XPATH,
-                "//*[self::a or self::li or self::button]"
-                "[contains("
-                "translate(normalize-space(.), "
-                "'ABCDEFGHIJKLMNOPQRSTUVWXYZ', "
-                "'abcdefghijklmnopqrstuvwxyz'), "
-                f"'{key.replace('_', ' ')}'"
-                ")]",
-            )
+        elements = driver.find_elements(
+            By.XPATH,
+            "//*[self::a or self::li or self::button]"
+            "[contains("
+            "normalize-space(.), "
+            f"'{label}'"
+            ")]",
+        )
 
         visible_elements = [
             element
             for element in elements
             if element.is_displayed()
         ]
-
-        if not visible_elements:
-            labels = {
-                0: "Balance Sheet",
-                1: "Statement of Income",
-                2: "Cash Flows",
-            }
-
-            label = labels[statement_type]
-
-            elements = driver.find_elements(
-                By.XPATH,
-                "//*[self::a or self::li or self::button]"
-                f"[contains(normalize-space(.), '{label}')]",
-            )
-
-            visible_elements = [
-                element
-                for element in elements
-                if element.is_displayed()
-            ]
 
         if not visible_elements:
             return []
@@ -1412,7 +1724,9 @@ class CompanyScraper:
         deadline = time.time() + 20
 
         while time.time() < deadline:
-            logs = driver.get_log("performance")
+            logs = driver.get_log(
+                "performance"
+            )
 
             for entry in logs:
                 try:
@@ -1429,37 +1743,62 @@ class CompanyScraper:
                 ):
                     continue
 
-                response = message["params"]["response"]
-                response_url = response.get("url", "")
+                response = message[
+                    "params"
+                ]["response"]
+
+                response_url = response.get(
+                    "url",
+                    "",
+                )
 
                 if (
-                    "NJstatementsTabData" not in response_url
-                    or f"statementType={statement_type}"
+                    "NJstatementsTabData"
                     not in response_url
-                    or "reportType=0" not in response_url
-                    or "requestLocale=en" not in response_url
-                    or f"symbol={symbol}" not in response_url
+                    or (
+                        f"statementType={statement_type}"
+                        not in response_url
+                    )
+                    or "reportType=0"
+                    not in response_url
+                    or (
+                        f"requestLocale={self.language}"
+                        not in response_url
+                    )
+                    or f"symbol={symbol}"
+                    not in response_url
                 ):
                     continue
 
                 if response.get("status") != 200:
                     continue
 
-                request_id = message["params"]["requestId"]
+                request_id = message[
+                    "params"
+                ]["requestId"]
 
                 try:
-                    result = driver.execute_cdp_cmd(
-                        "Network.getResponseBody",
-                        {"requestId": request_id},
+                    result = (
+                        driver.execute_cdp_cmd(
+                            "Network.getResponseBody",
+                            {
+                                "requestId": request_id,
+                            },
+                        )
                     )
 
-                    body = result.get("body", "")
+                    body = result.get(
+                        "body",
+                        "",
+                    )
 
                     if not body:
                         continue
 
-                    return CompanyScraper._parse_statement(
-                        body
+                    return (
+                        self._parse_statement(
+                            body
+                        )
                     )
 
                 except Exception:
@@ -1484,6 +1823,7 @@ class CompanyScraper:
             return []
 
         table = tables[0]
+
         rows = table.find_all("tr")
 
         if not rows:
@@ -1532,6 +1872,9 @@ class CompanyScraper:
                 "All Figures in",
                 "All Currency In",
                 "Last Update Date",
+                "جميع الأرقام بال",
+                "العملة في",
+                "تاريخ آخر تحديث",
             }:
                 continue
 
@@ -1543,25 +1886,16 @@ class CompanyScraper:
                     strip=True,
                 )
 
-                if value == "-":
-                    value = None
+                values.append(
+                    CompanyScraper
+                    ._parse_numeric_value(
+                        value
+                    )
+                )
 
-                elif value:
-                    value = value.replace(",", "")
-
-                    try:
-                        value = int(value)
-
-                    except ValueError:
-                        try:
-                            value = float(value)
-
-                        except ValueError:
-                            pass
-
-                values.append(value)
-
-            for index, value in enumerate(values):
+            for index, value in enumerate(
+                values
+            ):
                 if index >= len(periods):
                     break
 
@@ -1576,7 +1910,34 @@ class CompanyScraper:
         return records
 
     @staticmethod
-    def _get_file_type(url: str) -> str:
+    def _parse_numeric_value(
+        value: str,
+    ):
+        if not value or value == "-":
+            return None
+
+        value_without_commas = (
+            value.replace(",", "")
+        )
+
+        try:
+            return int(
+                value_without_commas
+            )
+
+        except ValueError:
+            try:
+                return float(
+                    value_without_commas
+                )
+
+            except ValueError:
+                return value
+
+    @staticmethod
+    def _get_file_type(
+        url: str,
+    ) -> str:
         url_lower = url.lower()
 
         if url_lower.endswith(".pdf"):

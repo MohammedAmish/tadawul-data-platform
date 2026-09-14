@@ -1,32 +1,24 @@
 import json
 
-from tadawul.discovery.ticker_loader import TickerLoader
 from tadawul.scraper.company import CompanyScraper
 
 
 def main():
-    symbol = "9634"
-
-    loader = TickerLoader(
-        "data/tickerData.json"
-    )
-
-    company = loader.get_by_symbol(symbol)
-
-    if company is None:
-        raise ValueError(
-            f"Company with symbol {symbol} was not found."
-        )
+    symbol = "2222"
+    language = "en"
 
     scraper = CompanyScraper(
-        headless=True
+        language=language,
+        headless=False,
     )
 
-    result = scraper.scrape(company)
+    result = scraper.scrape(symbol)
 
     company_name = result["company_name"]
 
-    output_path = f"data/{company_name}_{symbol}.json"
+    output_path = (
+        f"data/{company_name}_{symbol}_{language}.json"
+    )
 
     with open(
         output_path,
@@ -42,6 +34,7 @@ def main():
 
     print(f"Company: {company_name}")
     print(f"Symbol: {symbol}")
+    print(f"Language: {language}")
     print(f"Result saved to: {output_path}")
 
 
