@@ -1,146 +1,137 @@
 {
-  "symbol": "2222",
-  "company_name": "SAUDI ARAMCO",
+  "symbol": "2030",
+  "company_name": "المصافي",
   "language": "ar",
   "market": "السوق الرئيسية",
   "sector": "الطاقة",
   "shares_type": "أسهم عادية",
   "company_profile": {
-    "company_overview": "الغرض الرئيسي لأرامكو السعودية هو مزاولة جميع أوجه الأنشطة التي تتعلق بمجالات الطاقة، بما في ذلك صناعة المواد الهيدروكربونية والكيميائية وغيرها من الصناعات المرتبطة بها والمكملة لها أو أي نشاط آخر داخل المملكة أو خارجها وفقًا لنظامها الأساس.",
-    "company_history": "تأسست شركة الزيت العربية السعودية (أرامكو السعودية) في المملكة العربية السعودية بموجب المرسوم الملكي رقم (م/8) وتاريخ 04/04/1409هـ (الموافق 13/11/1988م) كشركة مملوكة بالكامل للدولة وبرأس مال بلغ ستين مليار (60,000,000,000) ريال سعودي مدفوع بالكامل. اكتسبت أرامكو السعودية صفة شركة مساهمة سعودية في 14/04/1439هـ (الموافق 01/01/2018م) بموجب النظام الأساس لأرامكو السعودية الموافق عليه بموجب قرار مجلس الوزراء رقم (180) بتاريخ 01/04/1439هـ (الموافق 19/12/2017م)، وتم قيدها بالسجل التجاري لمدينة الظهران بالرقم (2052101150) بتاريخ 11/07/1439هـ (الموافق 28/03/2018م) ومقرها الرئيسي بمدينة الظهران. يبلغ رأس المال الحالي لأرامكو السعودية تسعين مليار(90,000,000,000) ريـال سعودي مدفوع بالكامل، مقسم إلى مائتي واثنين وأربعين مليار (242,000,000,000) سهم عادي بدون قيمة إسمية.",
-    "company_bylaws_url": "https://www.saudiexchange.sa/Resources/pdfs/1541_ByLaw2.pdf",
-    "رأس المال المصرّح  (^)": "90,000,000,000",
-    "إجمالي عدد الأسهم المصدرة": "242,000,000,000",
-    "رأس المال المدفوع  (^)": "90,000,000,000",
-    "القيمة الإسمية/الوحدة": "-",
-    "القيمة المدفوعة/ الوحدة": "-"
+    "company_overview": "القيام بالأعمال البترولية بجميع فروعها وبكافة أوجه النشاط المتعلقة بها والقيام بتنفيذ مشروعات المياه وإصلاح الأراضي والمرافق والنقل وكافة الأعمال والمشروعات الصناعية والتجارية وأعمال الوكالات التجارية وتأسيس الشركات وشراء الأسهم،المشاركة مع الشركة العربية للصهاريج المحدودة .",
+    "company_history": "شركة مساهمة سعودية أنشأت وفقا لنظام الشركات في المملكة العربية السعودية بموجب مرسوم ملكي رقم 376 وتاريخ 14/ 8/ 1380هـ.",
+    "company_bylaws_url": "https://www.saudiexchange.sa/Resources/pdfs/383_ByLaw2.pdf",
+    "authorized_capital": "150,000,000",
+    "total_issued_shares": "15,000,000",
+    "paid_up_capital": "150,000,000",
+    "nominal_value_per_unit": "10",
+    "paid_value_per_unit": "10"
   },
-  "subsidiaries": [],
+  "subsidiaries": [
+    {
+      "name": "شركة كلين إنرجي",
+      "ownership_percentage": 100.0,
+      "main_business": "القيام بأنشطة تعدين المعادن وصناعة الكيماويات العضوية وإنتاج الغازات الأولية والهواء السائل والمضغوط",
+      "location": "مدينة بيش",
+      "country": "المملكة العربية السعودية"
+    },
+    {
+      "name": "شركة ريفينريز ستوراج سيرفسيز",
+      "ownership_percentage": 100.0,
+      "main_business": "القيام بأنشطة النقل بخطوط الأنابيب والنقل المائي البحري والساحلي للبضائع والتخزين",
+      "location": "مدينة بيش",
+      "country": "المملكة العربية السعودية"
+    }
+  ],
   "company_details": {
-    "date_established": "1988/11/13",
+    "date_established": "1960/06/14",
     "financial_year_end": "31/12",
-    "listing_date": "2019/12/11",
-    "external_auditors": "[شركة برايس ووتر هاوس كوبرز محاسبون قانونيون]",
-    "isin_code": "SA14TG012N13",
-    "number_of_employees": "75118",
+    "listing_date": "/",
+    "external_auditors": "[شركة ديلويت]",
+    "isin_code": "SA0007879147",
+    "number_of_employees": "-",
     "investor_relations": {
-      "contact_name": "علاقات المستثمرين",
-      "company_address": "ص. ب 5000 الظهران 31311",
+      "contact_name": "علاقات المستثمرين وشؤون المساهمين",
+      "company_address": "جده طريق المدينة المنورة - نادي الفنون - حي الرويس مركز ادهم",
       "contact_details": [
-        "الهاتف +966138720115",
-        "فاكس : +966138738190",
-        "بريد الالكتروني : -"
+        "الهاتف 0126517016",
+        "فاكس : 0126518050/30",
+        "بريد الالكتروني : ir@almasafi.com.sa"
       ],
-      "company_website": "www.saudiaramco.com"
+      "company_website": "www.almasafi.com.sa"
     }
   },
   "management_team": {
     "board_of_directors": [
       {
-        "name": "معالي الأستاذ/ ياسر بن عثمان الرميان",
-        "role": "غير تنفيذي",
-        "classification": null,
-        "bd_session_start": null,
-        "bd_session_end": null,
-        "designation": null
+        "name": "الدكتور/ عبيد سعد السبيعي",
+        "role": "مستقل",
+        "classification": "مستقل",
+        "bd_session_start": "2024-01-25",
+        "bd_session_end": "2028-01-24",
+        "designation": "رئيس مجلس الإدارة"
       },
       {
-        "name": "معالي الدكتور/ إبراهيم بن عبد العزيز العساف",
+        "name": "الأستاذ / عبد العزيز عبد المحسن البكر",
         "role": "نائب الرئيس - غير تنفيذي",
-        "classification": null,
-        "bd_session_start": null,
-        "bd_session_end": null,
-        "designation": null
+        "classification": "نائب الرئيس - غير تنفيذي",
+        "bd_session_start": "2024-01-25",
+        "bd_session_end": "2028-01-24",
+        "designation": "أعضاء مجلس الإدارة"
       },
       {
-        "name": "معالي الأستاذ/ محمد بن عبدالله الجدعان",
+        "name": "الدكتور/ عبد الرحمن احمد المفرح",
         "role": "غير تنفيذي",
-        "classification": null,
-        "bd_session_start": null,
-        "bd_session_end": null,
-        "designation": null
+        "classification": "غير تنفيذي",
+        "bd_session_start": "2024-01-25",
+        "bd_session_end": "2028-01-24",
+        "designation": "أعضاء مجلس الإدارة"
       },
       {
-        "name": "معالي الأستاذ/ فيصل بن فاضل الابراهيم",
-        "role": "غير تنفيذي",
-        "classification": null,
-        "bd_session_start": null,
-        "bd_session_end": null,
-        "designation": null
-      },
-      {
-        "name": "السيد/ آندرو إن. ليفيرس",
+        "name": "الأستاذ / مشعل عبد الرحمن العقلا",
         "role": "مستقل",
-        "classification": null,
-        "bd_session_start": null,
-        "bd_session_end": null,
-        "designation": null
+        "classification": "مستقل",
+        "bd_session_start": "2024-01-25",
+        "bd_session_end": "2028-01-24",
+        "designation": "أعضاء مجلس الإدارة"
       },
       {
-        "name": "السيدة/ لين لافرتي إلسنهانز",
+        "name": "الأستاذ / خالد احمد الحمدان",
         "role": "مستقل",
-        "classification": null,
-        "bd_session_start": null,
-        "bd_session_end": null,
-        "designation": null
+        "classification": "مستقل",
+        "bd_session_start": "2024-01-25",
+        "bd_session_end": "2028-01-24",
+        "designation": "أعضاء مجلس الإدارة"
       },
       {
-        "name": "الأستاذ/ أمين بن حسن الناصر",
+        "name": "الأستاذ / نائل سمير فايز",
+        "role": "مستقل",
+        "classification": "مستقل",
+        "bd_session_start": "2024-01-25",
+        "bd_session_end": "2028-01-24",
+        "designation": "أعضاء مجلس الإدارة"
+      },
+      {
+        "name": "الأستاذ / خالد محمد الحناكي",
+        "role": "مستقل",
+        "classification": "مستقل",
+        "bd_session_start": "2024-01-25",
+        "bd_session_end": "2028-01-24",
+        "designation": "أعضاء مجلس الإدارة"
+      },
+      {
+        "name": "المهندس / محمد اقبال رضوان دعبول",
         "role": "تنفيذي",
-        "classification": null,
-        "bd_session_start": null,
-        "bd_session_end": null,
-        "designation": null
-      },
-      {
-        "name": "السيد/ مارك أ. واينبرغر",
-        "role": "مستقل",
-        "classification": null,
-        "bd_session_start": null,
-        "bd_session_end": null,
-        "designation": null
-      },
-      {
-        "name": "السيد/ ستيوارت تي. غوليفر",
-        "role": "مستقل",
-        "classification": null,
-        "bd_session_start": null,
-        "bd_session_end": null,
-        "designation": null
-      },
-      {
-        "name": "السيد/ روبرت و. ددلي",
-        "role": "مستقل",
-        "classification": null,
-        "bd_session_start": null,
-        "bd_session_end": null,
-        "designation": null
-      },
-      {
-        "name": "الأستاذ/ خالد بن هاشم الدباغ",
-        "role": "غير تنفيذي",
-        "classification": null,
-        "bd_session_start": null,
-        "bd_session_end": null,
-        "designation": null
+        "classification": "تنفيذي",
+        "bd_session_start": "2025-06-01",
+        "bd_session_end": "2028-01-24",
+        "designation": "أعضاء مجلس الإدارة"
       }
     ],
     "senior_executives": [
       {
-        "name": "الأستاذ/ أمين بن حسن الناصر",
-        "role": "الرئيس التنفيذي",
-        "classification": null,
-        "bd_session_start": null,
-        "bd_session_end": null,
-        "designation": null
+        "name": "الأستاذ / يعقوب زهير الناظر",
+        "role": "المدير المالي",
+        "classification": "المدير المالي",
+        "bd_session_start": "2024-07-01",
+        "bd_session_end": "-",
+        "designation": "كبار التنفيذيين"
       },
       {
-        "name": "الأستاذ/ زياد بن ثامر المرشد",
-        "role": "المدير المالي",
-        "classification": null,
-        "bd_session_start": null,
-        "bd_session_end": null,
-        "designation": null
+        "name": "المهندس / محمد اقبال رضوان دعبول - العضو المنتدب",
+        "role": "-",
+        "classification": "-",
+        "bd_session_start": "2025-07-03",
+        "bd_session_end": "-",
+        "designation": "كبار التنفيذيين"
       }
     ]
   },
@@ -149,41 +140,41 @@
       "section": "القوائم المالية",
       "period": "سنوي",
       "year": 2025,
-      "publication_date": "2026-03-10",
+      "publication_date": "2026-04-02",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2026-03-10_08-18-44_Ar.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2026-04-02_10-41-49_Ar.pdf"
     },
     {
       "section": "القوائم المالية",
       "period": "سنوي",
       "year": 2024,
-      "publication_date": "2025-03-04",
+      "publication_date": "2025-04-10",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2025-03-04_09-24-08_Ar.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2025-04-09_20-31-45_Ar.pdf"
     },
     {
       "section": "القوائم المالية",
       "period": "سنوي",
       "year": 2023,
-      "publication_date": "2024-03-11",
+      "publication_date": "2024-03-21",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2024-03-11_10-08-23_Ar.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2024-03-21_12-13-04_Ar.pdf"
     },
     {
       "section": "القوائم المالية",
       "period": "سنوي",
       "year": 2022,
-      "publication_date": "2023-03-13",
+      "publication_date": "2023-03-31",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2023-03-13_07-38-47_Ar.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2023-03-31_01-37-53_Ar.pdf"
     },
     {
       "section": "القوائم المالية",
       "period": "الربع الثالث",
       "year": 2025,
-      "publication_date": "2025-11-04",
+      "publication_date": "2025-11-13",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2025-11-04_08-06-37_Ar.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2025-11-13_15-44-13_Ar.pdf"
     },
     {
       "section": "القوائم المالية",
@@ -191,103 +182,103 @@
       "year": 2024,
       "publication_date": "2024-11-05",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2024-11-05_08-59-01_Ar.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2024-11-05_09-34-45_Ar.pdf"
     },
     {
       "section": "القوائم المالية",
       "period": "الربع الثالث",
       "year": 2023,
-      "publication_date": "2023-11-07",
+      "publication_date": "2023-11-08",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2023-11-07_09-31-37_Ar.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2023-11-07_16-20-26_Ar.pdf"
     },
     {
       "section": "القوائم المالية",
       "period": "الربع الثالث",
       "year": 2022,
-      "publication_date": "2022-11-01",
+      "publication_date": "2022-12-08",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2022-11-01_08-32-19_Ar.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2022-12-08_15-11-06_Ar.pdf"
     },
     {
       "section": "القوائم المالية",
       "period": "الربع الثاني",
       "year": 2026,
-      "publication_date": "2026-08-04",
+      "publication_date": "2026-08-18",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2026-08-04_07-43-39_Ar.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2026-08-18_13-15-09_Ar.pdf"
     },
     {
       "section": "القوائم المالية",
       "period": "الربع الثاني",
       "year": 2025,
-      "publication_date": "2025-08-05",
+      "publication_date": "2025-08-18",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2025-08-05_08-48-45_Ar.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2025-08-17_16-52-17_Ar.pdf"
     },
     {
       "section": "القوائم المالية",
       "period": "الربع الثاني",
       "year": 2024,
-      "publication_date": "2024-08-06",
+      "publication_date": "2024-08-08",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2024-08-06_08-31-31_Ar.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2024-08-08_11-52-07_Ar.pdf"
     },
     {
       "section": "القوائم المالية",
       "period": "الربع الثاني",
       "year": 2023,
-      "publication_date": "2023-08-07",
+      "publication_date": "2023-09-13",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2023-08-07_11-35-12_Ar.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2023-09-13_15-06-17_Ar.pdf"
     },
     {
       "section": "القوائم المالية",
       "period": "الربع الثاني",
       "year": 2022,
-      "publication_date": "2022-08-15",
+      "publication_date": "2022-08-25",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2022-08-15_08-23-41_Ar.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2022-08-25_15-11-13_Ar.pdf"
     },
     {
       "section": "القوائم المالية",
       "period": "الربع الأول",
       "year": 2026,
-      "publication_date": "2026-05-11",
+      "publication_date": "2026-05-18",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2026-05-11_07-12-04_Ar.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2026-05-18_07-28-12_Ar.pdf"
     },
     {
       "section": "القوائم المالية",
       "period": "الربع الأول",
       "year": 2025,
-      "publication_date": "2025-05-12",
+      "publication_date": "2025-05-19",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2025-05-12_08-06-40_Ar.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2025-05-18_16-51-12_Ar.pdf"
     },
     {
       "section": "القوائم المالية",
       "period": "الربع الأول",
       "year": 2024,
-      "publication_date": "2024-05-07",
+      "publication_date": "2024-05-15",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2024-05-07_10-34-11_Ar.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2024-05-15_13-38-19_Ar.pdf"
     },
     {
       "section": "القوائم المالية",
       "period": "الربع الأول",
       "year": 2023,
-      "publication_date": "2023-05-09",
+      "publication_date": "2023-05-23",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2023-05-09_11-51-19_Ar.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2023-05-23_15-37-25_Ar.pdf"
     },
     {
       "section": "القوائم المالية",
       "period": "الربع الأول",
       "year": 2022,
-      "publication_date": "2022-05-16",
+      "publication_date": "2022-05-24",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2022-05-16_07-51-23_Ar.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2022-05-23_16-29-57_Ar.pdf"
     },
     {
       "section": "لغة التقارير المرنة",
@@ -295,7 +286,7 @@
       "year": 2025,
       "publication_date": "2026-04-02",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2026-04-02_10-31-16_ARB.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2026-04-02_15-03-07_ARB.html"
     },
     {
       "section": "لغة التقارير المرنة",
@@ -303,328 +294,402 @@
       "year": 2025,
       "publication_date": "2026-04-02",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2026-04-02_10-31-16_ARB.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2026-04-02_15-03-07_ARB.xls"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "سنوي",
       "year": 2024,
-      "publication_date": "2025-04-13",
+      "publication_date": "2025-04-10",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2025-04-13_08-43-03_ARB.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2025-04-10_00-41-30_ARB.html"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "سنوي",
       "year": 2024,
-      "publication_date": "2025-04-13",
+      "publication_date": "2025-04-10",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2025-04-13_08-43-03_ARB.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2025-04-10_00-41-30_ARB.xls"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "سنوي",
       "year": 2023,
-      "publication_date": "2024-04-22",
+      "publication_date": "2024-03-24",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2024-04-22_08-18-03_ARB.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2024-03-24_16-07-44_ARB.html"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "سنوي",
       "year": 2023,
-      "publication_date": "2024-04-22",
+      "publication_date": "2024-03-24",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2024-04-22_08-18-03_ARB.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2024-03-24_16-07-44_ARB.xls"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "سنوي",
       "year": 2022,
-      "publication_date": "2023-04-03",
+      "publication_date": "2023-12-06",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2023-04-03_09-12-15_ARB.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2023-12-05_14-30-57_ARB.html"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "سنوي",
       "year": 2022,
-      "publication_date": "2023-04-03",
+      "publication_date": "2023-12-06",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2023-04-03_09-12-15_ARB.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2023-12-05_14-30-57_ARB.xls"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "الربع الثالث",
       "year": 2025,
-      "publication_date": "2025-11-18",
+      "publication_date": "2025-11-16",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2025-11-18_08-33-25_ARB.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2025-11-14_20-03-12_ARB.html"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "الربع الثالث",
       "year": 2025,
-      "publication_date": "2025-11-18",
+      "publication_date": "2025-11-16",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2025-11-18_08-33-25_ARB.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2025-11-14_20-03-12_ARB.xls"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "الربع الثالث",
       "year": 2024,
-      "publication_date": "2024-11-25",
+      "publication_date": "2024-11-05",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2024-11-25_07-30-58_ARB.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2024-11-05_12-58-51_ARB.html"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "الربع الثالث",
       "year": 2024,
-      "publication_date": "2024-11-25",
+      "publication_date": "2024-11-05",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2024-11-25_07-30-58_ARB.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2024-11-05_12-58-51_ARB.xls"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "الربع الثالث",
       "year": 2023,
-      "publication_date": "2023-12-03",
+      "publication_date": "2023-12-06",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2023-12-03_08-07-48_ARB.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2023-12-05_14-32-16_ARB.html"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "الربع الثالث",
       "year": 2023,
-      "publication_date": "2023-12-03",
+      "publication_date": "2023-12-06",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2023-12-03_08-07-48_ARB.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2023-12-05_14-32-16_ARB.xls"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "الربع الثالث",
       "year": 2022,
-      "publication_date": "2022-11-24",
+      "publication_date": "2023-12-05",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2022-11-24_12-22-19_ARB.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2023-12-05_14-30-29_ARB.html"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "الربع الثالث",
       "year": 2022,
-      "publication_date": "2022-11-24",
+      "publication_date": "2023-12-05",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2022-11-24_12-22-19_ARB.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2023-12-05_14-30-29_ARB.xls"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "الربع الثاني",
       "year": 2026,
-      "publication_date": "2026-08-18",
+      "publication_date": "2026-08-19",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2026-08-18_08-33-41_ARB.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2026-08-18_18-50-10_ARB.html"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "الربع الثاني",
       "year": 2026,
-      "publication_date": "2026-08-18",
+      "publication_date": "2026-08-19",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2026-08-18_08-33-41_ARB.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2026-08-18_18-50-10_ARB.xls"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "الربع الثاني",
       "year": 2025,
-      "publication_date": "2025-08-18",
+      "publication_date": "2025-08-17",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2025-08-18_10-45-23_ARB.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2025-08-17_11-54-31_ARB.html"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "الربع الثاني",
       "year": 2025,
-      "publication_date": "2025-08-18",
+      "publication_date": "2025-08-17",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2025-08-18_10-45-23_ARB.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2025-08-17_11-54-31_ARB.xls"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "الربع الثاني",
       "year": 2024,
-      "publication_date": "2024-08-20",
+      "publication_date": "2024-08-11",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2024-08-20_10-45-37_ARB.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2024-08-08_16-13-28_ARB.html"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "الربع الثاني",
       "year": 2024,
-      "publication_date": "2024-08-20",
+      "publication_date": "2024-08-11",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2024-08-20_10-45-37_ARB.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2024-08-08_16-13-28_ARB.xls"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "الربع الثاني",
       "year": 2023,
-      "publication_date": "2023-08-20",
+      "publication_date": "2023-12-06",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2023-08-20_07-43-54_ARB.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2023-12-05_14-31-49_ARB.html"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "الربع الثاني",
       "year": 2023,
-      "publication_date": "2023-08-20",
+      "publication_date": "2023-12-06",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2023-08-20_07-43-54_ARB.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2023-12-05_14-31-49_ARB.xls"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "الربع الثاني",
       "year": 2022,
-      "publication_date": "2022-09-19",
+      "publication_date": "2022-09-15",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2022-09-19_14-53-35_ARB.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2022-09-14_15-05-54_ARB.html"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "الربع الثاني",
       "year": 2022,
-      "publication_date": "2022-09-19",
+      "publication_date": "2022-09-15",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2022-09-19_14-53-35_ARB.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2022-09-14_15-05-54_ARB.xls"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "الربع الأول",
       "year": 2026,
-      "publication_date": "2026-05-21",
+      "publication_date": "2026-05-19",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2026-05-21_14-32-22_ARB.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2026-05-18_11-42-02_ARB.html"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "الربع الأول",
       "year": 2026,
-      "publication_date": "2026-05-21",
+      "publication_date": "2026-05-19",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2026-05-21_14-32-22_ARB.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2026-05-18_11-42-02_ARB.xls"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "الربع الأول",
       "year": 2025,
-      "publication_date": "2025-05-20",
+      "publication_date": "2025-05-19",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2025-05-20_10-41-26_ARB.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2025-05-19_11-47-07_ARB.html"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "الربع الأول",
       "year": 2025,
-      "publication_date": "2025-05-20",
+      "publication_date": "2025-05-19",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2025-05-20_10-41-26_ARB.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2025-05-19_11-47-07_ARB.xls"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "الربع الأول",
       "year": 2024,
-      "publication_date": "2024-05-26",
+      "publication_date": "2024-05-20",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2024-05-26_13-15-39_ARB.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2024-05-20_11-12-19_ARB.html"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "الربع الأول",
       "year": 2024,
-      "publication_date": "2024-05-26",
+      "publication_date": "2024-05-20",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2024-05-26_13-15-39_ARB.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2024-05-20_11-12-19_ARB.xls"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "الربع الأول",
       "year": 2023,
-      "publication_date": "2023-05-23",
+      "publication_date": "2023-12-06",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2023-05-23_13-13-01_ARB.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2023-12-05_14-31-21_ARB.html"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "الربع الأول",
       "year": 2023,
-      "publication_date": "2023-05-23",
+      "publication_date": "2023-12-06",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2023-05-23_13-13-01_ARB.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2023-12-05_14-31-21_ARB.xls"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "الربع الأول",
       "year": 2022,
-      "publication_date": "2022-06-13",
+      "publication_date": "2022-05-24",
       "file_type": "html",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2022-06-13_08-18-57_ARB.html"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2022-05-24_12-26-37_ARB.html"
     },
     {
       "section": "لغة التقارير المرنة",
       "period": "الربع الأول",
       "year": 2022,
-      "publication_date": "2022-06-13",
+      "publication_date": "2022-05-24",
       "file_type": "xls",
-      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/1541_2222_2022-06-13_08-18-57_ARB.xls"
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/383_2030_2022-05-24_12-26-37_ARB.xls"
     },
     {
       "section": "تقرير مجلس الإدارة",
       "period": "تقرير مجلس الإدارة",
       "year": 2025,
-      "publication_date": "2026-03-10",
+      "publication_date": "2026-03-30",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2026-03-10_08-17-11_Ar.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2026-03-30_09-07-45_Ar.pdf"
     },
     {
       "section": "تقرير مجلس الإدارة",
       "period": "تقرير مجلس الإدارة",
       "year": 2024,
-      "publication_date": "2025-03-04",
+      "publication_date": "2025-03-31",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2025-03-04_09-23-11_Ar.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2025-03-31_21-09-17_Ar.pdf"
     },
     {
       "section": "تقرير مجلس الإدارة",
       "period": "تقرير مجلس الإدارة",
       "year": 2023,
-      "publication_date": "2024-03-11",
+      "publication_date": "2024-04-03",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2024-03-11_10-07-11_Ar.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2024-04-03_16-29-03_Ar.pdf"
     },
     {
       "section": "تقرير مجلس الإدارة",
       "period": "تقرير مجلس الإدارة",
       "year": 2022,
-      "publication_date": "2023-03-13",
+      "publication_date": "2023-05-17",
       "file_type": "pdf",
-      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2023-03-13_15-28-20_Ar.pdf"
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2023-05-16_17-48-00_Ar.pdf"
+    }
+  ],
+  "board_of_directors_shareholding": [
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "عبيد سعد عبيد الشماسي السبيعي",
+      "designation": "رئيس مجلس الإدارة",
+      "total_shares_held_trading_day": "0.0006667%",
+      "total_shares_held_prev_trading_day": "0.0006667%",
+      "total_shares_change": "0"
+    },
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "نائل سمير محمدكامل فايز",
+      "designation": "أعضاء مجلس الإدارة",
+      "total_shares_held_trading_day": "0.0000333%",
+      "total_shares_held_prev_trading_day": "0.0000333%",
+      "total_shares_change": "0"
+    },
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "خالد احمد عبدالعزيز الحمدان",
+      "designation": "أعضاء مجلس الإدارة",
+      "total_shares_held_trading_day": "0.0000333%",
+      "total_shares_held_prev_trading_day": "0.0000333%",
+      "total_shares_change": "0"
+    },
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "خالد محمد علي الحناكي",
+      "designation": "أعضاء مجلس الإدارة",
+      "total_shares_held_trading_day": "0.0000333%",
+      "total_shares_held_prev_trading_day": "0.0000333%",
+      "total_shares_change": "0"
+    },
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "محمد اقبال رضوان ابراهيم دعبول",
+      "designation": "كبار التنفيذيين",
+      "total_shares_held_trading_day": "0.0018000%",
+      "total_shares_held_prev_trading_day": "0.0018000%",
+      "total_shares_change": "0"
+    },
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "عبدالرحمن احمد سعد المفرح",
+      "designation": "أعضاء مجلس الإدارة",
+      "total_shares_held_trading_day": "0.0000067%",
+      "total_shares_held_prev_trading_day": "0.0000067%",
+      "total_shares_change": "0"
+    },
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "مشعل عبدالرحمن بن عبدالله العقلا",
+      "designation": "أعضاء مجلس الإدارة",
+      "total_shares_held_trading_day": "0.0003333%",
+      "total_shares_held_prev_trading_day": "0.0003333%",
+      "total_shares_change": "0"
+    },
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "محمد اقبال رضوان ابراهيم دعبول",
+      "designation": "أعضاء مجلس الإدارة",
+      "total_shares_held_trading_day": "0.0018000%",
+      "total_shares_held_prev_trading_day": "0.0018000%",
+      "total_shares_change": "0"
+    },
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "عبدالعزيز عبدالمحسن عبدالعزيز البكر",
+      "designation": "أعضاء مجلس الإدارة",
+      "total_shares_held_trading_day": "0.0007000%",
+      "total_shares_held_prev_trading_day": "0.0007000%",
+      "total_shares_change": "0"
     }
   ],
   "foreign_ownership": {
     "total_foreign_ownership": {
       "maximum_limit_percent": 49.0,
-      "actual_percent": 0.74
+      "actual_percent": 5.69
     },
     "foreign_strategic_investors_ownership_percent": 0.0,
-    "last_updated": "2026-09-13"
+    "last_updated": "2026-09-14"
   },
   "substantial_shareholders": {
     "substantial_shareholders": [
       {
-        "trading_date": "2026-09-13",
-        "shareholder": "المملكة العربية السعودية",
-        "total_shares_held_trading_day": "81.484%",
-        "total_shares_held_prev_trading_day": "81.484%",
+        "trading_date": "2026-09-14",
+        "shareholder": "شركة اثراء القابضة",
+        "total_shares_held_trading_day": "7.743%",
+        "total_shares_held_prev_trading_day": "7.743%",
         "total_shares_change": "0"
       }
     ],
@@ -635,231 +700,231 @@
       {
         "period": "2025-12-31",
         "metric": "إجمالي الموجودات",
-        "value": 2551964000
+        "value": 305043
       },
       {
         "period": "2024-12-31",
         "metric": "إجمالي الموجودات",
-        "value": 2423630000
+        "value": 360369
       },
       {
         "period": "2023-12-31",
         "metric": "إجمالي الموجودات",
-        "value": 2477940000
+        "value": 441214
       },
       {
         "period": "2025-12-31",
         "metric": "إجمالي المطلوبات",
-        "value": 830220000
+        "value": 21732
       },
       {
         "period": "2024-12-31",
         "metric": "إجمالي المطلوبات",
-        "value": 772275000
+        "value": 16899
       },
       {
         "period": "2023-12-31",
         "metric": "إجمالي المطلوبات",
-        "value": 740848000
+        "value": 7203
       },
       {
         "period": "2025-12-31",
         "metric": "إجمالي حقوق الملكية (بعد استبعاد الحصص غير المسيطرة)",
-        "value": 1491996000
+        "value": 283311
       },
       {
         "period": "2024-12-31",
         "metric": "إجمالي حقوق الملكية (بعد استبعاد الحصص غير المسيطرة)",
-        "value": 1458229000
+        "value": 343469
       },
       {
         "period": "2023-12-31",
         "metric": "إجمالي حقوق الملكية (بعد استبعاد الحصص غير المسيطرة)",
-        "value": 1534607000
+        "value": 434011
       },
       {
         "period": "2025-12-31",
         "metric": "إجمالي المطلوبات وحقوق المساهمين",
-        "value": 2551964000
+        "value": 305043
       },
       {
         "period": "2024-12-31",
         "metric": "إجمالي المطلوبات وحقوق المساهمين",
-        "value": 2423630000
+        "value": 360369
       },
       {
         "period": "2023-12-31",
         "metric": "إجمالي المطلوبات وحقوق المساهمين",
-        "value": 2477940000
+        "value": 441214
       }
     ],
     "statement_of_income": [
       {
         "period": "2025-12-31",
         "metric": "إجمالي الإيرادات (المبيعات/العمليات)",
-        "value": 1671204000
+        "value": -41946
       },
       {
         "period": "2024-12-31",
         "metric": "إجمالي الإيرادات (المبيعات/العمليات)",
-        "value": 1801674000
+        "value": -33348
       },
       {
         "period": "2023-12-31",
         "metric": "إجمالي الإيرادات (المبيعات/العمليات)",
-        "value": 1856373000
+        "value": 15599
       },
       {
         "period": "2025-12-31",
         "metric": "صافي الربح (الخسارة) قبل الزكاة والضريبة",
-        "value": 702860000
+        "value": -53626
       },
       {
         "period": "2024-12-31",
         "metric": "صافي الربح (الخسارة) قبل الزكاة والضريبة",
-        "value": 782010000
+        "value": -45688
       },
       {
         "period": "2023-12-31",
         "metric": "صافي الربح (الخسارة) قبل الزكاة والضريبة",
-        "value": 888067000
+        "value": 9379
       },
       {
         "period": "2025-12-31",
         "metric": "الزكاة وضريبة الدخل",
-        "value": -352650000
+        "value": -6557
       },
       {
         "period": "2024-12-31",
         "metric": "الزكاة وضريبة الدخل",
-        "value": -383588000
+        "value": -7800
       },
       {
         "period": "2023-12-31",
         "metric": "الزكاة وضريبة الدخل",
-        "value": -433303000
+        "value": -1677
       },
       {
         "period": "2025-12-31",
         "metric": "صافي الربح (الخسارة) العائد لمساهمي المصدر",
-        "value": 348042000
+        "value": -60183
       },
       {
         "period": "2024-12-31",
         "metric": "صافي الربح (الخسارة) العائد لمساهمي المصدر",
-        "value": 393891000
+        "value": -53488
       },
       {
         "period": "2023-12-31",
         "metric": "صافي الربح (الخسارة) العائد لمساهمي المصدر",
-        "value": 452753000
+        "value": 7702
       },
       {
         "period": "2025-12-31",
         "metric": "إجمالي الدخل الشامل العائد لمساهمي المصدر",
-        "value": 353850000
+        "value": -60158
       },
       {
         "period": "2024-12-31",
         "metric": "إجمالي الدخل الشامل العائد لمساهمي المصدر",
-        "value": 391720000
+        "value": -90542
       },
       {
         "period": "2023-12-31",
         "metric": "إجمالي الدخل الشامل العائد لمساهمي المصدر",
-        "value": 451111000
+        "value": 10190
       },
       {
         "period": "2025-12-31",
         "metric": "ربحية (خسارة) السهم",
-        "value": 1.44
+        "value": -4.01
       },
       {
         "period": "2024-12-31",
         "metric": "ربحية (خسارة) السهم",
-        "value": 1.63
+        "value": -3.57
       },
       {
         "period": "2023-12-31",
         "metric": "ربحية (خسارة) السهم",
-        "value": 1.87
+        "value": 0.51
       }
     ],
     "cash_flows": [
       {
         "period": "2025-12-31",
         "metric": "صافي النقد من الأنشطة التشغيلية",
-        "value": 510798000
+        "value": -7484
       },
       {
         "period": "2024-12-31",
         "metric": "صافي النقد من الأنشطة التشغيلية",
-        "value": 508888000
+        "value": 5151
       },
       {
         "period": "2023-12-31",
         "metric": "صافي النقد من الأنشطة التشغيلية",
-        "value": 537814000
+        "value": 894
       },
       {
         "period": "2025-12-31",
         "metric": "صافي النقد من الأنشطة الإستثمارية",
-        "value": -203902000
+        "value": -8807
       },
       {
         "period": "2024-12-31",
         "metric": "صافي النقد من الأنشطة الإستثمارية",
-        "value": -2861000
+        "value": -20041
       },
       {
         "period": "2023-12-31",
         "metric": "صافي النقد من الأنشطة الإستثمارية",
-        "value": -54019000
+        "value": -17
       },
       {
         "period": "2025-12-31",
         "metric": "صافي النقد من الأنشطة التمويلية",
-        "value": -280439000
+        "value": -347
       },
       {
         "period": "2024-12-31",
         "metric": "صافي النقد من الأنشطة التمويلية",
-        "value": -488358000
+        "value": -132
       },
       {
         "period": "2023-12-31",
         "metric": "صافي النقد من الأنشطة التمويلية",
-        "value": -510869000
+        "value": -15000
       },
       {
         "period": "2025-12-31",
         "metric": "النقد وما يماثله في بداية الفترة",
-        "value": 216642000
+        "value": 24861
       },
       {
         "period": "2024-12-31",
         "metric": "النقد وما يماثله في بداية الفترة",
-        "value": 198973000
+        "value": 39882
       },
       {
         "period": "2023-12-31",
         "metric": "النقد وما يماثله في بداية الفترة",
-        "value": 226047000
+        "value": 54005
       },
       {
         "period": "2025-12-31",
         "metric": "النقد وما يماثله في نهاية الفترة",
-        "value": 243099000
+        "value": 8223
       },
       {
         "period": "2024-12-31",
         "metric": "النقد وما يماثله في نهاية الفترة",
-        "value": 216642000
+        "value": 24861
       },
       {
         "period": "2023-12-31",
         "metric": "النقد وما يماثله في نهاية الفترة",
-        "value": 198973000
+        "value": 39882
       }
     ]
   },
@@ -867,162 +932,162 @@
     {
       "period": "2022-12-31",
       "metric": "الموجودات المتداولة",
-      "value": 476088000
+      "value": 54373
     },
     {
       "period": "2021-12-31",
       "metric": "الموجودات المتداولة",
-      "value": 509465000
+      "value": 30922
     },
     {
       "period": "2020-12-31",
       "metric": "الموجودات المتداولة",
-      "value": 340079000
+      "value": 39245
     },
     {
       "period": "2019-12-31",
       "metric": "الموجودات المتداولة",
-      "value": 320122000
+      "value": 48704
     },
     {
       "period": "2022-12-31",
       "metric": "المخزون",
-      "value": 100528000
+      "value": null
     },
     {
       "period": "2021-12-31",
       "metric": "المخزون",
-      "value": 74703000
+      "value": null
     },
     {
       "period": "2020-12-31",
       "metric": "المخزون",
-      "value": 51999000
+      "value": null
     },
     {
       "period": "2019-12-31",
       "metric": "المخزون",
-      "value": 42607000
+      "value": null
     },
     {
       "period": "2022-12-31",
       "metric": "الاستثمارات",
-      "value": 380169000
+      "value": 390758
     },
     {
       "period": "2021-12-31",
       "metric": "الاستثمارات",
-      "value": 120793000
+      "value": 532428
     },
     {
       "period": "2020-12-31",
       "metric": "الاستثمارات",
-      "value": 95638000
+      "value": 479293
     },
     {
       "period": "2019-12-31",
       "metric": "الاستثمارات",
-      "value": 85161000
+      "value": 416259
     },
     {
       "period": "2022-12-31",
       "metric": "الموجودات الثابتة",
-      "value": 1303266000
+      "value": 104
     },
     {
       "period": "2021-12-31",
       "metric": "الموجودات الثابتة",
-      "value": 1244316000
+      "value": 56
     },
     {
       "period": "2020-12-31",
       "metric": "الموجودات الثابتة",
-      "value": 1209460000
+      "value": 57
     },
     {
       "period": "2019-12-31",
       "metric": "الموجودات الثابتة",
-      "value": 982014000
+      "value": 59
     },
     {
       "period": "2022-12-31",
       "metric": "الموجودات الأخرى",
-      "value": 232873000
+      "value": null
     },
     {
       "period": "2021-12-31",
       "metric": "الموجودات الأخرى",
-      "value": 213413000
+      "value": 72
     },
     {
       "period": "2020-12-31",
       "metric": "الموجودات الأخرى",
-      "value": 217085000
+      "value": null
     },
     {
       "period": "2019-12-31",
       "metric": "الموجودات الأخرى",
-      "value": 64222000
+      "value": null
     },
     {
       "period": "2022-12-31",
       "metric": "إجمالي  الموجودات",
-      "value": 2492924000
+      "value": 445235
     },
     {
       "period": "2021-12-31",
       "metric": "إجمالي  الموجودات",
-      "value": 2162690000
+      "value": 563478
     },
     {
       "period": "2020-12-31",
       "metric": "إجمالي  الموجودات",
-      "value": 1914261000
+      "value": 518595
     },
     {
       "period": "2019-12-31",
       "metric": "إجمالي  الموجودات",
-      "value": 1494126000
+      "value": 465022
     },
     {
       "period": "2022-12-31",
       "metric": "المطلوبات المتداولة",
-      "value": 331386000
+      "value": 6366
     },
     {
       "period": "2021-12-31",
       "metric": "المطلوبات المتداولة",
-      "value": 303828000
+      "value": 3262
     },
     {
       "period": "2020-12-31",
       "metric": "المطلوبات المتداولة",
-      "value": 243211000
+      "value": 9659
     },
     {
       "period": "2019-12-31",
       "metric": "المطلوبات المتداولة",
-      "value": 215571000
+      "value": 10518
     },
     {
       "period": "2022-12-31",
       "metric": "المطلوبات غير المتداولة",
-      "value": 495391000
+      "value": 48
     },
     {
       "period": "2021-12-31",
       "metric": "المطلوبات غير المتداولة",
-      "value": 578194000
+      "value": 681
     },
     {
       "period": "2020-12-31",
       "metric": "المطلوبات غير المتداولة",
-      "value": 569956000
+      "value": 612
     },
     {
       "period": "2019-12-31",
       "metric": "المطلوبات غير المتداولة",
-      "value": 232320000
+      "value": 542
     },
     {
       "period": "2022-12-31",
@@ -1047,84 +1112,84 @@
     {
       "period": "2022-12-31",
       "metric": "حقوق المساهمين",
-      "value": 1448916000
+      "value": 438821
     },
     {
       "period": "2021-12-31",
       "metric": "حقوق المساهمين",
-      "value": 1113257000
+      "value": 559535
     },
     {
       "period": "2020-12-31",
       "metric": "حقوق المساهمين",
-      "value": 990848000
+      "value": 508324
     },
     {
       "period": "2019-12-31",
       "metric": "حقوق المساهمين",
-      "value": 1035065000
+      "value": 453962
     },
     {
       "period": "2022-12-31",
       "metric": "إجمالي المطلوبات و حقوق المساهمين",
-      "value": 2492924000
+      "value": 445235
     },
     {
       "period": "2021-12-31",
       "metric": "إجمالي المطلوبات و حقوق المساهمين",
-      "value": 2162690000
+      "value": 563478
     },
     {
       "period": "2020-12-31",
       "metric": "إجمالي المطلوبات و حقوق المساهمين",
-      "value": 1914261000
+      "value": 518595
     },
     {
       "period": "2019-12-31",
       "metric": "إجمالي المطلوبات و حقوق المساهمين",
-      "value": 1494126000
+      "value": 465022
     },
     {
       "period": "2022-12-31",
       "metric": "حقوق الاقلية",
-      "value": 217231000
+      "value": null
     },
     {
       "period": "2021-12-31",
       "metric": "حقوق الاقلية",
-      "value": 167411000
+      "value": null
     },
     {
       "period": "2020-12-31",
       "metric": "حقوق الاقلية",
-      "value": 110246000
+      "value": null
     },
     {
       "period": "2019-12-31",
       "metric": "حقوق الاقلية",
-      "value": 11170000
+      "value": null
     }
   ],
   "statement_of_income": [
     {
       "period": "2022-12-31",
       "metric": "المبيعات",
-      "value": 2006955000
+      "value": null
     },
     {
       "period": "2021-12-31",
       "metric": "المبيعات",
-      "value": 1346930000
+      "value": null
     },
     {
       "period": "2020-12-31",
       "metric": "المبيعات",
-      "value": 768109000
+      "value": null
     },
     {
       "period": "2019-12-31",
       "metric": "المبيعات",
-      "value": 1105696000
+      "value": null
     },
     {
       "period": "2022-12-31",
@@ -1149,202 +1214,202 @@
     {
       "period": "2022-12-31",
       "metric": "إجمالي الدخل",
-      "value": 2006955000
+      "value": null
     },
     {
       "period": "2021-12-31",
       "metric": "إجمالي الدخل",
-      "value": 1346930000
+      "value": null
     },
     {
       "period": "2020-12-31",
       "metric": "إجمالي الدخل",
-      "value": 768109000
+      "value": null
     },
     {
       "period": "2019-12-31",
       "metric": "إجمالي الدخل",
-      "value": 1105696000
+      "value": null
     },
     {
       "period": "2022-12-31",
       "metric": "الإيرادات الأخرى",
-      "value": 259418000
+      "value": 34726
     },
     {
       "period": "2021-12-31",
       "metric": "الإيرادات الأخرى",
-      "value": 154828000
+      "value": 10018
     },
     {
       "period": "2020-12-31",
       "metric": "الإيرادات الأخرى",
-      "value": 93982000
+      "value": 17129
     },
     {
       "period": "2019-12-31",
       "metric": "الإيرادات الأخرى",
-      "value": 131089000
+      "value": 21451
     },
     {
       "period": "2022-12-31",
       "metric": "إجمالي الإيرادات",
-      "value": 2266373000
+      "value": 34726
     },
     {
       "period": "2021-12-31",
       "metric": "إجمالي الإيرادات",
-      "value": 1501758000
+      "value": 10018
     },
     {
       "period": "2020-12-31",
       "metric": "إجمالي الإيرادات",
-      "value": 862091000
+      "value": 17129
     },
     {
       "period": "2019-12-31",
       "metric": "إجمالي الإيرادات",
-      "value": 1236785000
+      "value": 21451
     },
     {
       "period": "2022-12-31",
       "metric": "المصاريف الإدارية والتسويقية",
-      "value": 83700000
+      "value": -5007
     },
     {
       "period": "2021-12-31",
       "metric": "المصاريف الإدارية والتسويقية",
-      "value": 59496000
+      "value": 2842
     },
     {
       "period": "2020-12-31",
       "metric": "المصاريف الإدارية والتسويقية",
-      "value": 46970000
+      "value": 2777
     },
     {
       "period": "2019-12-31",
       "metric": "المصاريف الإدارية والتسويقية",
-      "value": 36647000
+      "value": 3133
     },
     {
       "period": "2022-12-31",
       "metric": "الاستهلاكات",
-      "value": 91618000
+      "value": -34
     },
     {
       "period": "2021-12-31",
       "metric": "الاستهلاكات",
-      "value": 85521000
+      "value": 17
     },
     {
       "period": "2020-12-31",
       "metric": "الاستهلاكات",
-      "value": 76208000
+      "value": 13
     },
     {
       "period": "2019-12-31",
       "metric": "الاستهلاكات",
-      "value": 50266000
+      "value": 5
     },
     {
       "period": "2022-12-31",
       "metric": "المصاريف الأخرى",
-      "value": 938093000
+      "value": null
     },
     {
       "period": "2021-12-31",
       "metric": "المصاريف الأخرى",
-      "value": 587220000
+      "value": null
     },
     {
       "period": "2020-12-31",
       "metric": "المصاريف الأخرى",
-      "value": 366489000
+      "value": null
     },
     {
       "period": "2019-12-31",
       "metric": "المصاريف الأخرى",
-      "value": 483131000
+      "value": null
     },
     {
       "period": "2022-12-31",
       "metric": "إجمالي المصاريف",
-      "value": 1113411000
+      "value": -5041
     },
     {
       "period": "2021-12-31",
       "metric": "إجمالي المصاريف",
-      "value": 732237000
+      "value": 2859
     },
     {
       "period": "2020-12-31",
       "metric": "إجمالي المصاريف",
-      "value": 489667000
+      "value": 2790
     },
     {
       "period": "2019-12-31",
       "metric": "إجمالي المصاريف",
-      "value": 570044000
+      "value": 3138
     },
     {
       "period": "2022-12-31",
       "metric": "صافي الدخل قبل الزكاة",
-      "value": 1152962000
+      "value": 29685
     },
     {
       "period": "2021-12-31",
       "metric": "صافي الدخل قبل الزكاة",
-      "value": 769521000
+      "value": 7159
     },
     {
       "period": "2020-12-31",
       "metric": "صافي الدخل قبل الزكاة",
-      "value": 372424000
+      "value": 14339
     },
     {
       "period": "2019-12-31",
       "metric": "صافي الدخل قبل الزكاة",
-      "value": 666741000
+      "value": 18313
     },
     {
       "period": "2022-12-31",
       "metric": "الزكاة",
-      "value": 548957000
+      "value": 1455
     },
     {
       "period": "2021-12-31",
       "metric": "الزكاة",
-      "value": 357125000
+      "value": 567
     },
     {
       "period": "2020-12-31",
       "metric": "الزكاة",
-      "value": 188661000
+      "value": 959
     },
     {
       "period": "2019-12-31",
       "metric": "الزكاة",
-      "value": 336048000
+      "value": 1142
     },
     {
       "period": "2022-12-31",
       "metric": "صافي الدخل",
-      "value": 604005000
+      "value": 28230
     },
     {
       "period": "2021-12-31",
       "metric": "صافي الدخل",
-      "value": 412396000
+      "value": 6592
     },
     {
       "period": "2020-12-31",
       "metric": "صافي الدخل",
-      "value": 183763000
+      "value": 13380
     },
     {
       "period": "2019-12-31",
       "metric": "صافي الدخل",
-      "value": 330693000
+      "value": 17171
     },
     {
       "period": "2022-12-31",
@@ -1354,17 +1419,17 @@
     {
       "period": "2021-12-31",
       "metric": "رصيدالأرباح المبقاة أول الفترة",
-      "value": null
+      "value": 28977
     },
     {
       "period": "2020-12-31",
       "metric": "رصيدالأرباح المبقاة أول الفترة",
-      "value": null
+      "value": 31927
     },
     {
       "period": "2019-12-31",
       "metric": "رصيدالأرباح المبقاة أول الفترة",
-      "value": null
+      "value": 27945
     },
     {
       "period": "2022-12-31",
@@ -1374,17 +1439,17 @@
     {
       "period": "2021-12-31",
       "metric": "المحول الى الإحتياطات",
-      "value": null
+      "value": 659
     },
     {
       "period": "2020-12-31",
       "metric": "المحول الى الإحتياطات",
-      "value": null
+      "value": 1338
     },
     {
       "period": "2019-12-31",
       "metric": "المحول الى الإحتياطات",
-      "value": null
+      "value": 1717
     },
     {
       "period": "2022-12-31",
@@ -1414,12 +1479,12 @@
     {
       "period": "2021-12-31",
       "metric": "التوزيعات الأخرى",
-      "value": null
+      "value": 11250
     },
     {
       "period": "2020-12-31",
       "metric": "التوزيعات الأخرى",
-      "value": null
+      "value": 15000
     },
     {
       "period": "2019-12-31",
@@ -1434,279 +1499,279 @@
     {
       "period": "2021-12-31",
       "metric": "رصيد الأرباح المبقاة آخر الفترة",
-      "value": null
+      "value": 25131
     },
     {
       "period": "2020-12-31",
       "metric": "رصيد الأرباح المبقاة آخر الفترة",
-      "value": null
+      "value": 28977
     },
     {
       "period": "2019-12-31",
       "metric": "رصيد الأرباح المبقاة آخر الفترة",
-      "value": null
+      "value": 31927
     }
   ],
   "cash_flows": [
     {
       "period": "2022-12-31",
       "metric": "صافي الدخل",
-      "value": 1152962000
+      "value": 28230
     },
     {
       "period": "2021-12-31",
       "metric": "صافي الدخل",
-      "value": 769521000
+      "value": 7159
     },
     {
       "period": "2020-12-31",
       "metric": "صافي الدخل",
-      "value": 372424000
+      "value": 14339
     },
     {
       "period": "2019-12-31",
       "metric": "صافي الدخل",
-      "value": 666741000
+      "value": 17171
     },
     {
       "period": "2022-12-31",
       "metric": "الاستهلاكات",
-      "value": 91618000
+      "value": -34
     },
     {
       "period": "2021-12-31",
       "metric": "الاستهلاكات",
-      "value": 85521000
+      "value": 17
     },
     {
       "period": "2020-12-31",
       "metric": "الاستهلاكات",
-      "value": 76208000
+      "value": 13
     },
     {
       "period": "2019-12-31",
       "metric": "الاستهلاكات",
-      "value": 50266000
+      "value": 5
     },
     {
       "period": "2022-12-31",
       "metric": "الحسابات المدينة",
-      "value": -22906000
+      "value": -176
     },
     {
       "period": "2021-12-31",
       "metric": "الحسابات المدينة",
-      "value": -55190000
+      "value": 8092
     },
     {
       "period": "2020-12-31",
       "metric": "الحسابات المدينة",
-      "value": 22172000
+      "value": 3806
     },
     {
       "period": "2019-12-31",
       "metric": "الحسابات المدينة",
-      "value": 727000
+      "value": 589
     },
     {
       "period": "2022-12-31",
       "metric": "المخزون",
-      "value": -26555000
+      "value": null
     },
     {
       "period": "2021-12-31",
       "metric": "المخزون",
-      "value": -23157000
+      "value": null
     },
     {
       "period": "2020-12-31",
       "metric": "المخزون",
-      "value": 15890000
+      "value": null
     },
     {
       "period": "2019-12-31",
       "metric": "المخزون",
-      "value": 1869000
+      "value": null
     },
     {
       "period": "2022-12-31",
       "metric": "المصاريف المدفوعة مقدما",
-      "value": 2973000
+      "value": null
     },
     {
       "period": "2021-12-31",
       "metric": "المصاريف المدفوعة مقدما",
-      "value": 1263000
+      "value": null
     },
     {
       "period": "2020-12-31",
       "metric": "المصاريف المدفوعة مقدما",
-      "value": -8593000
+      "value": null
     },
     {
       "period": "2019-12-31",
       "metric": "المصاريف المدفوعة مقدما",
-      "value": -9951000
+      "value": null
     },
     {
       "period": "2022-12-31",
       "metric": "الحسابات الدائنة",
-      "value": 13745000
+      "value": 2116
     },
     {
       "period": "2021-12-31",
       "metric": "الحسابات الدائنة",
-      "value": 35763000
+      "value": -6512
     },
     {
       "period": "2020-12-31",
       "metric": "الحسابات الدائنة",
-      "value": -16250000
+      "value": -51
     },
     {
       "period": "2019-12-31",
       "metric": "الحسابات الدائنة",
-      "value": 3430000
+      "value": 69
     },
     {
       "period": "2022-12-31",
       "metric": "التغييرات الأخرى في نشاط العمليات",
-      "value": -513685000
+      "value": -6547
     },
     {
       "period": "2021-12-31",
       "metric": "التغييرات الأخرى في نشاط العمليات",
-      "value": -291120000
+      "value": -456
     },
     {
       "period": "2020-12-31",
       "metric": "التغييرات الأخرى في نشاط العمليات",
-      "value": -176554000
+      "value": -2739
     },
     {
       "period": "2019-12-31",
       "metric": "التغييرات الأخرى في نشاط العمليات",
-      "value": -296553000
+      "value": 2223
     },
     {
       "period": "2022-12-31",
       "metric": "مشتريات الموجودات الثابتة",
-      "value": -141161000
+      "value": -10
     },
     {
       "period": "2021-12-31",
       "metric": "مشتريات الموجودات الثابتة",
-      "value": -119645000
+      "value": -15
     },
     {
       "period": "2020-12-31",
       "metric": "مشتريات الموجودات الثابتة",
-      "value": -101030000
+      "value": -11
     },
     {
       "period": "2019-12-31",
       "metric": "مشتريات الموجودات الثابتة",
-      "value": -122882000
+      "value": -54
     },
     {
       "period": "2022-12-31",
       "metric": "التغييرات الأخرى في نشاط الإستثمار",
-      "value": -247848000
+      "value": null
     },
     {
       "period": "2021-12-31",
       "metric": "التغييرات الأخرى في نشاط الإستثمار",
-      "value": -16096000
+      "value": 2733
     },
     {
       "period": "2020-12-31",
       "metric": "التغييرات الأخرى في نشاط الإستثمار",
-      "value": 80131000
+      "value": -6010
     },
     {
       "period": "2019-12-31",
       "metric": "التغييرات الأخرى في نشاط الإستثمار",
-      "value": -54262000
+      "value": -1086
     },
     {
       "period": "2022-12-31",
       "metric": "الزيادة في الديون",
-      "value": -135546000
+      "value": null
     },
     {
       "period": "2021-12-31",
       "metric": "الزيادة في الديون",
-      "value": -43493000
+      "value": null
     },
     {
       "period": "2020-12-31",
       "metric": "الزيادة في الديون",
-      "value": 34527000
+      "value": null
     },
     {
       "period": "2019-12-31",
       "metric": "الزيادة في الديون",
-      "value": 39058000
+      "value": null
     },
     {
       "period": "2022-12-31",
       "metric": "التغييرات الأخرى في نشاط التمويل",
-      "value": -247129000
+      "value": null
     },
     {
       "period": "2021-12-31",
       "metric": "التغييرات الأخرى في نشاط التمويل",
-      "value": -251020000
+      "value": -11250
     },
     {
       "period": "2020-12-31",
       "metric": "التغييرات الأخرى في نشاط التمويل",
-      "value": -269399000
+      "value": -15000
     },
     {
       "period": "2019-12-31",
       "metric": "التغييرات الأخرى في نشاط التمويل",
-      "value": -283889000
+      "value": -11250
     },
     {
       "period": "2022-12-31",
       "metric": "النقد في بداية الفترة",
-      "value": 299579000
+      "value": 30426
     },
     {
       "period": "2021-12-31",
       "metric": "النقد في بداية الفترة",
-      "value": 207232000
+      "value": 30657
     },
     {
       "period": "2020-12-31",
       "metric": "النقد في بداية الفترة",
-      "value": 177706000
+      "value": 36310
     },
     {
       "period": "2019-12-31",
       "metric": "النقد في بداية الفترة",
-      "value": 183152000
+      "value": 28643
     },
     {
       "period": "2022-12-31",
       "metric": "النقد في نهاية الفترة",
-      "value": 226047000
+      "value": 54005
     },
     {
       "period": "2021-12-31",
       "metric": "النقد في نهاية الفترة",
-      "value": 299579000
+      "value": 30425
     },
     {
       "period": "2020-12-31",
       "metric": "النقد في نهاية الفترة",
-      "value": 207232000
+      "value": 30657
     },
     {
       "period": "2019-12-31",
       "metric": "النقد في نهاية الفترة",
-      "value": 177706000
+      "value": 36310
     }
   ]
 }

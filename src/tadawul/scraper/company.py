@@ -26,6 +26,7 @@ class CompanyScraper:
             "company_overview": "Company overview",
             "company_history": "Company History",
             "company_bylaws": "Company Bylaws",
+            "subsidiary_name": "Name of Subsidiary",
             "equity_profile": "Equity Profile",
             "foreign_ownership": "Foreign Ownership",
             "substantial_shareholders": "Substantial Shareholders",
@@ -52,6 +53,7 @@ class CompanyScraper:
             "company_overview": "نبذة عن نشاط الشركة",
             "company_history": "نبذة عن تاريخ الشركة",
             "company_bylaws": "النظام الأساسي للشركة",
+            "subsidiary_name": "اسم الشركة التابعة",
             "equity_profile": "ملف الأسهم",
             "foreign_ownership": "الملكية الأجنبية",
             "substantial_shareholders": "المساهمون الكبار",
@@ -142,6 +144,7 @@ class CompanyScraper:
                     "senior_executives": [],
                 },
                 "financial_statements_and_reports": [],
+                "board_of_directors_shareholding": [],
                 "foreign_ownership": None,
                 "substantial_shareholders": {
                     "substantial_shareholders": [],
@@ -157,11 +160,29 @@ class CompanyScraper:
                 "cash_flows": [],
             }
 
-            market, sector = (
+            _, sector = (
                 self._get_market_and_sector(driver)
             )
 
-            result["market"] = market
+            market_type = browser.servlet.get_company(
+                symbol
+            )["market_type"]
+
+            if market_type == "M":
+                result["market"] = (
+                    "Main Market"
+                    if self.language == "en"
+                    else "السوق الرئيسية"
+                )
+            elif market_type == "S":
+                result["market"] = (
+                    "Nomu - Parallel Market"
+                    if self.language == "en"
+                    else "نمو – السوق الموازية"
+                )
+            else:
+                result["market"] = None
+
             result["sector"] = sector
 
             result["shares_type"] = self._get_exact_text(
@@ -187,6 +208,12 @@ class CompanyScraper:
 
             result["financial_information"] = (
                 self._get_financial_information(
+                    driver
+                )
+            )
+            
+            result["board_of_directors_shareholding"] = (
+                self._get_board_of_directors_shareholding(
                     driver
                 )
             )
@@ -374,10 +401,23 @@ class CompanyScraper:
         if equity_elements:
             equity = equity_elements[0]
 
-            for item in equity.find_elements(
+            equity_fields = [
+                "authorized_capital",
+                "total_issued_shares",
+                "paid_up_capital",
+                "nominal_value_per_unit",
+                "paid_value_per_unit",
+            ]
+
+            items = equity.find_elements(
                 By.CSS_SELECTOR,
                 "li",
-            ):
+            )
+
+            for index, item in enumerate(items):
+                if index >= len(equity_fields):
+                    break
+
                 spans = item.find_elements(
                     By.TAG_NAME,
                     "span",
@@ -388,17 +428,17 @@ class CompanyScraper:
                     "strong",
                 )
 
-                if spans and strongs:
-                    key = spans[0].text.strip()
-                    value = strongs[0].text.strip()
+                if not spans or not strongs:
+                    continue
 
-                    if key:
-                        profile[key] = value
+                value = strongs[0].text.strip()
+
+                profile[equity_fields[index]] = value
 
         return profile
 
-    @staticmethod
     def _get_subsidiaries(
+        self,
         driver,
     ) -> list[dict]:
         tables = driver.find_elements(
@@ -407,7 +447,7 @@ class CompanyScraper:
             "translate(normalize-space(.), "
             "'ABCDEFGHIJKLMNOPQRSTUVWXYZ', "
             "'abcdefghijklmnopqrstuvwxyz'), "
-            "'name of subsidiary'"
+            f"'{self.labels['subsidiary_name'].lower()}'"
             ")]]",
         )
 
@@ -701,7 +741,7 @@ class CompanyScraper:
                         "namePopupBox_",
                     )
 
-                    popups = group.find_elements(
+                    popups = driver.find_elements(
                         By.ID,
                         popup_id,
                     )
@@ -782,13 +822,13 @@ class CompanyScraper:
                     "classification",
             },
             "ar": {
-                "بداية دورة مجلس الإدارة":
+                "تاريخ بداية دورة المجلس":
                     "bd_session_start",
-                "نهاية دورة مجلس الإدارة":
+                "تاريخ نهاية دورة المجلس":
                     "bd_session_end",
-                "التصنيف":
+                "صفة العضوية":
                     "classification",
-                "التعيين":
+                "منصب":
                     "designation",
             },
         }
@@ -1033,6 +1073,89 @@ class CompanyScraper:
                     )
 
         return reports
+    
+    def _get_board_of_directors_shareholding(
+        self,
+        driver,
+    ) -> list[dict]:
+        tables = driver.find_elements(
+            By.TAG_NAME,
+            "table",
+        )
+
+        for table in tables:
+            headers = table.find_elements(
+                By.TAG_NAME,
+                "th",
+            )
+
+            if len(headers) < 6:
+                continue
+
+            header_values = [
+                " ".join(
+                    header.text.split()
+                ).casefold()
+                for header in headers
+            ]
+
+            if self.language == "en":
+                if (
+                    header_values[0] != "trading date"
+                    or header_values[1] != "shareholders"
+                    or header_values[2] != "designation"
+                ):
+                    continue
+
+            elif self.language == "ar":
+                if (
+                    header_values[0] != "تاريخ التداول"
+                    or header_values[1] != "المساهمون"
+                    or header_values[2] != "منصب"
+                ):
+                    continue
+
+            else:
+                continue
+
+            rows = table.find_elements(
+                By.TAG_NAME,
+                "tr",
+            )
+
+            shareholders = []
+
+            for row in rows[1:]:
+                cells = row.find_elements(
+                    By.TAG_NAME,
+                    "td",
+                )
+
+                if len(cells) < 6:
+                    continue
+
+                values = [
+                    cell.text.strip()
+                    for cell in cells
+                ]
+
+                shareholders.append(
+                    {
+                        "trading_date": values[0],
+                        "shareholder": values[1],
+                        "designation": values[2],
+                        "total_shares_held_trading_day":
+                            values[3],
+                        "total_shares_held_prev_trading_day":
+                            values[4],
+                        "total_shares_change":
+                            values[5],
+                    }
+                )
+
+            return shareholders
+
+        return []
 
     def _get_foreign_ownership(
         self,
@@ -1590,12 +1713,17 @@ class CompanyScraper:
         periods = []
 
         statement_labels = {
-            self.labels["balance_sheet"]:
-                "balance_sheet",
-            self.labels["statement_of_income"]:
-                "statement_of_income",
-            self.labels["cash_flows"]:
-                "cash_flows",
+            " ".join(
+                self.labels["balance_sheet"].split()
+            ).casefold(): "balance_sheet",
+
+            " ".join(
+                self.labels["statement_of_income"].split()
+            ).casefold(): "statement_of_income",
+
+            " ".join(
+                self.labels["cash_flows"].split()
+            ).casefold(): "cash_flows",
         }
 
         for row in rows:
@@ -1614,9 +1742,17 @@ class CompanyScraper:
 
             first_value = values[0]
 
-            if first_value in statement_labels:
+            normalized_first_value = (
+                " ".join(
+                    first_value.split()
+                ).casefold()
+            )
+
+            if normalized_first_value in statement_labels:
                 current_statement = (
-                    statement_labels[first_value]
+                    statement_labels[
+                        normalized_first_value
+                    ]
                 )
 
                 periods = [

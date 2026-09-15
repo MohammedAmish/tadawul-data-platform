@@ -41,3 +41,12 @@ class TadawulServlet:
         response.raise_for_status()
 
         return response.json()
+
+    def get_company(self, symbol: str) -> dict:
+        for company in self.fetch():
+            if company["symbol"] == symbol:
+                return company
+
+        raise ValueError(
+            f"Company {symbol} was not found"
+        )

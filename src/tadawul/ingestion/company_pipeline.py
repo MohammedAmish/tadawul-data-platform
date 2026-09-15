@@ -5,6 +5,23 @@ import dlt
 from tadawul.scraper.company import CompanyScraper
 
 
+MAIN_MARKET_SYMBOLS = [
+    "2222",
+    "2030",
+    "4240",
+    "6060",
+    "4220",
+]
+
+NOMU_SYMBOLS = [
+    "9510",
+    "9513",
+    "9523",
+    "9541",
+    "9544",
+]
+
+
 @dlt.resource(
     name="raw_company",
     write_disposition="merge",
@@ -33,21 +50,28 @@ def main():
         dataset_name="raw_tadawul",
     )
 
-    for language in ["en", "ar"]:
-        print(
-            f"\n{'=' * 60}\n"
-            f"Loading company {2222} - language: {language}\n"
-            f"{'=' * 60}"
-        )
+    companies = (
+        MAIN_MARKET_SYMBOLS
+        + NOMU_SYMBOLS
+    )
 
-        load_info = pipeline.run(
-            company_resource(
-                "2222",
-                language,
+    for symbol in companies:
+        for language in ["en", "ar"]:
+            print(
+                f"\n{'=' * 60}\n"
+                f"Loading company {symbol} - "
+                f"language: {language}"
+                f"\n{'=' * 60}"
             )
-        )
 
-        print(load_info)
+            load_info = pipeline.run(
+                company_resource(
+                    symbol,
+                    language,
+                )
+            )
+
+            print(load_info)
 
 
 if __name__ == "__main__":

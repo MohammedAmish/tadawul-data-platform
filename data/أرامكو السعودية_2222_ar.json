@@ -9,11 +9,11 @@
     "company_overview": "الغرض الرئيسي لأرامكو السعودية هو مزاولة جميع أوجه الأنشطة التي تتعلق بمجالات الطاقة، بما في ذلك صناعة المواد الهيدروكربونية والكيميائية وغيرها من الصناعات المرتبطة بها والمكملة لها أو أي نشاط آخر داخل المملكة أو خارجها وفقًا لنظامها الأساس.",
     "company_history": "تأسست شركة الزيت العربية السعودية (أرامكو السعودية) في المملكة العربية السعودية بموجب المرسوم الملكي رقم (م/8) وتاريخ 04/04/1409هـ (الموافق 13/11/1988م) كشركة مملوكة بالكامل للدولة وبرأس مال بلغ ستين مليار (60,000,000,000) ريال سعودي مدفوع بالكامل. اكتسبت أرامكو السعودية صفة شركة مساهمة سعودية في 14/04/1439هـ (الموافق 01/01/2018م) بموجب النظام الأساس لأرامكو السعودية الموافق عليه بموجب قرار مجلس الوزراء رقم (180) بتاريخ 01/04/1439هـ (الموافق 19/12/2017م)، وتم قيدها بالسجل التجاري لمدينة الظهران بالرقم (2052101150) بتاريخ 11/07/1439هـ (الموافق 28/03/2018م) ومقرها الرئيسي بمدينة الظهران. يبلغ رأس المال الحالي لأرامكو السعودية تسعين مليار(90,000,000,000) ريـال سعودي مدفوع بالكامل، مقسم إلى مائتي واثنين وأربعين مليار (242,000,000,000) سهم عادي بدون قيمة إسمية.",
     "company_bylaws_url": "https://www.saudiexchange.sa/Resources/pdfs/1541_ByLaw2.pdf",
-    "رأس المال المصرّح  (^)": "90,000,000,000",
-    "إجمالي عدد الأسهم المصدرة": "242,000,000,000",
-    "رأس المال المدفوع  (^)": "90,000,000,000",
-    "القيمة الإسمية/الوحدة": "-",
-    "القيمة المدفوعة/ الوحدة": "-"
+    "authorized_capital": "90,000,000,000",
+    "total_issued_shares": "242,000,000,000",
+    "paid_up_capital": "90,000,000,000",
+    "nominal_value_per_unit": "-",
+    "paid_value_per_unit": "-"
   },
   "subsidiaries": [],
   "company_details": {
@@ -39,108 +39,108 @@
       {
         "name": "معالي الأستاذ/ ياسر بن عثمان الرميان",
         "role": "غير تنفيذي",
-        "classification": null,
-        "bd_session_start": null,
-        "bd_session_end": null,
-        "designation": null
+        "classification": "غير تنفيذي",
+        "bd_session_start": "2024-07-01",
+        "bd_session_end": "2027-06-30",
+        "designation": "رئيس مجلس الإدارة"
       },
       {
         "name": "معالي الدكتور/ إبراهيم بن عبد العزيز العساف",
         "role": "نائب الرئيس - غير تنفيذي",
-        "classification": null,
-        "bd_session_start": null,
-        "bd_session_end": null,
-        "designation": null
+        "classification": "نائب الرئيس - غير تنفيذي",
+        "bd_session_start": "2024-07-01",
+        "bd_session_end": "2027-06-30",
+        "designation": "أعضاء مجلس الإدارة"
       },
       {
         "name": "معالي الأستاذ/ محمد بن عبدالله الجدعان",
         "role": "غير تنفيذي",
-        "classification": null,
-        "bd_session_start": null,
-        "bd_session_end": null,
-        "designation": null
+        "classification": "غير تنفيذي",
+        "bd_session_start": "2024-07-01",
+        "bd_session_end": "2027-06-30",
+        "designation": "أعضاء مجلس الإدارة"
       },
       {
         "name": "معالي الأستاذ/ فيصل بن فاضل الابراهيم",
         "role": "غير تنفيذي",
-        "classification": null,
-        "bd_session_start": null,
-        "bd_session_end": null,
-        "designation": null
+        "classification": "غير تنفيذي",
+        "bd_session_start": "2024-07-01",
+        "bd_session_end": "2027-06-30",
+        "designation": "أعضاء مجلس الإدارة"
       },
       {
         "name": "السيد/ آندرو إن. ليفيرس",
         "role": "مستقل",
-        "classification": null,
-        "bd_session_start": null,
-        "bd_session_end": null,
-        "designation": null
+        "classification": "مستقل",
+        "bd_session_start": "2024-07-01",
+        "bd_session_end": "2027-06-30",
+        "designation": "أعضاء مجلس الإدارة"
       },
       {
         "name": "السيدة/ لين لافرتي إلسنهانز",
         "role": "مستقل",
-        "classification": null,
-        "bd_session_start": null,
-        "bd_session_end": null,
-        "designation": null
+        "classification": "مستقل",
+        "bd_session_start": "2024-07-01",
+        "bd_session_end": "2027-06-30",
+        "designation": "أعضاء مجلس الإدارة"
       },
       {
         "name": "الأستاذ/ أمين بن حسن الناصر",
         "role": "تنفيذي",
-        "classification": null,
-        "bd_session_start": null,
-        "bd_session_end": null,
-        "designation": null
+        "classification": "تنفيذي",
+        "bd_session_start": "2024-07-01",
+        "bd_session_end": "2024-07-18",
+        "designation": "أعضاء مجلس الإدارة"
       },
       {
         "name": "السيد/ مارك أ. واينبرغر",
         "role": "مستقل",
-        "classification": null,
-        "bd_session_start": null,
-        "bd_session_end": null,
-        "designation": null
+        "classification": "مستقل",
+        "bd_session_start": "2024-07-01",
+        "bd_session_end": "2027-06-30",
+        "designation": "أعضاء مجلس الإدارة"
       },
       {
         "name": "السيد/ ستيوارت تي. غوليفر",
         "role": "مستقل",
-        "classification": null,
-        "bd_session_start": null,
-        "bd_session_end": null,
-        "designation": null
+        "classification": "مستقل",
+        "bd_session_start": "2024-07-01",
+        "bd_session_end": "2027-06-30",
+        "designation": "أعضاء مجلس الإدارة"
       },
       {
         "name": "السيد/ روبرت و. ددلي",
         "role": "مستقل",
-        "classification": null,
-        "bd_session_start": null,
-        "bd_session_end": null,
-        "designation": null
+        "classification": "مستقل",
+        "bd_session_start": "2024-07-01",
+        "bd_session_end": "2027-06-30",
+        "designation": "أعضاء مجلس الإدارة"
       },
       {
         "name": "الأستاذ/ خالد بن هاشم الدباغ",
         "role": "غير تنفيذي",
-        "classification": null,
-        "bd_session_start": null,
-        "bd_session_end": null,
-        "designation": null
+        "classification": "غير تنفيذي",
+        "bd_session_start": "2024-07-01",
+        "bd_session_end": "2027-06-30",
+        "designation": "أعضاء مجلس الإدارة"
       }
     ],
     "senior_executives": [
       {
         "name": "الأستاذ/ أمين بن حسن الناصر",
         "role": "الرئيس التنفيذي",
-        "classification": null,
-        "bd_session_start": null,
-        "bd_session_end": null,
-        "designation": null
+        "classification": "الرئيس التنفيذي",
+        "bd_session_start": "2015-09-17",
+        "bd_session_end": "-",
+        "designation": "كبار التنفيذيين"
       },
       {
         "name": "الأستاذ/ زياد بن ثامر المرشد",
         "role": "المدير المالي",
-        "classification": null,
-        "bd_session_start": null,
-        "bd_session_end": null,
-        "designation": null
+        "classification": "المدير المالي",
+        "bd_session_start": "2022-05-01",
+        "bd_session_end": "-",
+        "designation": "كبار التنفيذيين"
       }
     ]
   },
@@ -610,18 +610,76 @@
       "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2023-03-13_15-28-20_Ar.pdf"
     }
   ],
+  "board_of_directors_shareholding": [
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "ياسر عثمان حمود الرميان",
+      "designation": "رئيس مجلس الإدارة",
+      "total_shares_held_trading_day": "0.0015000%",
+      "total_shares_held_prev_trading_day": "0.0015000%",
+      "total_shares_change": "0"
+    },
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "امين حسن علي ناصر",
+      "designation": "أعضاء مجلس الإدارة",
+      "total_shares_held_trading_day": "0.0007012%",
+      "total_shares_held_prev_trading_day": "0.0007012%",
+      "total_shares_change": "0"
+    },
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "فيصل فاضل محسن الابراهيم",
+      "designation": "أعضاء مجلس الإدارة",
+      "total_shares_held_trading_day": "0.0000011%",
+      "total_shares_held_prev_trading_day": "0.0000011%",
+      "total_shares_change": "0"
+    },
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "زياد ثامر راكان المرشد",
+      "designation": "كبار التنفيذيين",
+      "total_shares_held_trading_day": "0.0000813%",
+      "total_shares_held_prev_trading_day": "0.0000813%",
+      "total_shares_change": "0"
+    },
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "خالد هاشم صالح الدباغ",
+      "designation": "أعضاء مجلس الإدارة",
+      "total_shares_held_trading_day": "0.0000617%",
+      "total_shares_held_prev_trading_day": "0.0000617%",
+      "total_shares_change": "0"
+    },
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "امين حسن علي ناصر",
+      "designation": "كبار التنفيذيين",
+      "total_shares_held_trading_day": "0.0007012%",
+      "total_shares_held_prev_trading_day": "0.0007012%",
+      "total_shares_change": "0"
+    },
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "ابراهيم عبدالعزيز عبدالله العساف",
+      "designation": "أعضاء مجلس الإدارة",
+      "total_shares_held_trading_day": "0.0000584%",
+      "total_shares_held_prev_trading_day": "0.0000584%",
+      "total_shares_change": "0"
+    }
+  ],
   "foreign_ownership": {
     "total_foreign_ownership": {
       "maximum_limit_percent": 49.0,
       "actual_percent": 0.74
     },
     "foreign_strategic_investors_ownership_percent": 0.0,
-    "last_updated": "2026-09-13"
+    "last_updated": "2026-09-14"
   },
   "substantial_shareholders": {
     "substantial_shareholders": [
       {
-        "trading_date": "2026-09-13",
+        "trading_date": "2026-09-14",
         "shareholder": "المملكة العربية السعودية",
         "total_shares_held_trading_day": "81.484%",
         "total_shares_held_prev_trading_day": "81.484%",

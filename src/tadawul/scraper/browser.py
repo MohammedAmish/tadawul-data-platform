@@ -5,6 +5,7 @@ import time
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from tadawul.scraper.servlet import TadawulServlet
 
 
 class TadawulBrowser:
@@ -15,6 +16,7 @@ class TadawulBrowser:
     def __init__(self, headless: bool = False):
         self.headless = headless
         self.driver = self._create_driver()
+        self.servlet = TadawulServlet()
 
     def _create_driver(self):
         options = Options()
@@ -172,10 +174,6 @@ class TadawulBrowser:
         }
 
     def get_company_link(self, symbol: str) -> str:
-        """
-        Get the company profile URL for a symbol from the
-        current locale's tickerData.
-        """
         company = self.get_company(symbol)
 
         company_link = company.get("link")

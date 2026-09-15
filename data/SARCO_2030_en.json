@@ -1,6 +1,7 @@
 {
   "symbol": "2030",
   "company_name": "SARCO",
+  "language": "en",
   "market": "Main Market",
   "sector": "Energy",
   "shares_type": "Common Shares",
@@ -8,11 +9,11 @@
     "company_overview": "Carrying out petroleum works in all its branches and all aspects of activity related to it, carrying out water projects, land reform, utilities, transportation, all business, industrial and commercial projects, commercial agency business, establishing companies and purchasing shares, participating with the Arab Tanks Company Limited.",
     "company_history": "A Saudi joint stock company established in accordance with the Companies Law in the Kingdom of Saudi Arabia by Royal Decree No. 376 dated 8/14/1380 AH.",
     "company_bylaws_url": "https://www.saudiexchange.sa/Resources/pdfs/383_ByLaw1.pdf",
-    "Authorized Capital  (^)": "150,000,000",
-    "Total Issued Shares": "15,000,000",
-    "Paid Capital  (^)": "150,000,000",
-    "Par Value/Share": "10",
-    "Paid Up Value/Share": "10"
+    "authorized_capital": "150,000,000",
+    "total_issued_shares": "15,000,000",
+    "paid_up_capital": "150,000,000",
+    "nominal_value_per_unit": "10",
+    "paid_value_per_unit": "10"
   },
   "subsidiaries": [
     {
@@ -127,10 +128,10 @@
       {
         "name": "Eng. Mohammed Iqbal Radwan Daboul - Managing Director",
         "role": "-",
-        "classification": null,
-        "bd_session_start": null,
-        "bd_session_end": null,
-        "designation": null
+        "classification": "-",
+        "bd_session_start": "2025-07-03",
+        "bd_session_end": "-",
+        "designation": "Senior Executives"
       }
     ]
   },
@@ -600,22 +601,96 @@
       "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/383_0_2023-05-16_17-48-00_En.pdf"
     }
   ],
+  "board_of_directors_shareholding": [
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "عبيد سعد عبيد الشماسي السبيعي",
+      "designation": "Chairman",
+      "total_shares_held_trading_day": "0.0006667%",
+      "total_shares_held_prev_trading_day": "0.0006667%",
+      "total_shares_change": "0"
+    },
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "نائل سمير محمدكامل فايز",
+      "designation": "Board of Directors",
+      "total_shares_held_trading_day": "0.0000333%",
+      "total_shares_held_prev_trading_day": "0.0000333%",
+      "total_shares_change": "0"
+    },
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "خالد احمد عبدالعزيز الحمدان",
+      "designation": "Board of Directors",
+      "total_shares_held_trading_day": "0.0000333%",
+      "total_shares_held_prev_trading_day": "0.0000333%",
+      "total_shares_change": "0"
+    },
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "خالد محمد علي الحناكي",
+      "designation": "Board of Directors",
+      "total_shares_held_trading_day": "0.0000333%",
+      "total_shares_held_prev_trading_day": "0.0000333%",
+      "total_shares_change": "0"
+    },
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "محمد اقبال رضوان ابراهيم دعبول",
+      "designation": "Senior Executives",
+      "total_shares_held_trading_day": "0.0018000%",
+      "total_shares_held_prev_trading_day": "0.0018000%",
+      "total_shares_change": "0"
+    },
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "عبدالرحمن احمد سعد المفرح",
+      "designation": "Board of Directors",
+      "total_shares_held_trading_day": "0.0000067%",
+      "total_shares_held_prev_trading_day": "0.0000067%",
+      "total_shares_change": "0"
+    },
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "مشعل عبدالرحمن بن عبدالله العقلا",
+      "designation": "Board of Directors",
+      "total_shares_held_trading_day": "0.0003333%",
+      "total_shares_held_prev_trading_day": "0.0003333%",
+      "total_shares_change": "0"
+    },
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "محمد اقبال رضوان ابراهيم دعبول",
+      "designation": "Board of Directors",
+      "total_shares_held_trading_day": "0.0018000%",
+      "total_shares_held_prev_trading_day": "0.0018000%",
+      "total_shares_change": "0"
+    },
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "عبدالعزيز عبدالمحسن عبدالعزيز البكر",
+      "designation": "Board of Directors",
+      "total_shares_held_trading_day": "0.0007000%",
+      "total_shares_held_prev_trading_day": "0.0007000%",
+      "total_shares_change": "0"
+    }
+  ],
   "foreign_ownership": {
     "total_foreign_ownership": {
       "maximum_limit_percent": 49.0,
-      "actual_percent": 5.24
+      "actual_percent": 5.69
     },
     "foreign_strategic_investors_ownership_percent": 0.0,
-    "last_updated": "2026-09-09"
+    "last_updated": "2026-09-14"
   },
   "substantial_shareholders": {
     "substantial_shareholders": [
       {
-        "trading_date": "2026-09-09",
+        "trading_date": "2026-09-14",
         "shareholder": "شركة اثراء القابضة",
         "total_shares_held_trading_day": "7.743%",
-        "total_shares_held_prev_trading_day": "7.278%",
-        "total_shares_change": "0.465"
+        "total_shares_held_prev_trading_day": "7.743%",
+        "total_shares_change": "0"
       }
     ],
     "shareholders_subject_to_lock_up": []

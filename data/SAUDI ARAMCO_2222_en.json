@@ -9,11 +9,11 @@
     "company_overview": "In accordance with the Bylaws, the main objective of the Company shall be to engage in any activities relating to the energy industry, including hydrocarbons, chemicals and other associated and complementary industries, or any other activity, in or outside the Kingdom.",
     "company_history": "The Saudi Arabian Oil Company (Saudi Aramco) was originally established in the Kingdom of Saudi Arabia by virtue of Royal Decree No. (M/8) dated 4/4/1409H (corresponding to 13 November 1988G) as a company wholly owned by the State with a fully paid share capital of sixty billion Saudi Riyals (SAR 60,000,000,000). It became a Saudi joint stock company on 14/4/1439H (corresponding to 1 January 2018G) by virtue of the Bylaws, which were approved by Council of Ministers Resolution No.(180) dated 1/4/1439H (corresponding to 19 December 2017G). Saudi Aramco is registered in the city of Dhahran under commercial registration No(2052101150) dated 11/7/1439H (corresponding to 28 March 2018G) with its headquarters based in Dhahran. The current share capital of Saudi Aramco is ninety billion Saudi Riyals (SAR 90,000,000,000), consisting of two hundred and forty-two billion (242,000,000,000) ordinary shares with no par value.",
     "company_bylaws_url": "https://www.saudiexchange.sa/Resources/pdfs/1541_ByLaw1.pdf",
-    "Authorized Capital  (^)": "90,000,000,000",
-    "Total Issued Shares": "242,000,000,000",
-    "Paid Capital  (^)": "90,000,000,000",
-    "Par Value/Share": "-",
-    "Paid Up Value/Share": "-"
+    "authorized_capital": "90,000,000,000",
+    "total_issued_shares": "242,000,000,000",
+    "paid_up_capital": "90,000,000,000",
+    "nominal_value_per_unit": "-",
+    "paid_value_per_unit": "-"
   },
   "subsidiaries": [],
   "company_details": {
@@ -137,10 +137,10 @@
       {
         "name": "Mr. Ziad T. Al- Murshed",
         "role": "CFO",
-        "classification": null,
-        "bd_session_start": null,
-        "bd_session_end": null,
-        "designation": null
+        "classification": "CFO",
+        "bd_session_start": "2022-05-01",
+        "bd_session_end": "-",
+        "designation": "Senior Executives"
       }
     ]
   },
@@ -610,18 +610,76 @@
       "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/1541_0_2023-03-13_15-28-20_En.pdf"
     }
   ],
+  "board_of_directors_shareholding": [
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "ياسر عثمان حمود الرميان",
+      "designation": "Chairman",
+      "total_shares_held_trading_day": "0.0015000%",
+      "total_shares_held_prev_trading_day": "0.0015000%",
+      "total_shares_change": "0"
+    },
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "امين حسن علي ناصر",
+      "designation": "Board of Directors",
+      "total_shares_held_trading_day": "0.0007012%",
+      "total_shares_held_prev_trading_day": "0.0007012%",
+      "total_shares_change": "0"
+    },
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "فيصل فاضل محسن الابراهيم",
+      "designation": "Board of Directors",
+      "total_shares_held_trading_day": "0.0000011%",
+      "total_shares_held_prev_trading_day": "0.0000011%",
+      "total_shares_change": "0"
+    },
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "زياد ثامر راكان المرشد",
+      "designation": "Senior Executives",
+      "total_shares_held_trading_day": "0.0000813%",
+      "total_shares_held_prev_trading_day": "0.0000813%",
+      "total_shares_change": "0"
+    },
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "خالد هاشم صالح الدباغ",
+      "designation": "Board of Directors",
+      "total_shares_held_trading_day": "0.0000617%",
+      "total_shares_held_prev_trading_day": "0.0000617%",
+      "total_shares_change": "0"
+    },
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "امين حسن علي ناصر",
+      "designation": "Senior Executives",
+      "total_shares_held_trading_day": "0.0007012%",
+      "total_shares_held_prev_trading_day": "0.0007012%",
+      "total_shares_change": "0"
+    },
+    {
+      "trading_date": "2026-09-14",
+      "shareholder": "ابراهيم عبدالعزيز عبدالله العساف",
+      "designation": "Board of Directors",
+      "total_shares_held_trading_day": "0.0000584%",
+      "total_shares_held_prev_trading_day": "0.0000584%",
+      "total_shares_change": "0"
+    }
+  ],
   "foreign_ownership": {
     "total_foreign_ownership": {
       "maximum_limit_percent": 49.0,
       "actual_percent": 0.74
     },
     "foreign_strategic_investors_ownership_percent": 0.0,
-    "last_updated": "2026-09-13"
+    "last_updated": "2026-09-14"
   },
   "substantial_shareholders": {
     "substantial_shareholders": [
       {
-        "trading_date": "2026-09-13",
+        "trading_date": "2026-09-14",
         "shareholder": "المملكة العربية السعودية",
         "total_shares_held_trading_day": "81.484%",
         "total_shares_held_prev_trading_day": "81.484%",
@@ -691,22 +749,9 @@
         "period": "2023-12-31",
         "metric": "Total Liabilities and Shareholders Equity",
         "value": 2477940000
-      },
-      {
-        "period": "2025-12-31",
-        "metric": "Statement Of Income",
-        "value": "2025-12-31"
-      },
-      {
-        "period": "2024-12-31",
-        "metric": "Statement Of Income",
-        "value": "2024-12-31"
-      },
-      {
-        "period": "2023-12-31",
-        "metric": "Statement Of Income",
-        "value": "2023-12-31"
-      },
+      }
+    ],
+    "statement_of_income": [
       {
         "period": "2025-12-31",
         "metric": "Total Revenue (Sales/Operating)",
@@ -798,7 +843,6 @@
         "value": 1.87
       }
     ],
-    "statement_of_income": [],
     "cash_flows": [
       {
         "period": "2025-12-31",
