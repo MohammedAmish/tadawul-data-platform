@@ -1,0 +1,353 @@
+version: 2
+
+models:
+  - name: dim_tadawul__companies
+    description: >
+      Language-specific company information from Tadawul.
+      Grain is one row per symbol and language.
+
+    columns:
+      - name: symbol
+        description: Tadawul trading symbol.
+        tests:
+          - not_null
+
+      - name: language
+        description: Language of the source company page.
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['en', 'ar']
+
+      - name: company_name
+        tests:
+          - not_null
+
+      - name: trading_name
+        tests:
+          - not_null
+
+      - name: isin_code
+        tests:
+          - not_null
+
+    tests:
+      - unique:
+          arguments:
+            column_name: "symbol || '-' || language"
+
+  - name: fct_tadawul__financials
+    description: >
+      Consolidated financial facts from Tadawul balance sheet,
+      income statement, and cash flow data.
+      Arabic and English records representing the same financial
+      fact are consolidated into one language-neutral record.
+
+    columns:
+      - name: symbol
+        description: Tadawul trading symbol.
+        tests:
+          - not_null
+
+      - name: period
+        description: Financial statement period end date.
+        tests:
+          - not_null
+
+      - name: statement_type
+        description: Financial statement category.
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - balance_sheet
+                  - statement_of_income
+                  - cash_flow
+
+      - name: metric
+        description: Canonical language-neutral financial metric.
+        tests:
+          - not_null
+
+      - name: metric_value
+        description: Numeric value of the financial metric.
+        tests:
+          - not_null
+
+    tests:
+      - unique:
+          arguments:
+            column_name: >
+              symbol || '-' ||
+              period::text || '-' ||
+              statement_type || '-' ||
+              metric
+
+  - name: dim_tadawul__persons
+    description: >
+      Canonical person identities resolved from known Tadawul
+      name aliases.
+
+    columns:
+      - name: person_key
+        description: Stable canonical identifier for a resolved person.
+        tests:
+          - not_null
+          - unique
+
+      - name: canonical_name
+        description: Canonical display name for the resolved person.
+        tests:
+          - not_null
+
+  - name: fct_tadawul__shareholdings
+    description: >
+      Language-neutral board shareholding facts reported by Tadawul.
+      Arabic and English records representing the same underlying
+      shareholding are consolidated into one fact, while distinct
+      board and executive roles remain separate.
+      The current dataset covers a sample of Tadawul companies,
+      not the full available market.
+
+    columns:
+      - name: symbol
+        description: Tadawul company trading symbol.
+        tests:
+          - not_null
+
+      - name: trading_date
+        description: Trading date of the reported shareholding.
+        tests:
+          - not_null
+
+      - name: person_name
+        description: Person name reported by Tadawul.
+        tests:
+          - not_null
+
+      - name: designation
+        description: Language-neutral role associated with the reported holding.
+        tests:
+          - not_null
+
+      - name: total_shares_held_trading_day
+        description: Total shares held on the trading date.
+
+      - name: total_shares_held_prev_trading_day
+        description: Total shares held on the previous trading date.
+
+      - name: total_shares_change
+        description: Change in shares held between the two trading dates.
+
+  - name: fct_tadawul__shareholders
+    description: >
+      Language-neutral substantial shareholder holdings reported by Tadawul.
+      Arabic and English records representing the same underlying shareholder
+      holding are consolidated into one fact.
+      Grain is one row per company, trading date, shareholder, and holding values.
+      The current dataset covers a sample of Tadawul companies,
+      not the full available market.
+
+    columns:
+      - name: symbol
+        description: Tadawul company trading symbol.
+        tests:
+          - not_null
+
+      - name: trading_date
+        description: Trading date of the reported shareholder holding.
+        tests:
+          - not_null
+
+      - name: person_name
+        description: Shareholder name as reported by Tadawul.
+        tests:
+          - not_null
+
+      - name: total_shares_held_trading_day
+        description: Total shares held on the trading date.
+
+      - name: total_shares_held_prev_trading_day
+        description: Total shares held on the previous trading date.
+
+      - name: total_shares_change
+        description: Change in shares held between the two trading dates.
+
+  - name: mart_tadawul__company_overview
+    description: >
+      Page-oriented representation of the Tadawul company information
+      extracted by the scraper. Grain is one row per symbol and language.
+      Language-specific company and page information is preserved,
+      while shared numeric financial and shareholding facts are reused
+      across languages. One-to-many page sections are represented as
+      JSONB
+      arrays to preserve company-page information without multiplying
+      the company row. The current dataset covers a sample of Tadawul
+      companies, not the full available market.
+
+    columns:
+      - name: company_key
+        description: Language-specific company identifier.
+        tests:
+          - not_null
+          - unique
+
+      - name: symbol
+        description: Tadawul trading symbol.
+        tests:
+          - not_null
+
+      - name: language
+        description: Language of the company page.
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['en', 'ar']
+
+      - name: company_name
+        description: Company name in the page language.
+        tests:
+          - not_null
+
+      - name: trading_name
+        description: Trading name in the page language.
+        tests:
+          - not_null
+
+      - name: market
+        description: Market where the company is listed.
+
+      - name: sector
+        description: Tadawul sector associated with the company.
+
+      - name: shares_type
+        description: Share type reported by Tadawul.
+
+      - name: isin_code
+        description: Canonical ISIN code.
+        tests:
+          - not_null
+
+      - name: date_established
+        description: Company establishment date reported by Tadawul.
+
+      - name: financial_year_end
+        description: Company's financial year-end information reported by Tadawul.
+
+      - name: listing_date
+        description: Company listing date reported by Tadawul.
+
+      - name: external_auditors
+        description: External auditors reported by Tadawul.
+
+      - name: number_of_employees
+        description: Number of employees reported by Tadawul.
+
+      - name: investor_relations_contact_name
+        description: Investor relations contact name reported by Tadawul.
+
+      - name: investor_relations_company_address
+        description: Investor relations company address reported by Tadawul.
+
+      - name: investor_relations_company_website
+        description: Company website reported by Tadawul.
+
+      - name: company_overview
+        description: Company overview text in the page language.
+
+      - name: company_history
+        description: Company history text in the page language.
+
+      - name: company_bylaws_url
+        description: Company bylaws URL reported by Tadawul.
+
+      - name: authorized_capital
+        description: Authorized capital reported by Tadawul.
+
+      - name: total_issued_shares
+        description: Total issued shares reported by Tadawul.
+
+      - name: paid_up_capital
+        description: Paid-up capital reported by Tadawul.
+
+      - name: nominal_value_per_unit
+        description: Nominal value per unit reported by Tadawul.
+
+      - name: paid_value_per_unit
+        description: Paid value per unit reported by Tadawul.
+
+      - name: foreign_ownership_investors_ownership_percent
+        description: Foreign investors' ownership percentage reported by Tadawul.
+
+      - name: foreign_ownership_maximum_limit_percent
+        description: Maximum foreign ownership limit reported by Tadawul.
+
+      - name: foreign_ownership_actual_percent
+        description: Actual foreign ownership percentage reported by Tadawul.
+
+      - name: foreign_ownership_last_updated
+        description: Last update timestamp for foreign ownership information.
+
+      - name: latest_financial_period
+        description: Latest financial period represented by the selected overview indicators.
+
+      - name: total_assets
+        description: Latest total assets from the consolidated financial facts.
+
+      - name: total_liabilities
+        description: Latest total liabilities from the consolidated financial facts.
+
+      - name: shareholders_equity
+        description: Latest shareholders' equity from the consolidated financial facts.
+
+      - name: total_revenues
+        description: Latest total revenues from the consolidated financial facts.
+
+      - name: net_income
+        description: Latest net income from the consolidated financial facts.
+
+      - name: earnings_per_share
+        description: Latest earnings per share from the consolidated financial facts.
+
+      - name: board_members
+        description: >
+          JSONB array containing board members and their reported roles,
+          classifications, session dates, and designations.
+
+      - name: senior_executives
+        description: >
+          JSONB array containing senior executives and their reported roles,
+          classifications, session dates, and designations.
+
+      - name: subsidiaries
+        description: >
+          JSONB array containing subsidiaries and their ownership,
+          business, location, and country information.
+
+      - name: financial_reports
+        description: >
+          JSONB array containing financial reports and their associated
+          section, period, publication date, file type, and URL.
+
+      - name: investor_contacts
+        description: >
+          JSONB array containing investor contact information reported
+          by Tadawul.
+
+      - name: board_shareholdings
+        description: >
+          JSONB array containing language-neutral board shareholding
+          facts reported by Tadawul.
+
+      - name: substantial_shareholders
+        description: >
+          JSONB array containing language-neutral substantial shareholder
+          holding facts reported by Tadawul.
+
+      - name: shareholders_lockup
+        description: >
+          JSONB array containing shareholder lock-up facts reported
+          by Tadawul.

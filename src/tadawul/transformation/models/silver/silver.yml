@@ -1,0 +1,182 @@
+version: 2
+
+models:
+  - name: int_tadawul__companies
+    columns:
+      - name: company_key
+        tests:
+          - not_null
+          - unique
+
+      - name: symbol
+        tests:
+          - not_null
+
+      - name: language
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['en', 'ar']
+
+  - name: int_tadawul__subsidiaries
+    columns:
+      - name: company_key
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('int_tadawul__companies')
+                field: company_key
+
+      - name: subsidiary_name
+        tests:
+          - not_null
+
+  - name: int_tadawul__board_members
+    columns:
+      - name: company_key
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('int_tadawul__companies')
+                field: company_key
+
+      - name: person_name
+        tests:
+          - not_null
+
+  - name: int_tadawul__board_shareholdings
+    columns:
+      - name: company_key
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('int_tadawul__companies')
+                field: company_key
+
+      - name: person_name
+        tests:
+          - not_null
+
+  - name: int_tadawul__shareholders
+    columns:
+      - name: company_key
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('int_tadawul__companies')
+                field: company_key
+
+      - name: person_name
+        tests:
+          - not_null
+
+  - name: int_tadawul__balance_sheet
+    columns:
+      - name: company_key
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('int_tadawul__companies')
+                field: company_key
+
+      - name: period
+        tests:
+          - not_null
+
+      - name: metric
+        tests:
+          - not_null
+
+  - name: int_tadawul__statement_of_income
+    columns:
+      - name: company_key
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('int_tadawul__companies')
+                field: company_key
+
+      - name: period
+        tests:
+          - not_null
+
+      - name: metric
+        tests:
+          - not_null
+
+  - name: int_tadawul__cash_flows
+    columns:
+      - name: company_key
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('int_tadawul__companies')
+                field: company_key
+
+      - name: period
+        tests:
+          - not_null
+
+      - name: metric
+        tests:
+          - not_null
+
+  - name: int_tadawul__senior_executives
+    columns:
+      - name: company_key
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('int_tadawul__companies')
+                field: company_key
+
+      - name: person_name
+        tests:
+          - not_null
+
+  - name: int_tadawul__financial_reports
+    columns:
+      - name: company_key
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('int_tadawul__companies')
+                field: company_key
+
+  - name: int_tadawul__investor_contacts
+    columns:
+      - name: company_key
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('int_tadawul__companies')
+                field: company_key
+
+      - name: contact_value
+        tests:
+          - not_null
+
+  - name: int_tadawul__shareholders_lockup
+    columns:
+      - name: company_key
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('int_tadawul__companies')
+                field: company_key
+
+      - name: person_name
+        tests:
+          - not_null

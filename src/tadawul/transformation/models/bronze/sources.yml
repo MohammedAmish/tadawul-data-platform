@@ -1,0 +1,65 @@
+version: 2
+
+sources:
+  - name: raw_tadawul
+    schema: raw_tadawul
+
+    tables:
+      - name: raw_company
+        columns:
+          - name: symbol
+            tests:
+              - not_null
+
+          - name: company_name
+            tests:
+              - not_null
+
+          - name: language
+            tests:
+              - not_null
+              - accepted_values:
+                  arguments:
+                    values: ['en', 'ar']
+
+          - name: market
+            tests:
+              - not_null
+
+          - name: sector
+            tests:
+              - not_null
+
+          - name: company_details__isin_code
+            tests:
+              - not_null
+
+      - name: raw_company__balance_sheet
+
+      - name: raw_company__board_of_directors_shareholding
+
+      - name: raw_company__cash_flows
+
+      - name: raw_company__company_details_md71ngr_relations__contact_details
+
+      - name: raw_company__financial_information__balance_sheet
+
+      - name: raw_company__financial_information__cash_flows
+
+      - name: raw_company__financial_information__statement_of_income
+
+      - name: raw_company__financial_statements_and_reports
+
+      - name: raw_company__management_team__board_of_directors
+
+      - name: raw_company__management_team__senior_executives
+
+      - name: raw_company__statement_of_income
+
+      - name: raw_company__subsidiaries
+
+      - name: raw_company__substantial_shareholders__substantial_shareholders
+
+      - name: raw_company__substantial_sharepdckwreholders_subject_to_lock_up
+
+      - name: raw_servlet
