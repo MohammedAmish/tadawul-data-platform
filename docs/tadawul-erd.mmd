@@ -1,0 +1,202 @@
+erDiagram
+
+    %% =========================
+    %% BRONZE
+    %% =========================
+
+    STG_COMPANY {
+        string company_id PK
+        string symbol
+        string language
+        string market
+        string sector
+        string isin_code
+    }
+
+    STG_SERVLET {
+        string symbol PK
+        string company_name_en
+        string company_name_ar
+        string trading_name_en
+        string trading_name_ar
+    }
+
+    STG_FINANCIALS {
+        string company_id FK
+        string period
+        string metric
+        string value
+    }
+
+    STG_BOARD {
+        string company_id FK
+        string name
+        string role
+        string classification
+    }
+
+    STG_EXECUTIVES {
+        string company_id FK
+        string name
+        string role
+        string classification
+    }
+
+    STG_SHAREHOLDERS {
+        string company_id FK
+        string shareholder
+        string trading_date
+        string shares
+    }
+
+    STG_SUBSIDIARIES {
+        string company_id FK
+        string name
+        string ownership_percentage
+    }
+
+
+    %% =========================
+    %% SILVER
+    %% =========================
+
+    INT_COMPANIES {
+        string company_key PK
+        string symbol
+        string language
+        string company_name
+        string trading_name
+        string market
+        string sector
+        string isin_code
+    }
+
+    INT_PERSONS {
+        string person_key PK
+        string canonical_name
+    }
+
+    INT_FINANCIALS {
+        string company_key FK
+        string period
+        string metric
+        string value
+    }
+
+    INT_BOARD_MEMBERS {
+        string person_key FK
+        string company_key FK
+        string person_name
+        string role
+    }
+
+    INT_EXECUTIVES {
+        string person_key FK
+        string company_key FK
+        string person_name
+        string role
+    }
+
+    INT_SHAREHOLDINGS {
+        string person_key FK
+        string company_key FK
+        string trading_date
+        string shares
+    }
+
+    INT_SUBSIDIARIES {
+        string company_key FK
+        string subsidiary_name
+        string ownership_percentage
+    }
+
+
+    %% =========================
+    %% GOLD
+    %% =========================
+
+    DIM_COMPANIES {
+        string symbol PK
+        string language PK
+        string company_name
+        string trading_name
+        string market
+        string sector
+        string isin_code
+    }
+
+    DIM_PERSONS {
+        string person_key PK
+        string canonical_name
+    }
+
+    FCT_FINANCIALS {
+        string symbol FK
+        string period
+        string statement_type
+        string metric
+        numeric metric_value
+    }
+
+    FCT_SHAREHOLDINGS {
+        string symbol FK
+        string trading_date
+        string shareholder
+        numeric shares_held
+    }
+
+    FCT_SHAREHOLDERS {
+        string symbol FK
+        string trading_date
+        string shareholder
+        numeric shares_held
+    }
+
+    MART_COMPANY_OVERVIEW {
+        string company_key FK
+        string symbol
+        string language
+        string company_name
+        string market
+        jsonb board_members
+        jsonb senior_executives
+        jsonb subsidiaries
+    }
+
+    MART_PERSON_EXPOSURE {
+        string person_key FK
+        string canonical_name
+        integer total_company_count
+        jsonb all_companies
+    }
+
+
+    %% =========================
+    %% RELATIONSHIPS
+    %% =========================
+
+    STG_COMPANY ||--o{ STG_FINANCIALS : has
+    STG_COMPANY ||--o{ STG_BOARD : has
+    STG_COMPANY ||--o{ STG_EXECUTIVES : has
+    STG_COMPANY ||--o{ STG_SHAREHOLDERS : has
+    STG_COMPANY ||--o{ STG_SUBSIDIARIES : owns
+
+    STG_COMPANY ||--|| INT_COMPANIES : transforms
+    STG_SERVLET ||--o{ INT_COMPANIES : enriches
+
+    INT_COMPANIES ||--o{ INT_FINANCIALS : reports
+    INT_COMPANIES ||--o{ INT_BOARD_MEMBERS : has
+    INT_COMPANIES ||--o{ INT_EXECUTIVES : has
+    INT_COMPANIES ||--o{ INT_SHAREHOLDINGS : has
+    INT_COMPANIES ||--o{ INT_SUBSIDIARIES : owns
+
+    INT_PERSONS ||--o{ INT_BOARD_MEMBERS : serves_as
+    INT_PERSONS ||--o{ INT_EXECUTIVES : serves_as
+    INT_PERSONS ||--o{ INT_SHAREHOLDINGS : owns
+
+    DIM_COMPANIES ||--o{ FCT_FINANCIALS : reports
+    DIM_COMPANIES ||--o{ FCT_SHAREHOLDINGS : records
+    DIM_COMPANIES ||--o{ FCT_SHAREHOLDERS : records
+
+    DIM_COMPANIES ||--o{ MART_COMPANY_OVERVIEW : describes
+    DIM_PERSONS ||--o{ MART_PERSON_EXPOSURE : describes
