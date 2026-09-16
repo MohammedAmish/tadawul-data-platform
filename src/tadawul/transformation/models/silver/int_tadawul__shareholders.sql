@@ -1,5 +1,11 @@
 select
+    coalesce(
+        p.person_key,
+        lower(trim(s.shareholder))
+    ) as person_key,
+
     c.symbol || '-' || c.language as company_key,
+
     s.trading_date,
     s.shareholder as person_name,
     s.total_shares_held_trading_day,
@@ -10,3 +16,6 @@ from {{ ref('stg_tadawul__substantial_shareholders') }} s
 
 inner join {{ ref('stg_tadawul__company') }} c
     on s.company_root_id = c.company_id
+
+left join {{ ref('tadawul_person_aliases') }} p
+    on s.shareholder = p.alias

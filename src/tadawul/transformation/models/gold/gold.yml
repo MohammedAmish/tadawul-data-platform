@@ -351,3 +351,39 @@ models:
         description: >
           JSONB array containing shareholder lock-up facts reported
           by Tadawul.
+
+  - name: mart_tadawul__person_company_exposure
+    description: >
+      Person-centric view showing the number of distinct companies in which
+      each identified person appears as a board member, board shareholder,
+      substantial shareholder, or lock-up shareholder within the current
+      Tadawul sample.
+
+    columns:
+      - name: person_key
+        description: Unique normalized person identifier.
+        tests:
+          - not_null
+          - unique
+
+      - name: canonical_name
+        description: Canonical display name from the person alias mapping.
+        tests:
+          - not_null
+
+      - name: board_company_count
+        description: Number of distinct companies where the person appears as a board member.
+
+      - name: board_shareholding_company_count
+        description: Number of distinct companies where the person appears in board shareholding records.
+
+      - name: substantial_shareholder_company_count
+        description: Number of distinct companies where the person appears as a substantial shareholder.
+
+      - name: lockup_company_count
+        description: Number of distinct companies where the person appears in shareholder lock-up records.
+
+      - name: total_company_count
+        description: >
+          Number of distinct companies across all supported board and
+          shareholder relationships.
