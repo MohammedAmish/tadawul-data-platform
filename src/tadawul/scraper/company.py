@@ -93,168 +93,183 @@ class CompanyScraper:
         self.language = language
         self.headless = headless
 
+        self.browser = TadawulBrowser(
+            headless=headless
+        )
+
+        self.browser.set_locale(language)
+
     @property
     def labels(self) -> dict[str, str]:
         return self.LABELS[self.language]
 
     def scrape(self, symbol: str) -> dict:
-        with TadawulBrowser(
-            headless=self.headless
-        ) as browser:
+        # Reuse the existing browser.
+        browser = self.browser
 
-            browser.set_locale(self.language)
+        company = browser.get_company(symbol)
 
-            company = browser.get_company(symbol)
+        company_url = company.get("link")
 
-            company_url = company.get("link")
-
-            if not company_url:
-                raise RuntimeError(
-                    f"Link for company {symbol} was not found"
-                )
-
-            if company_url.startswith("/"):
-                company_url = (
-                    browser.BASE_URL + company_url
-                )
-
-            browser.open(
-                company_url,
-                wait_seconds=10,
+        if not company_url:
+            raise RuntimeError(
+                f"Link for company {symbol} was not found"
             )
 
-            driver = browser.driver
-
-            company_name = company.get(
-                "companyDisplay"
+        if company_url.startswith("/"):
+            company_url = (
+                browser.BASE_URL + company_url
             )
 
-            result = {
-                "symbol": symbol,
-                "company_name": company_name,
-                "language": self.language,
-                "market": None,
-                "sector": None,
-                "shares_type": None,
-                "company_profile": {},
-                "subsidiaries": [],
-                "company_details": {},
-                "management_team": {
-                    "board_of_directors": [],
-                    "senior_executives": [],
-                },
-                "financial_statements_and_reports": [],
-                "board_of_directors_shareholding": [],
-                "foreign_ownership": None,
-                "substantial_shareholders": {
-                    "substantial_shareholders": [],
-                    "shareholders_subject_to_lock_up": [],
-                },
-                "financial_information": {
-                    "balance_sheet": [],
-                    "statement_of_income": [],
-                    "cash_flows": [],
-                },
+        browser.open(
+            company_url,
+            wait_seconds=10,
+        )
+
+        driver = browser.driver
+
+        company_name = company.get(
+            "companyDisplay"
+        )
+
+        result = {
+            "symbol": symbol,
+            "company_name": company_name,
+            "language": self.language,
+            "market": None,
+            "sector": None,
+            "shares_type": None,
+            "company_profile": {},
+            "subsidiaries": [],
+            "company_details": {},
+            "management_team": {
+                "board_of_directors": [],
+                "senior_executives": [],
+            },
+            "financial_statements_and_reports": [],
+            "board_of_directors_shareholding": [],
+            "foreign_ownership": None,
+            "substantial_shareholders": {
+                "substantial_shareholders": [],
+                "shareholders_subject_to_lock_up": [],
+            },
+            "financial_information": {
                 "balance_sheet": [],
                 "statement_of_income": [],
                 "cash_flows": [],
-            }
+            },
+            "balance_sheet": [],
+            "statement_of_income": [],
+            "cash_flows": [],
+        }
 
-            _, sector = (
-                self._get_market_and_sector(driver)
+        _, sector = self._get_market_and_sector(
+            driver
+        )
+
+        market_type = browser.servlet.get_company(
+            symbol
+        )["market_type"]
+
+        if market_type == "M":
+            result["market"] = (
+                "Main Market"
+                if self.language == "en"
+                else "السوق الرئيسية"
             )
 
-            market_type = browser.servlet.get_company(
-                symbol
-            )["market_type"]
-
-            if market_type == "M":
-                result["market"] = (
-                    "Main Market"
-                    if self.language == "en"
-                    else "السوق الرئيسية"
-                )
-            elif market_type == "S":
-                result["market"] = (
-                    "Nomu - Parallel Market"
-                    if self.language == "en"
-                    else "نمو – السوق الموازية"
-                )
-            else:
-                result["market"] = None
-
-            result["sector"] = sector
-
-            result["shares_type"] = self._get_exact_text(
-                driver,
-                self.labels["common_shares"],
+        elif market_type == "S":
+            result["market"] = (
+                "Nomu - Parallel Market"
+                if self.language == "en"
+                else "نمو – السوق الموازية"
             )
 
-            result["company_profile"] = (
-                self._get_company_profile(driver)
-            )
+        else:
+            result["market"] = None
 
-            result["subsidiaries"] = (
-                self._get_subsidiaries(driver)
-            )
+        result["sector"] = sector
 
-            result["company_details"] = (
-                self._get_company_details(driver)
-            )
+        result["shares_type"] = self._get_exact_text(
+            driver,
+            self.labels["common_shares"],
+        )
 
-            result["management_team"] = (
-                self._get_management_team(driver)
-            )
+        result["company_profile"] = (
+            self._get_company_profile(driver)
+        )
 
-            result["financial_information"] = (
-                self._get_financial_information(
-                    driver
-                )
-            )
-            
-            result["board_of_directors_shareholding"] = (
-                self._get_board_of_directors_shareholding(
-                    driver
-                )
-            )
+        result["subsidiaries"] = (
+            self._get_subsidiaries(driver)
+        )
 
-            result["financial_statements_and_reports"] = (
-                self._get_financial_statements_and_reports(
-                    driver,
-                    symbol,
-                )
-            )
+        result["company_details"] = (
+            self._get_company_details(driver)
+        )
 
-            result["foreign_ownership"] = (
-                self._get_foreign_ownership(
-                    driver,
-                    symbol,
-                )
-            )
+        result["management_team"] = (
+            self._get_management_team(driver)
+        )
 
-            result["substantial_shareholders"] = (
-                self._get_substantial_shareholders(
-                    driver,
-                    symbol,
-                )
-            )
-
-            self._open_financial_information(
+        result["financial_information"] = (
+            self._get_financial_information(
                 driver
             )
+        )
+        
+        result["financial_statements_and_reports"] = (
+            self._get_financial_statements_and_reports(
+                driver,
+                symbol,
+            )
+        )
+        
+        self._open_financial_information(
+            driver
+        )
 
-            for statement_type, key in (
-                self.STATEMENT_TYPES.items()
-            ):
-                records = self._get_statement(
-                    driver,
-                    symbol,
-                    statement_type,
-                )
+        for statement_type, key in (
+            self.STATEMENT_TYPES.items()
+        ):
+            records = self._get_statement(
+                driver,
+                symbol,
+                statement_type,
+            )
 
-                result[key] = records
+            result[key] = records
+
+        result["board_of_directors_shareholding"] = (
+            self._get_board_of_directors_shareholding(
+                driver
+            )
+        )
+
+        result["foreign_ownership"] = (
+            self._get_foreign_ownership(
+                driver,
+                symbol,
+            )
+        )
+
+        result["substantial_shareholders"] = (
+            self._get_substantial_shareholders(
+                driver,
+                symbol,
+            )
+        )
 
         return result
+    
+    def close(self):
+        if self.browser:
+            self.browser.close()
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc, tb):
+        self.close()
 
     @staticmethod
     def _get_exact_text(

@@ -1,0 +1,370 @@
+{
+  "symbol": "9633",
+  "company_name": "SERVICE EQUIPMENT",
+  "language": "en",
+  "market": "Nomu - Parallel Market",
+  "sector": "Consumer Discretionary Distribution & Retail",
+  "shares_type": "Common Shares",
+  "company_profile": {
+    "company_overview": "Maintenance Machinery Company is a company specialized in providing a wide range of equipment related to the automotive maintenance sector and accessories whose main products include the following: - Tire equipment - Brake maintenance machines - Rim repair equipment - Suspension and brake testing devices - Suspension and brake testing devices - Lighting inspection equipment - Environmental Inspection Equipment - Welding machines for cars - Petrol Station Equipment & Accessories - Fault diagnostic devices - Car and vehicle cranes - Equipment for checking and maintaining fuel cycles - Oil and grease equipment - Mechanical hand tools and accessories - Compressors and air extensions - Freon charging stations - Car painting equipment - Car chassis repair - Measuring and inspection devices - Car wash equipment - Electric vehicle equipment",
+    "company_history": "A company was established in 1980, and the company is headquartered in Jeddah. The company is one of the market leaders in the field of maintenance solutions, technical services and services related to vehicle service centers in the Kingdom of Saudi Arabia.The company takes an integrated approach through two main lines of business: the first concerns the sale of equipment while the second involves the provision of after-sales services. This approach ensures its customers comprehensive solutions that meet their operational needs. The company''s relationships with the brands it supplies are based on the needs of the local market.",
+    "company_bylaws_url": "https://www.saudiexchange.sa/Resources/pdfs/7386_ByLaw1.pdf",
+    "authorized_capital": "50,000,000",
+    "total_issued_shares": "2,400,000",
+    "paid_up_capital": "24,000,000",
+    "nominal_value_per_unit": "10",
+    "paid_value_per_unit": "10"
+  },
+  "subsidiaries": [],
+  "company_details": {
+    "date_established": "1980/04/28",
+    "financial_year_end": "31/12",
+    "listing_date": "2025/05/04",
+    "external_auditors": "[RSM United Accountants Professional Consultants]",
+    "isin_code": "SA16A1A4MGH8",
+    "number_of_employees": "107",
+    "investor_relations": {
+      "contact_name": "ghada alsulami",
+      "company_address": "Jeddah, Al-Naseem District, Street: King Abdullah Roads, P.O. Box (6217) Postal Code (23236))",
+      "contact_details": [
+        "Telephone: +966126403000",
+        "Fax : +966126404438",
+        "Email : Listing@serviceequipment.com.sa"
+      ],
+      "company_website": "https://serviceequipment.com.sa/"
+    }
+  },
+  "management_team": {
+    "board_of_directors": [
+      {
+        "name": "Ahmed Omar Abu Bakr Balubaid",
+        "role": "Non - Executive",
+        "classification": "Non - Executive",
+        "bd_session_start": "2024-06-25",
+        "bd_session_end": "2028-06-10",
+        "designation": "Chairman"
+      },
+      {
+        "name": "Majid Ahmed Omar Balubaid",
+        "role": "Deputy Chairman - Executive",
+        "classification": "Deputy Chairman - Executive",
+        "bd_session_start": "2024-06-25",
+        "bd_session_end": "2028-06-10",
+        "designation": "Board of Directors"
+      },
+      {
+        "name": "Muhammad Hashem Bakr Alhajj",
+        "role": "Non - Executive",
+        "classification": "Non - Executive",
+        "bd_session_start": "2024-06-10",
+        "bd_session_end": "2028-06-10",
+        "designation": "Board of Directors"
+      },
+      {
+        "name": "Ahmed Mahmoud Ahmed Zahran",
+        "role": "Independent",
+        "classification": "Independent",
+        "bd_session_start": "2024-06-10",
+        "bd_session_end": "2028-06-10",
+        "designation": "Board of Directors"
+      },
+      {
+        "name": "BASSAM ALI ALDHABI",
+        "role": "Independent",
+        "classification": "Independent",
+        "bd_session_start": "2025-12-24",
+        "bd_session_end": "2028-06-10",
+        "designation": "Board of Directors"
+      }
+    ],
+    "senior_executives": [
+      {
+        "name": "Majid Ahmed Omar Balubaid",
+        "role": "CEO",
+        "classification": "CEO",
+        "bd_session_start": "2024-06-10",
+        "bd_session_end": "-",
+        "designation": "Senior Executives"
+      },
+      {
+        "name": "Sameer Abdulmardi Amer",
+        "role": "CFO",
+        "classification": null,
+        "bd_session_start": null,
+        "bd_session_end": null,
+        "designation": null
+      }
+    ]
+  },
+  "financial_statements_and_reports": [
+    {
+      "section": "Financial Statements",
+      "period": "Annual",
+      "year": 2025,
+      "publication_date": "2026-03-26",
+      "file_type": "pdf",
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/7386_0_2026-03-26_03-40-33_En.pdf"
+    },
+    {
+      "section": "Financial Statements",
+      "period": "Annual",
+      "year": 2024,
+      "publication_date": "2025-05-04",
+      "file_type": "pdf",
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/7386_0_2025-04-30_19-28-36_En.pdf"
+    },
+    {
+      "section": "Financial Statements",
+      "period": "Q2",
+      "year": 2026,
+      "publication_date": "2026-08-31",
+      "file_type": "pdf",
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/7386_0_2026-08-31_08-59-17_En.pdf"
+    },
+    {
+      "section": "Financial Statements",
+      "period": "Q2",
+      "year": 2025,
+      "publication_date": "2025-08-25",
+      "file_type": "pdf",
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/7386_0_2025-08-24_15-16-54_En.pdf"
+    },
+    {
+      "section": "XBRL",
+      "period": "Annual",
+      "year": 2025,
+      "publication_date": "2026-04-16",
+      "file_type": "html",
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/7386_9633_2026-04-14_15-42-00_Eng.html"
+    },
+    {
+      "section": "XBRL",
+      "period": "Annual",
+      "year": 2025,
+      "publication_date": "2026-04-16",
+      "file_type": "xls",
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/7386_9633_2026-04-14_15-42-00_Eng.xls"
+    },
+    {
+      "section": "XBRL",
+      "period": "Annual",
+      "year": 2024,
+      "publication_date": "2025-11-05",
+      "file_type": "html",
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/7386_9633_2025-10-29_16-12-09_Eng.html"
+    },
+    {
+      "section": "XBRL",
+      "period": "Annual",
+      "year": 2024,
+      "publication_date": "2025-11-05",
+      "file_type": "xls",
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/7386_9633_2025-10-29_16-12-09_Eng.xls"
+    },
+    {
+      "section": "Board Report",
+      "period": "Board Report",
+      "year": 2025,
+      "publication_date": "2026-03-31",
+      "file_type": "pdf",
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/7386_0_2026-03-31_15-48-15_En.pdf"
+    },
+    {
+      "section": "Board Report",
+      "period": "Board Report",
+      "year": 2024,
+      "publication_date": "2025-06-02",
+      "file_type": "pdf",
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/7386_0_2025-06-02_07-21-56_En.pdf"
+    }
+  ],
+  "board_of_directors_shareholding": [],
+  "foreign_ownership": {
+    "total_foreign_ownership": {
+      "maximum_limit_percent": 49.0,
+      "actual_percent": 0.1
+    },
+    "foreign_strategic_investors_ownership_percent": 0.0,
+    "last_updated": "2026-09-14"
+  },
+  "substantial_shareholders": {
+    "substantial_shareholders": [
+      {
+        "trading_date": "2026-09-14",
+        "shareholder": "شركة احمد عمر ابوبكر بالبيد القابضة",
+        "total_shares_held_trading_day": "61.6%",
+        "total_shares_held_prev_trading_day": "61.6%",
+        "total_shares_change": "0"
+      },
+      {
+        "trading_date": "2026-09-14",
+        "shareholder": "شركة عمر ابوبكر بالبيد المحدودة",
+        "total_shares_held_trading_day": "8.4%",
+        "total_shares_held_prev_trading_day": "8.4%",
+        "total_shares_change": "0"
+      }
+    ],
+    "shareholders_subject_to_lock_up": []
+  },
+  "financial_information": {
+    "balance_sheet": [
+      {
+        "period": "2025-12-31",
+        "metric": "Total Assets",
+        "value": 55579
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "Total Assets",
+        "value": 52926
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "Total Liabilities",
+        "value": 11311
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "Total Liabilities",
+        "value": 11038
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "Total Shareholders Equity (After Deducting the Minority Equity)",
+        "value": 44267
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "Total Shareholders Equity (After Deducting the Minority Equity)",
+        "value": 41888
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "Total Liabilities and Shareholders Equity",
+        "value": 55579
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "Total Liabilities and Shareholders Equity",
+        "value": 52926
+      }
+    ],
+    "statement_of_income": [
+      {
+        "period": "2025-12-31",
+        "metric": "Total Revenue (Sales/Operating)",
+        "value": 50518
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "Total Revenue (Sales/Operating)",
+        "value": 57437
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "Net Profit (Loss) before Zakat and Tax",
+        "value": 7142
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "Net Profit (Loss) before Zakat and Tax",
+        "value": 17317
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "Zakat and Income Tax",
+        "value": -1141
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "Zakat and Income Tax",
+        "value": -1075
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "Net Profit (Loss) Attributable to Shareholders of the Issuer",
+        "value": 6001
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "Net Profit (Loss) Attributable to Shareholders of the Issuer",
+        "value": 16241
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "Total Comprehensive Income Attributable to Shareholders of the Issuer",
+        "value": 5979
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "Total Comprehensive Income Attributable to Shareholders of the Issuer",
+        "value": 16705
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "Profit (Loss) per Share",
+        "value": 2.5
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "Profit (Loss) per Share",
+        "value": 6.77
+      }
+    ],
+    "cash_flows": [
+      {
+        "period": "2025-12-31",
+        "metric": "Net Cash From Operating Activities",
+        "value": 6776
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "Net Cash From Operating Activities",
+        "value": 9462
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "Net Cash From Investing Activities",
+        "value": -75
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "Net Cash From Investing Activities",
+        "value": -457
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "Net Cash From Financing Activities",
+        "value": -4302
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "Net Cash From Financing Activities",
+        "value": -664
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "Cash and Cash Equivalents, Beginning of the Period",
+        "value": 9603
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "Cash and Cash Equivalents, Beginning of the Period",
+        "value": 1262
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "Cash and Cash Equivalents, End of the Period",
+        "value": 12002
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "Cash and Cash Equivalents, End of the Period",
+        "value": 9604
+      }
+    ]
+  },
+  "balance_sheet": [],
+  "statement_of_income": [],
+  "cash_flows": []
+}

@@ -7,12 +7,12 @@ def main():
     symbol = "2222"
     language = "en"
 
-    scraper = CompanyScraper(
+    with CompanyScraper(
         language=language,
-        headless=False,
-    )
+        headless=True,
+    ) as scraper:
 
-    result = scraper.scrape(symbol)
+        result = scraper.scrape(symbol)
 
     company_name = result["company_name"]
 

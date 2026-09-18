@@ -612,7 +612,7 @@
   ],
   "board_of_directors_shareholding": [
     {
-      "trading_date": "2026-09-14",
+      "trading_date": "2026-09-17",
       "shareholder": "ياسر عثمان حمود الرميان",
       "designation": "Chairman",
       "total_shares_held_trading_day": "0.0015000%",
@@ -620,7 +620,7 @@
       "total_shares_change": "0"
     },
     {
-      "trading_date": "2026-09-14",
+      "trading_date": "2026-09-17",
       "shareholder": "امين حسن علي ناصر",
       "designation": "Board of Directors",
       "total_shares_held_trading_day": "0.0007012%",
@@ -628,7 +628,7 @@
       "total_shares_change": "0"
     },
     {
-      "trading_date": "2026-09-14",
+      "trading_date": "2026-09-17",
       "shareholder": "فيصل فاضل محسن الابراهيم",
       "designation": "Board of Directors",
       "total_shares_held_trading_day": "0.0000011%",
@@ -636,7 +636,7 @@
       "total_shares_change": "0"
     },
     {
-      "trading_date": "2026-09-14",
+      "trading_date": "2026-09-17",
       "shareholder": "زياد ثامر راكان المرشد",
       "designation": "Senior Executives",
       "total_shares_held_trading_day": "0.0000813%",
@@ -644,7 +644,7 @@
       "total_shares_change": "0"
     },
     {
-      "trading_date": "2026-09-14",
+      "trading_date": "2026-09-17",
       "shareholder": "خالد هاشم صالح الدباغ",
       "designation": "Board of Directors",
       "total_shares_held_trading_day": "0.0000617%",
@@ -652,7 +652,7 @@
       "total_shares_change": "0"
     },
     {
-      "trading_date": "2026-09-14",
+      "trading_date": "2026-09-17",
       "shareholder": "امين حسن علي ناصر",
       "designation": "Senior Executives",
       "total_shares_held_trading_day": "0.0007012%",
@@ -660,7 +660,7 @@
       "total_shares_change": "0"
     },
     {
-      "trading_date": "2026-09-14",
+      "trading_date": "2026-09-17",
       "shareholder": "ابراهيم عبدالعزيز عبدالله العساف",
       "designation": "Board of Directors",
       "total_shares_held_trading_day": "0.0000584%",
@@ -674,12 +674,12 @@
       "actual_percent": 0.74
     },
     "foreign_strategic_investors_ownership_percent": 0.0,
-    "last_updated": "2026-09-14"
+    "last_updated": "2026-09-17"
   },
   "substantial_shareholders": {
     "substantial_shareholders": [
       {
-        "trading_date": "2026-09-14",
+        "trading_date": "2026-09-17",
         "shareholder": "المملكة العربية السعودية",
         "total_shares_held_trading_day": "81.484%",
         "total_shares_held_prev_trading_day": "81.484%",

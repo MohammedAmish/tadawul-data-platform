@@ -1,0 +1,370 @@
+{
+  "symbol": "9633",
+  "company_name": "آلات الصيانة",
+  "language": "ar",
+  "market": "نمو – السوق الموازية",
+  "sector": "تجزئة وتوزيع السلع الكمالية",
+  "shares_type": "أسهم عادية",
+  "company_profile": {
+    "company_overview": "شركة آلات الصيانة هي شركة متخصصة في تقديم مجموعة واسعة من المعدات ذات الصلاة بقطاع صيانة السيارات وملحقاتها",
+    "company_history": "نشأت شركة إلى الصيانة في عام ١٩٨٠، ومقرها الشركة الرئيسي في مدينة جدة",
+    "company_bylaws_url": "https://www.saudiexchange.sa/Resources/pdfs/7386_ByLaw2.pdf",
+    "authorized_capital": "50,000,000",
+    "total_issued_shares": "2,400,000",
+    "paid_up_capital": "24,000,000",
+    "nominal_value_per_unit": "10",
+    "paid_value_per_unit": "10"
+  },
+  "subsidiaries": [],
+  "company_details": {
+    "date_established": "1980/04/28",
+    "financial_year_end": "31/12",
+    "listing_date": "2025/05/04",
+    "external_auditors": "[شركة ار اس ام المحاسبون المتحدون للاستشارات المهنية]",
+    "isin_code": "SA16A1A4MGH8",
+    "number_of_employees": "107",
+    "investor_relations": {
+      "contact_name": "غاده السلمي",
+      "company_address": "جدة، حي النسيم، شارع : طرق الملك عبد الله، ص.ب (6217) رمز بريدي",
+      "contact_details": [
+        "الهاتف +966126403000",
+        "فاكس : +966126404438",
+        "بريد الالكتروني : Listing@serviceequipment.com.sa"
+      ],
+      "company_website": "https://serviceequipment.com.sa/"
+    }
+  },
+  "management_team": {
+    "board_of_directors": [
+      {
+        "name": "أحمد عمر أبو بكر بالبيد",
+        "role": "غير تنفيذي",
+        "classification": "غير تنفيذي",
+        "bd_session_start": "2024-06-25",
+        "bd_session_end": "2028-06-10",
+        "designation": "رئيس مجلس الإدارة"
+      },
+      {
+        "name": "ماجد أحمد عمر بالبيد",
+        "role": "نائب الرئيس - تنفيذي",
+        "classification": "نائب الرئيس - تنفيذي",
+        "bd_session_start": "2024-06-25",
+        "bd_session_end": "2028-06-10",
+        "designation": "أعضاء مجلس الإدارة"
+      },
+      {
+        "name": "محمد هاشم بكر الحاج",
+        "role": "غير تنفيذي",
+        "classification": "غير تنفيذي",
+        "bd_session_start": "2024-06-10",
+        "bd_session_end": "2028-06-10",
+        "designation": "أعضاء مجلس الإدارة"
+      },
+      {
+        "name": "أحمد محمود احمد زهران",
+        "role": "مستقل",
+        "classification": "مستقل",
+        "bd_session_start": "2024-06-10",
+        "bd_session_end": "2028-06-10",
+        "designation": "أعضاء مجلس الإدارة"
+      },
+      {
+        "name": "بسام علي الظبي",
+        "role": "مستقل",
+        "classification": "مستقل",
+        "bd_session_start": "2025-12-24",
+        "bd_session_end": "2028-06-10",
+        "designation": "أعضاء مجلس الإدارة"
+      }
+    ],
+    "senior_executives": [
+      {
+        "name": "ماجد أحمد عمر بالبيد",
+        "role": "الرئيس التنفيذي",
+        "classification": "الرئيس التنفيذي",
+        "bd_session_start": "2024-06-10",
+        "bd_session_end": "-",
+        "designation": "كبار التنفيذيين"
+      },
+      {
+        "name": "سمير عبد المرضي عامر",
+        "role": "المدير المالي",
+        "classification": null,
+        "bd_session_start": null,
+        "bd_session_end": null,
+        "designation": null
+      }
+    ]
+  },
+  "financial_statements_and_reports": [
+    {
+      "section": "القوائم المالية",
+      "period": "سنوي",
+      "year": 2025,
+      "publication_date": "2026-03-26",
+      "file_type": "pdf",
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/7386_0_2026-03-26_03-40-33_Ar.pdf"
+    },
+    {
+      "section": "القوائم المالية",
+      "period": "سنوي",
+      "year": 2024,
+      "publication_date": "2025-05-04",
+      "file_type": "pdf",
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/7386_0_2025-04-30_19-28-36_Ar.pdf"
+    },
+    {
+      "section": "القوائم المالية",
+      "period": "الربع الثاني",
+      "year": 2026,
+      "publication_date": "2026-08-31",
+      "file_type": "pdf",
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/7386_0_2026-08-31_08-59-17_Ar.pdf"
+    },
+    {
+      "section": "القوائم المالية",
+      "period": "الربع الثاني",
+      "year": 2025,
+      "publication_date": "2025-08-25",
+      "file_type": "pdf",
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/7386_0_2025-08-24_15-16-54_Ar.pdf"
+    },
+    {
+      "section": "لغة التقارير المرنة",
+      "period": "سنوي",
+      "year": 2025,
+      "publication_date": "2026-04-16",
+      "file_type": "html",
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/7386_9633_2026-04-14_15-42-00_ARB.html"
+    },
+    {
+      "section": "لغة التقارير المرنة",
+      "period": "سنوي",
+      "year": 2025,
+      "publication_date": "2026-04-16",
+      "file_type": "xls",
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/7386_9633_2026-04-14_15-42-00_ARB.xls"
+    },
+    {
+      "section": "لغة التقارير المرنة",
+      "period": "سنوي",
+      "year": 2024,
+      "publication_date": "2025-11-05",
+      "file_type": "html",
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/7386_9633_2025-10-29_16-12-09_ARB.html"
+    },
+    {
+      "section": "لغة التقارير المرنة",
+      "period": "سنوي",
+      "year": 2024,
+      "publication_date": "2025-11-05",
+      "file_type": "xls",
+      "file_url": "https://www.saudiexchange.sa/Resources/XBRL_DOCS/7386_9633_2025-10-29_16-12-09_ARB.xls"
+    },
+    {
+      "section": "تقرير مجلس الإدارة",
+      "period": "تقرير مجلس الإدارة",
+      "year": 2025,
+      "publication_date": "2026-03-31",
+      "file_type": "pdf",
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/7386_0_2026-03-31_15-48-15_Ar.pdf"
+    },
+    {
+      "section": "تقرير مجلس الإدارة",
+      "period": "تقرير مجلس الإدارة",
+      "year": 2024,
+      "publication_date": "2025-06-02",
+      "file_type": "pdf",
+      "file_url": "https://www.saudiexchange.sa/Resources/fsPdf/7386_0_2025-06-02_07-21-56_Ar.pdf"
+    }
+  ],
+  "board_of_directors_shareholding": [],
+  "foreign_ownership": {
+    "total_foreign_ownership": {
+      "maximum_limit_percent": 49.0,
+      "actual_percent": 0.1
+    },
+    "foreign_strategic_investors_ownership_percent": 0.0,
+    "last_updated": "2026-09-14"
+  },
+  "substantial_shareholders": {
+    "substantial_shareholders": [
+      {
+        "trading_date": "2026-09-14",
+        "shareholder": "شركة احمد عمر ابوبكر بالبيد القابضة",
+        "total_shares_held_trading_day": "61.6%",
+        "total_shares_held_prev_trading_day": "61.6%",
+        "total_shares_change": "0"
+      },
+      {
+        "trading_date": "2026-09-14",
+        "shareholder": "شركة عمر ابوبكر بالبيد المحدودة",
+        "total_shares_held_trading_day": "8.4%",
+        "total_shares_held_prev_trading_day": "8.4%",
+        "total_shares_change": "0"
+      }
+    ],
+    "shareholders_subject_to_lock_up": []
+  },
+  "financial_information": {
+    "balance_sheet": [
+      {
+        "period": "2025-12-31",
+        "metric": "إجمالي الموجودات",
+        "value": 55579
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "إجمالي الموجودات",
+        "value": 52926
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "إجمالي المطلوبات",
+        "value": 11311
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "إجمالي المطلوبات",
+        "value": 11038
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "إجمالي حقوق الملكية (بعد استبعاد الحصص غير المسيطرة)",
+        "value": 44267
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "إجمالي حقوق الملكية (بعد استبعاد الحصص غير المسيطرة)",
+        "value": 41888
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "إجمالي المطلوبات وحقوق المساهمين",
+        "value": 55579
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "إجمالي المطلوبات وحقوق المساهمين",
+        "value": 52926
+      }
+    ],
+    "statement_of_income": [
+      {
+        "period": "2025-12-31",
+        "metric": "إجمالي الإيرادات (المبيعات/العمليات)",
+        "value": 50518
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "إجمالي الإيرادات (المبيعات/العمليات)",
+        "value": 57437
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "صافي الربح (الخسارة) قبل الزكاة والضريبة",
+        "value": 7142
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "صافي الربح (الخسارة) قبل الزكاة والضريبة",
+        "value": 17317
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "الزكاة وضريبة الدخل",
+        "value": -1141
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "الزكاة وضريبة الدخل",
+        "value": -1075
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "صافي الربح (الخسارة) العائد لمساهمي المصدر",
+        "value": 6001
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "صافي الربح (الخسارة) العائد لمساهمي المصدر",
+        "value": 16241
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "إجمالي الدخل الشامل العائد لمساهمي المصدر",
+        "value": 5979
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "إجمالي الدخل الشامل العائد لمساهمي المصدر",
+        "value": 16705
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "ربحية (خسارة) السهم",
+        "value": 2.5
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "ربحية (خسارة) السهم",
+        "value": 6.77
+      }
+    ],
+    "cash_flows": [
+      {
+        "period": "2025-12-31",
+        "metric": "صافي النقد من الأنشطة التشغيلية",
+        "value": 6776
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "صافي النقد من الأنشطة التشغيلية",
+        "value": 9462
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "صافي النقد من الأنشطة الإستثمارية",
+        "value": -75
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "صافي النقد من الأنشطة الإستثمارية",
+        "value": -457
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "صافي النقد من الأنشطة التمويلية",
+        "value": -4302
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "صافي النقد من الأنشطة التمويلية",
+        "value": -664
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "النقد وما يماثله في بداية الفترة",
+        "value": 9603
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "النقد وما يماثله في بداية الفترة",
+        "value": 1262
+      },
+      {
+        "period": "2025-12-31",
+        "metric": "النقد وما يماثله في نهاية الفترة",
+        "value": 12002
+      },
+      {
+        "period": "2024-12-31",
+        "metric": "النقد وما يماثله في نهاية الفترة",
+        "value": 9604
+      }
+    ]
+  },
+  "balance_sheet": [],
+  "statement_of_income": [],
+  "cash_flows": []
+}

@@ -3,23 +3,10 @@ from __future__ import annotations
 import dlt
 
 from tadawul.scraper.company import CompanyScraper
-
-
-MAIN_MARKET_SYMBOLS = [
-    "2222",
-    "2030",
-    "4240",
-    "6060",
-    "4220",
-]
-
-NOMU_SYMBOLS = [
-    "9510",
-    "9513",
-    "9523",
-    "9541",
-    "9544",
-]
+from tadawul.utils.discovered_company_symbols import (
+    MAIN_MARKET_SYMBOLS,
+    NOMU_SYMBOLS,
+)
 
 
 @dlt.resource(
@@ -30,12 +17,8 @@ NOMU_SYMBOLS = [
 def company_resource(
     symbol: str,
     language: str,
+    scraper: CompanyScraper,
 ):
-    scraper = CompanyScraper(
-        headless=True,
-        language=language,
-    )
-
     result = scraper.scrape(symbol)
 
     result["symbol"] = symbol
@@ -50,28 +33,29 @@ def main():
         dataset_name="raw_tadawul",
     )
 
-    companies = (
-        MAIN_MARKET_SYMBOLS
-        + NOMU_SYMBOLS
-    )
+    # companies = MAIN_MARKET_SYMBOLS
+    companies = NOMU_SYMBOLS
 
-    for symbol in companies:
-        for language in ["en", "ar"]:
-            print(
-                f"\n{'=' * 60}\n"
-                f"Loading company {symbol} - "
-                f"language: {language}"
-                f"\n{'=' * 60}"
-            )
+    for language in ["en", "ar"]:
+        with CompanyScraper(
+            headless=True,
+            language=language,
+        ) as scraper:
 
-            load_info = pipeline.run(
-                company_resource(
-                    symbol,
-                    language,
+            for symbol in companies:
+                print(
+                    f"Scraping {symbol} - {language}"
                 )
-            )
 
-            print(load_info)
+                load_info = pipeline.run(
+                    company_resource(
+                        symbol,
+                        language,
+                        scraper,
+                    )
+                )
+
+                print(load_info)
 
 
 if __name__ == "__main__":
