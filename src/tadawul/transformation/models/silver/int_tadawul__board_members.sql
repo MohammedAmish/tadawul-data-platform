@@ -1,12 +1,8 @@
 select
-    coalesce(
-        p.person_key,
-        lower(trim(b.name))
-    ) as person_key,
-
     c.symbol || '-' || c.language as company_key,
 
     b.name as person_name,
+    'board_of_directors' as management_type,
     b.role,
     b.classification,
     b.bd_session_start,
@@ -16,7 +12,22 @@ select
 from {{ ref('stg_tadawul__board_of_directors') }} b
 
 inner join {{ ref('stg_tadawul__company') }} c
-    on b.company_root_id = c.company_id
+    on b.company_id = c.company_id
 
-left join {{ ref('tadawul_person_aliases') }} p
-    on b.name = p.alias
+union all
+
+select
+    c.symbol || '-' || c.language as company_key,
+
+    e.name as person_name,
+    'senior_executive' as management_type,
+    e.role,
+    e.classification,
+    e.bd_session_start,
+    e.bd_session_end,
+    e.designation
+
+from {{ ref('stg_tadawul__senior_executives') }} e
+
+inner join {{ ref('stg_tadawul__company') }} c
+    on e.company_id = c.company_id

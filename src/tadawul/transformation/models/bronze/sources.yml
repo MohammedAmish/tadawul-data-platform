@@ -35,31 +35,87 @@ sources:
               - not_null
 
       - name: raw_company__balance_sheet
+        columns:
+          - name: _dlt_root_id
+            tests:
+              - not_null
 
       - name: raw_company__board_of_directors_shareholding
+        columns:
+          - name: _dlt_root_id
+            tests:
+              - not_null
 
       - name: raw_company__cash_flows
+        columns:
+          - name: _dlt_root_id
+            tests:
+              - not_null
 
       - name: raw_company__company_details_md71ngr_relations__contact_details
+        columns:
+          - name: _dlt_root_id
+            tests:
+              - not_null
 
       - name: raw_company__financial_information__balance_sheet
+        columns:
+          - name: _dlt_root_id
+            tests:
+              - not_null
 
       - name: raw_company__financial_information__cash_flows
+        columns:
+          - name: _dlt_root_id
+            tests:
+              - not_null
 
       - name: raw_company__financial_information__statement_of_income
+        columns:
+          - name: _dlt_root_id
+            tests:
+              - not_null
 
       - name: raw_company__financial_statements_and_reports
+        columns:
+          - name: _dlt_root_id
+            tests:
+              - not_null
 
       - name: raw_company__management_team__board_of_directors
+        columns:
+          - name: _dlt_root_id
+            tests:
+              - not_null
 
       - name: raw_company__management_team__senior_executives
+        columns:
+          - name: _dlt_root_id
+            tests:
+              - not_null
 
       - name: raw_company__statement_of_income
+        columns:
+          - name: _dlt_root_id
+            tests:
+              - not_null
 
       - name: raw_company__subsidiaries
+        columns:
+          - name: _dlt_root_id
+            tests:
+              - not_null
 
       - name: raw_company__substantial_shareholders__substantial_shareholders
+        columns:
+          - name: _dlt_root_id
+            tests:
+              - not_null
 
       - name: raw_company__substantial_sharepdckwreholders_subject_to_lock_up
+        columns:
+          - name: _dlt_root_id
+            tests:
+              - not_null
 
       - name: raw_servlet

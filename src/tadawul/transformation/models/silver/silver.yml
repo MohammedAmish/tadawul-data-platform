@@ -1,6 +1,7 @@
 version: 2
 
 models:
+
   - name: int_tadawul__companies
     columns:
       - name: company_key
@@ -19,22 +20,26 @@ models:
               arguments:
                 values: ['en', 'ar']
 
-  - name: int_tadawul__subsidiaries
-    columns:
-      - name: company_key
+      - name: company_name
         tests:
           - not_null
-          - relationships:
-              arguments:
-                to: ref('int_tadawul__companies')
-                field: company_key
 
-      - name: subsidiary_name
+      - name: market
         tests:
           - not_null
+
+      - name: sector
+        tests:
+          - not_null
+
+      - name: isin_code
+        tests:
+          - not_null
+
 
   - name: int_tadawul__board_members
     columns:
+
       - name: company_key
         tests:
           - not_null
@@ -46,6 +51,16 @@ models:
       - name: person_name
         tests:
           - not_null
+
+      - name: management_type
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - board_of_directors
+                  - senior_executive
+
 
   - name: int_tadawul__board_shareholdings
     columns:
@@ -57,11 +72,29 @@ models:
                 to: ref('int_tadawul__companies')
                 field: company_key
 
-      - name: person_name
+      - name: shareholder_name
         tests:
           - not_null
 
-  - name: int_tadawul__shareholders
+      - name: shareholding_type
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - board_shareholding
+                  - substantial_shareholder
+
+      - name: is_lockup
+        tests:
+          - not_null
+
+      - name: trading_date
+        tests:
+          - not_null
+
+
+  - name: int_tadawul__financials
     columns:
       - name: company_key
         tests:
@@ -71,19 +104,35 @@ models:
                 to: ref('int_tadawul__companies')
                 field: company_key
 
-      - name: person_name
+      - name: symbol
         tests:
           - not_null
 
-  - name: int_tadawul__balance_sheet
-    columns:
-      - name: company_key
+      - name: language
         tests:
           - not_null
-          - relationships:
+          - accepted_values:
               arguments:
-                to: ref('int_tadawul__companies')
-                field: company_key
+                values: ['en', 'ar']
+
+      - name: statement_type
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - balance_sheet
+                  - statement_of_income
+                  - cash_flows
+
+      - name: source_type
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - detailed
+                  - financial_information
 
       - name: period
         tests:
@@ -93,55 +142,6 @@ models:
         tests:
           - not_null
 
-  - name: int_tadawul__statement_of_income
-    columns:
-      - name: company_key
-        tests:
-          - not_null
-          - relationships:
-              arguments:
-                to: ref('int_tadawul__companies')
-                field: company_key
-
-      - name: period
-        tests:
-          - not_null
-
-      - name: metric
-        tests:
-          - not_null
-
-  - name: int_tadawul__cash_flows
-    columns:
-      - name: company_key
-        tests:
-          - not_null
-          - relationships:
-              arguments:
-                to: ref('int_tadawul__companies')
-                field: company_key
-
-      - name: period
-        tests:
-          - not_null
-
-      - name: metric
-        tests:
-          - not_null
-
-  - name: int_tadawul__senior_executives
-    columns:
-      - name: company_key
-        tests:
-          - not_null
-          - relationships:
-              arguments:
-                to: ref('int_tadawul__companies')
-                field: company_key
-
-      - name: person_name
-        tests:
-          - not_null
 
   - name: int_tadawul__financial_reports
     columns:
@@ -152,31 +152,3 @@ models:
               arguments:
                 to: ref('int_tadawul__companies')
                 field: company_key
-
-  - name: int_tadawul__investor_contacts
-    columns:
-      - name: company_key
-        tests:
-          - not_null
-          - relationships:
-              arguments:
-                to: ref('int_tadawul__companies')
-                field: company_key
-
-      - name: contact_value
-        tests:
-          - not_null
-
-  - name: int_tadawul__shareholders_lockup
-    columns:
-      - name: company_key
-        tests:
-          - not_null
-          - relationships:
-              arguments:
-                to: ref('int_tadawul__companies')
-                field: company_key
-
-      - name: person_name
-        tests:
-          - not_null

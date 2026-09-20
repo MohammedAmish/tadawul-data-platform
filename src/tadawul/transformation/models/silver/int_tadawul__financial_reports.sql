@@ -8,4 +8,4 @@ select
     r.file_url
 from {{ ref('stg_tadawul__financial_reports') }} r
 inner join {{ ref('stg_tadawul__company') }} c
-    on r.company_root_id = c.company_id
+    on r.company_id = c.company_id
