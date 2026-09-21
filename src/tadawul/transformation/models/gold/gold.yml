@@ -158,3 +158,43 @@ models:
           JSONB array containing financial facts across balance sheet,
           statement of income, and cash flow statements, including the
           statement type, source type, period, metric, and value.
+
+  - name: fct_tadawul__person_company_relationships
+    columns:
+      - name: person_key
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('int_tadawul__persons')
+                field: person_key
+
+      - name: person_name
+        tests:
+          - not_null
+
+      - name: company_key
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_tadawul__companies')
+                field: company_key
+
+      - name: symbol
+        tests:
+          - not_null
+
+      - name: company_name
+        tests:
+          - not_null
+
+      - name: relationship_type
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - board_member
+                  - board_shareholding
+                  - substantial_shareholder

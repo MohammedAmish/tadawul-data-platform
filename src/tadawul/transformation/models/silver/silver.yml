@@ -152,3 +152,14 @@ models:
               arguments:
                 to: ref('int_tadawul__companies')
                 field: company_key
+
+  - name: int_tadawul__persons
+    columns:
+      - name: person_key
+        tests:
+          - not_null
+          - unique
+
+      - name: person_name
+        tests:
+          - not_null
