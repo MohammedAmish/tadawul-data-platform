@@ -33,8 +33,7 @@ def main():
         dataset_name="raw_tadawul",
     )
 
-    # companies = MAIN_MARKET_SYMBOLS
-    companies = NOMU_SYMBOLS
+    companies = MAIN_MARKET_SYMBOLS + NOMU_SYMBOLS
 
     for language in ["en", "ar"]:
         with CompanyScraper(

@@ -24,6 +24,33 @@ def get_ticker_symbols(browser: TadawulBrowser) -> list[str]:
     return list(dict.fromkeys(symbols))
 
 
+def is_fund(company: dict) -> bool:
+    names = [
+        company.get("companyNameEN", ""),
+        company.get("companyNameAR", ""),
+        company.get("companyName", ""),
+        company.get("tradingNameEn", ""),
+        company.get("tradingNameAr", ""),
+    ]
+
+    text = " ".join(
+        name.upper()
+        for name in names
+        if name
+    )
+
+    fund_patterns = [
+        r"\bREIT\b",
+        r"\bFUND\b",
+        r"صندوق",
+    ]
+
+    return any(
+        re.search(pattern, text)
+        for pattern in fund_patterns
+    )
+
+
 def discover_company_symbols():
     servlet = TadawulServlet()
 
@@ -50,6 +77,9 @@ def discover_company_symbols():
         company = servlet_by_symbol.get(symbol)
 
         if not company:
+            continue
+
+        if is_fund(company):
             continue
 
         market_type = company.get("market_type")
