@@ -4,9 +4,10 @@ models:
   - name: dim_tadawul__companies
     description: >
       Company-centric Gold model containing language-specific Tadawul company
-      information. Grain is one row per symbol and language. One-to-many
-      company information such as board members, shareholdings, financial
-      reports, and financial facts is represented as JSONB arrays.
+      information. Grain is one row per symbol and language. Company-level
+      attributes are stored as individual columns, while one-to-many entities
+      such as board members, shareholdings, financials, and financial reports
+      are represented in separate Gold fact models.
 
     columns:
       - name: company_key
@@ -137,28 +138,6 @@ models:
           JSONB array containing subsidiary names, ownership percentages,
           business information, locations, and countries.
 
-      - name: board_members
-        description: >
-          JSONB array containing board members and senior executives with
-          their reported management type, roles, classifications, session
-          dates, and designations.
-
-      - name: shareholdings
-        description: >
-          JSONB array containing board shareholding, substantial shareholder,
-          and lock-up shareholder observations reported by Tadawul.
-
-      - name: financial_reports
-        description: >
-          JSONB array containing financial reports with section, period,
-          year, publication date, file type, and file URL.
-
-      - name: financials
-        description: >
-          JSONB array containing financial facts across balance sheet,
-          statement of income, and cash flow statements, including the
-          statement type, source type, period, metric, and value.
-
   - name: fct_tadawul__person_company_relationships
     columns:
       - name: person_key
@@ -198,3 +177,90 @@ models:
                   - board_member
                   - board_shareholding
                   - substantial_shareholder
+
+  - name: fct_tadawul__board_members
+    description: >
+      Gold fact model containing board members and senior executives associated
+      with Tadawul companies.
+
+    columns:
+      - name: company_key
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_tadawul__companies')
+                field: company_key
+
+      - name: person_name
+        tests:
+          - not_null
+
+  - name: fct_tadawul__shareholdings
+    description: >
+      Gold fact model containing board shareholding, substantial shareholder,
+      and lock-up shareholder observations reported by Tadawul.
+
+    columns:
+      - name: company_key
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_tadawul__companies')
+                field: company_key
+
+      - name: shareholder_name
+        tests:
+          - not_null
+
+      - name: trading_date
+        tests:
+          - not_null
+
+  - name: fct_tadawul__financials
+    description: >
+      Gold fact model containing financial statement facts across balance
+      sheet, statement of income, and cash flow statements.
+
+    columns:
+      - name: company_key
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_tadawul__companies')
+                field: company_key
+
+      - name: statement_type
+        tests:
+          - not_null
+
+      - name: period
+        tests:
+          - not_null
+
+      - name: metric
+        tests:
+          - not_null
+
+  - name: fct_tadawul__financial_reports
+    description: >
+      Gold fact model containing financial reports published by Tadawul.
+
+    columns:
+      - name: company_key
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_tadawul__companies')
+                field: company_key
+
+      - name: year
+        tests:
+          - not_null
+
+      - name: publication_date
+        tests:
+          - not_null
