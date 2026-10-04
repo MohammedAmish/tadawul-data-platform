@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import re
 import time
 
@@ -203,6 +204,38 @@ class TadawulBrowser:
             company_url,
             wait_seconds=wait_seconds,
         )
+    
+    def get_response_body(self, url_contains: str) -> str | None:
+        """
+        Return the response body for the first performance-log
+        network response whose URL contains the given string.
+        """
+        for entry in self.driver.get_log("performance"):
+            message = json.loads(entry["message"])["message"]
+
+            if message["method"] != "Network.responseReceived":
+                continue
+
+            response = message["params"]["response"]
+            url = response["url"]
+
+            if url_contains not in url:
+                continue
+
+            request_id = message["params"]["requestId"]
+
+            try:
+                body = self.driver.execute_cdp_cmd(
+                    "Network.getResponseBody",
+                    {"requestId": request_id},
+                )
+
+                return body["body"]
+
+            except Exception:
+                continue
+
+        return None
 
     def close(self):
         if self.driver:

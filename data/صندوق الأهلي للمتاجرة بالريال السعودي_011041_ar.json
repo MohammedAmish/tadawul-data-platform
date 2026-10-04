@@ -1,0 +1,177 @@
+{
+  "symbol": "011041",
+  "fund_name": "صندوق الأهلي للمتاجرة بالريال السعودي",
+  "language": "ar",
+  "market": "صناديق الاستثمار",
+  "fund_info": {
+    "fund_name": "صندوق الأهلي للمتاجرة بالريال السعودي",
+    "fund_type": "المحافظة على رأس المال",
+    "fund_manager": "شركة الأهلي المالية",
+    "telephone": "018747106",
+    "website": "www.alahlicapital.com",
+    "website_url": "https://www.alahlicapital.com/"
+  },
+  "fund_documents": {
+    "terms_and_conditions": [
+      {
+        "url": "https://www.saudiexchange.sa/Resources/mfpdfs/terms/350_2_2024-10-13_17-30-24_Ar.pdf",
+        "date": "2024-10-13"
+      }
+    ],
+    "fact_sheet": [
+      {
+        "url": "https://www.saudiexchange.sa/Resources/mfpdfs/factsheet/350_5_2026-04-20_15-10-02_Ar.pdf",
+        "year": "2026",
+        "period": "الربع الأول",
+        "date": "2026-04-20"
+      },
+      {
+        "url": "https://www.saudiexchange.sa/Resources/mfpdfs/factsheet/350_5_2025-12-09_12-25-45_Ar.pdf",
+        "year": "2025",
+        "period": "الربع الأول",
+        "date": "2025-12-09"
+      },
+      {
+        "url": "https://www.saudiexchange.sa/Resources/mfpdfs/factsheet/350_5_2024-04-23_11-13-22_Ar.pdf",
+        "year": "2024",
+        "period": "الربع الأول",
+        "date": "2024-04-23"
+      },
+      {
+        "url": "https://www.saudiexchange.sa/Resources/mfpdfs/factsheet/350_5_2023-04-25_15-08-20_Ar.pdf",
+        "year": "2023",
+        "period": "الربع الأول",
+        "date": "2023-04-25"
+      },
+      {
+        "url": "https://www.saudiexchange.sa/Resources/mfpdfs/factsheet/350_5_2026-07-14_19-51-15_Ar.pdf",
+        "year": "2026",
+        "period": "الربع الثاني",
+        "date": "2026-07-14"
+      },
+      {
+        "url": "https://www.saudiexchange.sa/Resources/mfpdfs/factsheet/350_5_2025-07-14_17-47-39_Ar.pdf",
+        "year": "2025",
+        "period": "الربع الثاني",
+        "date": "2025-07-14"
+      },
+      {
+        "url": "https://www.saudiexchange.sa/Resources/mfpdfs/factsheet/350_5_2024-07-14_19-07-05_Ar.pdf",
+        "year": "2024",
+        "period": "الربع الثاني",
+        "date": "2024-07-14"
+      },
+      {
+        "url": "https://www.saudiexchange.sa/Resources/mfpdfs/factsheet/350_5_2023-07-13_14-50-03_Ar.pdf",
+        "year": "2023",
+        "period": "الربع الثاني",
+        "date": "2023-07-13"
+      },
+      {
+        "url": "https://www.saudiexchange.sa/Resources/mfpdfs/factsheet/350_5_2025-10-14_17-56-35_Ar.pdf",
+        "year": "2025",
+        "period": "الربع الثالث",
+        "date": "2025-10-14"
+      },
+      {
+        "url": "https://www.saudiexchange.sa/Resources/mfpdfs/factsheet/350_5_2024-10-14_16-28-23_Ar.pdf",
+        "year": "2024",
+        "period": "الربع الثالث",
+        "date": "2024-10-14"
+      },
+      {
+        "url": "https://www.saudiexchange.sa/Resources/mfpdfs/factsheet/350_5_2023-10-12_13-24-31_Ar.pdf",
+        "year": "2023",
+        "period": "الربع الثالث",
+        "date": "2023-10-12"
+      },
+      {
+        "url": "https://www.saudiexchange.sa/Resources/mfpdfs/factsheet/350_5_2022-11-10_11-01-19_Ar.pdf",
+        "year": "2022",
+        "period": "الربع الثالث",
+        "date": "2022-11-10"
+      },
+      {
+        "url": "https://www.saudiexchange.sa/Resources/mfpdfs/factsheet/350_5_2026-01-19_14-54-38_Ar.pdf",
+        "year": "2025",
+        "period": "الربع الرابع",
+        "date": "2026-01-19"
+      },
+      {
+        "url": "https://www.saudiexchange.sa/Resources/mfpdfs/factsheet/350_5_2025-01-14_18-03-18_Ar.pdf",
+        "year": "2024",
+        "period": "الربع الرابع",
+        "date": "2025-01-14"
+      },
+      {
+        "url": "https://www.saudiexchange.sa/Resources/mfpdfs/factsheet/350_5_2024-01-16_10-57-35_Ar.pdf",
+        "year": "2023",
+        "period": "الربع الرابع",
+        "date": "2024-01-16"
+      },
+      {
+        "url": "https://www.saudiexchange.sa/Resources/mfpdfs/factsheet/350_5_2023-01-15_18-23-53_Ar.pdf",
+        "year": "2022",
+        "period": "الربع الرابع",
+        "date": "2023-01-15"
+      }
+    ],
+    "financial_statements": [
+      {
+        "url": "https://www.saudiexchange.sa/Resources/mfpdfs/stmt/350_1_2026-04-09_16-33-55_Ar.pdf",
+        "year": "2025",
+        "period": "سنوي",
+        "date": "2026-04-09"
+      },
+      {
+        "url": "https://www.saudiexchange.sa/Resources/mfpdfs/stmt/350_1_2024-03-28_13-30-37_Ar.pdf",
+        "year": "2023",
+        "period": "سنوي",
+        "date": "2024-03-28"
+      },
+      {
+        "url": "https://www.saudiexchange.sa/Resources/mfpdfs/stmt/350_1_2023-03-30_19-58-14_Ar.pdf",
+        "year": "2022",
+        "period": "سنوي",
+        "date": "2023-03-30"
+      },
+      {
+        "url": "https://www.saudiexchange.sa/Resources/mfpdfs/stmt/350_1_2022-04-06_15-05-37_Ar.pdf",
+        "year": "2021",
+        "period": "سنوي",
+        "date": "2022-04-06"
+      },
+      {
+        "url": "https://www.saudiexchange.sa/Resources/mfpdfs/stmt/350_1_2024-08-11_19-12-48_Ar.pdf",
+        "year": "2024",
+        "period": "نصف سنوي",
+        "date": "2024-08-11"
+      },
+      {
+        "url": "https://www.saudiexchange.sa/Resources/mfpdfs/stmt/350_1_2023-08-09_11-37-19_Ar.pdf",
+        "year": "2023",
+        "period": "نصف سنوي",
+        "date": "2023-08-09"
+      },
+      {
+        "url": "https://www.saudiexchange.sa/Resources/mfpdfs/stmt/350_1_2022-08-21_18-22-52_Ar.pdf",
+        "year": "2022",
+        "period": "نصف سنوي",
+        "date": "2022-08-21"
+      },
+      {
+        "url": "https://www.saudiexchange.sa/Resources/mfpdfs/stmt/350_1_2021-09-05_10-04-47_Ar.pdf",
+        "year": "2021",
+        "period": "نصف سنوي",
+        "date": "2021-09-05"
+      }
+    ],
+    "xbrl": [],
+    "voting_policy": [
+      {
+        "url": "https://www.saudiexchange.sa/Resources/mfpdfs/terms/350_6_2023-02-08_19-11-21_En.pdf",
+        "date": "2023-02-08"
+      }
+    ]
+  }
+}
