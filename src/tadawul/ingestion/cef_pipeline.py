@@ -2,21 +2,21 @@ from __future__ import annotations
 
 import dlt
 
-from tadawul.scraper.etf import EtfScraper
+from tadawul.scraper.cef import CefScraper
 
 
 @dlt.resource(
-    name="raw_etf",
+    name="raw_cef",
     write_disposition="merge",
     primary_key=["symbol", "language"],
 )
-def etf_resource(
-    etf: dict,
+def cef_resource(
+    cef: dict,
     language: str,
-    scraper: EtfScraper,
+    scraper: CefScraper,
 ):
     result = scraper.scrape(
-        etf["url"]
+        cef["url"]
     )
 
     yield result
@@ -24,27 +24,27 @@ def etf_resource(
 
 def main():
     pipeline = dlt.pipeline(
-        pipeline_name="tadawul_etf",
+        pipeline_name="tadawul_cef",
         destination="postgres",
         dataset_name="raw_tadawul",
     )
 
     for language in ["en", "ar"]:
-        with EtfScraper(
+        with CefScraper(
             headless=True,
             language=language,
         ) as scraper:
 
-            etfs = scraper.get_all_etfs()
+            cefs = scraper.get_all_cefs()
 
-            for etf in etfs:
+            for cef in cefs:
                 print(
-                    f"Scraping ETF {etf['name']} - {language}"
+                    f"Scraping {cef['name']} - {language}"
                 )
 
                 load_info = pipeline.run(
-                    etf_resource(
-                        etf,
+                    cef_resource(
+                        cef,
                         language,
                         scraper,
                     )

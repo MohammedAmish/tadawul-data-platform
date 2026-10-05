@@ -11,25 +11,15 @@ from tadawul.scraper.mutual_fund import MutualFundScraper
     primary_key=["symbol", "language"],
 )
 def mutual_fund_resource(
+    symbol: str,
     language: str,
     scraper: MutualFundScraper,
 ):
-    fund_symbols = [
-    "011041",
-    "547001",
-    "135004",
-]
+    result = scraper.scrape(symbol)
 
-    for symbol in fund_symbols:
-        print(
-            f"Scraping mutual fund {symbol} - {language}"
-        )
+    result["symbol"] = symbol
 
-        result = scraper.scrape(symbol)
-
-        result["symbol"] = symbol
-
-        yield result
+    yield result
 
 
 def main():
@@ -45,14 +35,26 @@ def main():
             language=language,
         ) as scraper:
 
-            load_info = pipeline.run(
-                mutual_fund_resource(
-                    language,
-                    scraper,
-                )
+            fund_symbols = scraper.get_all_fund_symbols()
+
+            print(
+                f"Found {len(fund_symbols)} mutual funds - {language}"
             )
 
-            print(load_info)
+            for symbol in fund_symbols:
+                print(
+                    f"Scraping mutual fund {symbol} - {language}"
+                )
+
+                load_info = pipeline.run(
+                    mutual_fund_resource(
+                        symbol,
+                        language,
+                        scraper,
+                    )
+                )
+
+                print(load_info)
 
 
 if __name__ == "__main__":
