@@ -1,0 +1,127 @@
+{
+  "symbol": "9400",
+  "etf_name": "YAQEEN 30 ETF",
+  "language": "en",
+  "fund_profile": {
+    "description": "Yaqeen Saudi Equity ETF aims to provide investors with long term capital appreciation and growth. The Fund passively invests in the listed Saudi equities in order to achieve the results that correspond to the performance, before fees and expenses, of the Benchmark Index. The Fund is passively managed by way of fully investing, barring a small cash portion, into the components of the Benchmark Index in the same weightings with the aim of replicating the performance of the Index.",
+    "index_info": "The following criteria will be assessed on the quarterly maintenance:  1. Sharia compliant screen 1 as per Yaqeen Sharia screening. 2. For each stock to be eligible, non trading days in the Saudi Stock Exchange Tadawul must not exceed 7 trading days during the past quarter screen 2. 3. Top 30 floating market capitalization stocks. The stocks should also be member of Tadawul public indices",
+    "total_net_assets_at_inception": "50,000,000",
+    "initial_total_units": "2,500,000",
+    "units_initial_values": "20"
+  },
+  "fund_details": {
+    "date_established": "2010/03/16",
+    "financial_year_end": "31/12",
+    "listing_date": "2010/03/28",
+    "external_auditors": "[PricewaterhouseCoopers]",
+    "isin_code": "SA12HGA4IS40",
+    "number_of_employees": "63"
+  },
+  "management": {
+    "fund_chairman": [
+      {
+        "name": "Ahmad Ibrahim Alshabanah",
+        "bd_session_start": "2022-12-12",
+        "designation": "Fund Chairman",
+        "bd_session_end": "-",
+        "classification": "-"
+      }
+    ],
+    "fund_board_of_directors": [
+      {
+        "name": "Mohammed Al Malki",
+        "bd_session_start": "2020-10-07",
+        "designation": "Fund Board of Directors",
+        "bd_session_end": "-",
+        "classification": "Independent"
+      },
+      {
+        "name": "Yazeed Abdulaziz Abunayan",
+        "bd_session_start": "2025-11-30",
+        "designation": "Fund Board of Directors",
+        "bd_session_end": "-",
+        "classification": "Independent"
+      },
+      {
+        "name": "Abdulaziz Abdulrahamn Al Arfaj",
+        "bd_session_start": "2025-11-30",
+        "designation": "Fund Board of Directors",
+        "bd_session_end": "-",
+        "classification": "Independent"
+      }
+    ],
+    "senior_executives": []
+  },
+  "financials": [
+    {
+      "url": "https://www.saudiexchange.sa/Resources/fsPdf/518_0_2026-03-31_13-22-59_En.pdf",
+      "year": "2025",
+      "period": "Annual",
+      "date": "2026-03-31"
+    },
+    {
+      "url": "https://www.saudiexchange.sa/Resources/fsPdf/518_0_2025-03-27_15-29-18_En.pdf",
+      "year": "2024",
+      "period": "Annual",
+      "date": "2025-03-27"
+    },
+    {
+      "url": "https://www.saudiexchange.sa/Resources/fsPdf/518_0_2024-03-30_15-12-21_En.pdf",
+      "year": "2023",
+      "period": "Annual",
+      "date": "2024-03-30"
+    },
+    {
+      "url": "https://www.saudiexchange.sa/Resources/fsPdf/518_0_2023-03-30_16-03-48_En.pdf",
+      "year": "2022",
+      "period": "Annual",
+      "date": "2023-03-30"
+    },
+    {
+      "url": "https://www.saudiexchange.sa/Resources/fsPdf/518_0_2026-08-11_16-21-16_En.pdf",
+      "year": "2026",
+      "period": "Q2",
+      "date": "2026-08-11"
+    },
+    {
+      "url": "https://www.saudiexchange.sa/Resources/fsPdf/518_0_2025-08-11_14-24-19_En.pdf",
+      "year": "2025",
+      "period": "Q2",
+      "date": "2025-08-11"
+    },
+    {
+      "url": "https://www.saudiexchange.sa/Resources/fsPdf/518_0_2024-08-11_13-55-05_En.pdf",
+      "year": "2024",
+      "period": "Q2",
+      "date": "2024-08-11"
+    },
+    {
+      "url": "https://www.saudiexchange.sa/Resources/fsPdf/518_0_2023-08-14_13-44-46_En.pdf",
+      "year": "2023",
+      "period": "Q2",
+      "date": "2023-08-14"
+    },
+    {
+      "url": "https://www.saudiexchange.sa/Resources/fsPdf/518_0_2022-08-25_15-49-41_En.pdf",
+      "year": "2022",
+      "period": "Q2",
+      "date": "2022-08-25"
+    }
+  ],
+  "terms_and_conditions": {
+    "name": "Terms and Conditions",
+    "url": "https://www.saudiexchange.sa/Resources/pdfs/518_TermsConditions1.pdf"
+  },
+  "basket_components": {
+    "name": "Basket Components",
+    "url": "https://etf.yaqeen.sa/"
+  },
+  "investor_relations": {
+    "contact_name": "Ahmed Al Shabanah",
+    "address": "Head Office - Al Olaya St. P.O. Box 884 , Riyadh 11421",
+    "contact_information": "Telephone: 8004298888 Fax: 0112054819 E-mail: addingvalue@yaqeen.sa",
+    "email": "addingvalue@yaqeen.sa",
+    "website": "http://www.yaqeen.sa",
+    "website_url": "https://http://www.yaqeen.sa"
+  }
+}

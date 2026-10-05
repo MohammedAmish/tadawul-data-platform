@@ -1,0 +1,127 @@
+{
+  "symbol": "9400",
+  "etf_name": "صندوق يقين 30",
+  "language": "ar",
+  "fund_profile": {
+    "description": "يهدف الصندوق لتحقيق نمو ومكاسب رأسمالية على المدى الطويل. يستثمر الصندوق بشكل غير نشط في الأسهم السعودية لمطابقة أداء المؤشر (F30) قبل الرسوم والمصاريف يتبع الصندوق أسلوب الإدارة غير النشطة للمحفظة بالاستثمار في الأسهم المكونة لمحفظة المؤشر بنفس التكوين والوزن النسبي لتوزيع الأصول بغرض محاكاة أداء المؤشر.",
+    "index_info": "يخضع المؤشر للمعايير التالية عند الصيانة الربعية:  1. متوافق مع الشريعة تصنيف 1 وذلك حسب معايير شركة يقين المالية. 2. أن لا تزيد فترة توقف تداول أسهم الشركة في السوق المالية السعودية تداول عن 7 أيام تداول خلال الربع السابق تصنيف 2.  3. أكبر 30 شركة من حيث القيمة السوقية للأسهم المتداولة الأسهم الحرة، ويجب أن تكون الشركات مشمولة في مؤشرات تداول.",
+    "initial_net_assets": "50,000,000",
+    "initial_total_units": "2,500,000",
+    "initial_unit_value": "20"
+  },
+  "fund_details": {
+    "date_established": "2010/03/16",
+    "financial_year_end": "31/12",
+    "listing_date": "2010/03/28",
+    "external_auditors": "[برايس ووترهاوس كوبرز]",
+    "isin_code": "SA12HGA4IS40",
+    "number_of_employees": "63"
+  },
+  "management": {
+    "fund_chairman": [
+      {
+        "name": "أحمد بن ابراهيم الشبانه",
+        "bd_session_start": "2022-12-12",
+        "designation": "رئيس مجلس إدارة الصندوق",
+        "bd_session_end": "-",
+        "classification": "-"
+      }
+    ],
+    "fund_board_of_directors": [
+      {
+        "name": "محمد مسفر المالكي",
+        "bd_session_start": "2020-10-07",
+        "designation": "أعضاء مجلس إدارة الصندوق",
+        "bd_session_end": "-",
+        "classification": "مستقل"
+      },
+      {
+        "name": "يزيد عبدالعزيز ابونيان",
+        "bd_session_start": "2025-11-30",
+        "designation": "أعضاء مجلس إدارة الصندوق",
+        "bd_session_end": "-",
+        "classification": "مستقل"
+      },
+      {
+        "name": "عبدالعزيز عبدالرحمن العرفج",
+        "bd_session_start": "2025-11-30",
+        "designation": "أعضاء مجلس إدارة الصندوق",
+        "bd_session_end": "-",
+        "classification": "مستقل"
+      }
+    ],
+    "senior_executives": []
+  },
+  "financials": [
+    {
+      "url": "https://www.saudiexchange.sa/Resources/fsPdf/518_0_2026-03-31_13-22-59_Ar.pdf",
+      "year": "2025",
+      "period": "سنوي",
+      "date": "2026-03-31"
+    },
+    {
+      "url": "https://www.saudiexchange.sa/Resources/fsPdf/518_0_2025-03-27_15-29-18_Ar.pdf",
+      "year": "2024",
+      "period": "سنوي",
+      "date": "2025-03-27"
+    },
+    {
+      "url": "https://www.saudiexchange.sa/Resources/fsPdf/518_0_2024-03-30_15-12-21_Ar.pdf",
+      "year": "2023",
+      "period": "سنوي",
+      "date": "2024-03-30"
+    },
+    {
+      "url": "https://www.saudiexchange.sa/Resources/fsPdf/518_0_2023-03-30_16-03-48_Ar.pdf",
+      "year": "2022",
+      "period": "سنوي",
+      "date": "2023-03-30"
+    },
+    {
+      "url": "https://www.saudiexchange.sa/Resources/fsPdf/518_0_2026-08-11_16-21-16_Ar.pdf",
+      "year": "2026",
+      "period": "الربع الثاني",
+      "date": "2026-08-11"
+    },
+    {
+      "url": "https://www.saudiexchange.sa/Resources/fsPdf/518_0_2025-08-11_14-24-19_Ar.pdf",
+      "year": "2025",
+      "period": "الربع الثاني",
+      "date": "2025-08-11"
+    },
+    {
+      "url": "https://www.saudiexchange.sa/Resources/fsPdf/518_0_2024-08-11_13-55-05_Ar.pdf",
+      "year": "2024",
+      "period": "الربع الثاني",
+      "date": "2024-08-11"
+    },
+    {
+      "url": "https://www.saudiexchange.sa/Resources/fsPdf/518_0_2023-08-14_13-44-46_Ar.pdf",
+      "year": "2023",
+      "period": "الربع الثاني",
+      "date": "2023-08-14"
+    },
+    {
+      "url": "https://www.saudiexchange.sa/Resources/fsPdf/518_0_2022-08-25_15-49-41_Ar.pdf",
+      "year": "2022",
+      "period": "الربع الثاني",
+      "date": "2022-08-25"
+    }
+  ],
+  "terms_and_conditions": {
+    "name": "الشروط والاحكام",
+    "url": "https://www.saudiexchange.sa/Resources/pdfs/518_TermsConditions2.pdf"
+  },
+  "basket_components": {
+    "name": "مكونات الصندوق",
+    "url": "https://etf.yaqeen.sa/"
+  },
+  "investor_relations": {
+    "contact_name": "أحمد الشبانه",
+    "address": "المقر الرئيسي طريق العليا العام ص ب 884 الرياض 11421",
+    "contact_information": "الهاتف: 8004298888 الفاكس: 0112054819 البريد الإلكتروني: addingvalue@yaqeen.sa",
+    "email": "addingvalue@yaqeen.sa",
+    "website": "http://www.yaqeen.sa",
+    "website_url": "https://http://www.yaqeen.sa"
+  }
+}
