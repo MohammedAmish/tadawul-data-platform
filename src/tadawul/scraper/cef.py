@@ -644,25 +644,23 @@ class CefScraper:
         )
 
         if investment_heading:
-            heading_paragraph = (
-                investment_heading.find_parent("p")
+            value_paragraph = (
+                investment_heading.find_next(
+                    "p"
+                )
             )
 
-            if heading_paragraph:
-                value_paragraph = (
-                    heading_paragraph.find_next_sibling(
-                        "p"
+            if value_paragraph:
+                value = self._clean_value(
+                    self._text(
+                        value_paragraph
                     )
                 )
 
-                if value_paragraph:
+                if value:
                     result[
                         "investment_limits"
-                    ] = self._clean_value(
-                        self._text(
-                            value_paragraph
-                        )
-                    )
+                    ] = value
 
         return result
 
