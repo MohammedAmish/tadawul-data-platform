@@ -1182,7 +1182,8 @@ class ReitScraper:
         soup: BeautifulSoup,
     ) -> dict:
         section = soup.select_one(
-            "div.financials"
+            "div.financials, "
+            "div.financials_Reits"
         )
 
         if section is None:
@@ -1198,13 +1199,16 @@ class ReitScraper:
                 strip=True,
             )
             for tab in section.select(
-                ".financials_Tab li"
+                ".financials_Tab li, "
+                ".financials_Tab_Reits li"
             )
         ]
 
         financial_sections = section.select(
             ".financials_Tab_Dtl_box > "
-            ".inner_tab_DtlBox"
+            ".inner_tab_DtlBox, "
+            ".financials_Tab_Dtl_box_Reits > "
+            ".inner_tab_DtlBox_Reits"
         )
 
         for index, financial_section in enumerate(

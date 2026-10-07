@@ -8,17 +8,15 @@ def main():
 
     with ReitScraper(
         language=language,
-        headless=True,
+        headless=False,
     ) as scraper:
 
         reits = scraper.get_all_reits()
 
-        print(f"Found {len(reits)} REITs")
-
-        first_reit = reits[0]
+        reit = reits[19]
 
         result = scraper.scrape(
-            first_reit["url"]
+            reit["url"]
         )
 
     reit_name = result["reit_name"]
